@@ -15,8 +15,59 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@tw/shared": ["libs/shared/src/index.ts"]
+      "@tw/asdffeature322sdfd": ["libs/asdffeature322sdfd/src/index.ts"],
+      "@tw/asdffeature322sdsadf1132e123123fd": [
+        "libs/asdffeature322sdsadf1132e123123fd/src/index.ts"
+      ],
+      "@tw/asdffeature322sdsadffd": [
+        "libs/asdffeature322sdsadffd/src/index.ts"
+      ],
+      "@tw/feature": ["libs/feature/src/index.ts"],
+      "@tw/feature10": ["libs/feature10/src/index.ts"],
+      "@tw/feature11": ["libs/feature11/src/index.ts"],
+      "@tw/feature12": ["libs/feature12/src/index.ts"],
+      "@tw/feature13": ["libs/feature13/src/index.ts"],
+      "@tw/feature14": ["libs/feature14/src/index.ts"],
+      "@tw/feature15": ["libs/feature15/src/index.ts"],
+      "@tw/feature16": ["libs/feature16/src/index.ts"],
+      "@tw/feature2": ["libs/feature2/src/index.ts"],
+      "@tw/feature20": ["libs/feature20/src/index.ts"],
+      "@tw/feature22": ["libs/feature22/src/index.ts"],
+      "@tw/feature23": ["libs/feature23/src/index.ts"],
+      "@tw/feature24": ["libs/feature24/src/index.ts"],
+      "@tw/feature25": ["libs/feature25/src/index.ts"],
+      "@tw/feature26": ["libs/feature26/src/index.ts"],
+      "@tw/feature27": ["libs/feature27/src/index.ts"],
+      "@tw/feature30": ["libs/feature30/src/index.ts"],
+      "@tw/feature31": ["libs/feature31/src/index.ts"],
+      "@tw/feature32": ["libs/feature32/src/index.ts"],
+      "@tw/feature322": ["libs/feature322/src/index.ts"],
+      "@tw/feature322d": ["libs/feature322d/src/index.ts"],
+      "@tw/feature322sdfd": ["libs/feature322sdfd/src/index.ts"],
+      "@tw/feature33": ["libs/feature33/src/index.ts"],
+      "@tw/feature4": ["libs/feature4/src/index.ts"],
+      "@tw/feature5": ["libs/feature5/src/index.ts"],
+      "@tw/feature50": ["libs/feature50/src/index.ts"],
+      "@tw/feature51": ["libs/feature51/src/index.ts"],
+      "@tw/feature6": ["libs/feature6/src/index.ts"],
+      "@tw/feature61": ["libs/feature61/src/index.ts"],
+      "@tw/feature62": ["libs/feature62/src/index.ts"],
+      "@tw/feature7": ["libs/feature7/src/index.ts"],
+      "@tw/featured7": ["libs/featured7/src/index.ts"],
+      "@tw/featuresd": ["libs/featuresd/src/index.ts"],
+      "@tw/featuresdf4": ["libs/featuresdf4/src/index.ts"],
+      "@tw/shared": ["libs/shared/src/index.ts"],
+      "@tw/test": ["libs/test/src/index.ts"],
+      "@tw/test2": ["libs/test2/src/index.ts"],
+      "@tw/test3": ["libs/test3/src/index.ts"],
+      "@tw/test4": ["libs/test4/src/index.ts"],
+      "@tw/test5": ["libs/test5/src/index.ts"],
+      "@tw/test6": ["libs/test6/src/index.ts"],
+      "@tw/test7": ["libs/test7/src/index.ts"],
+      "@tw/testd7": ["libs/testd7/src/index.ts"],
+      "@tw/testd8": ["libs/testd8/src/index.ts"],
+      "@tw/testd9": ["libs/testd9/src/index.ts"]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": ["node_modules", "tmp", "**/files/**"]
 }

@@ -1,3 +1,4 @@
+
 import {
   Tree,
   formatFiles,
@@ -7,6 +8,7 @@ import {
   readProjectConfiguration,
 } from '@nrwl/devkit';
 import { libraryGenerator } from '@nrwl/workspace';
+import { strings } from '@angular-devkit/core';
 
 export default async function (tree: Tree, schema: any) {
   await libraryGenerator(tree, { name: schema.name });
@@ -15,7 +17,11 @@ export default async function (tree: Tree, schema: any) {
     tree, // the virtual file system
     joinPathFragments(__dirname, './files'), // path to the file templates
     libraryRoot, // destination path of the files
-    schema // config object to replace variable in file templates
+    {
+      ...schema,
+      classify: (str: string) => strings.classify(str),
+      singleItemName: schema.singleItemName
+    }
   );
   await formatFiles(tree);
   return () => {

@@ -92,8 +92,7 @@
             "passWithNoTests": true
           }
         }
-      },
-      "tags": []
+      }
     },
     "boilerplate-e2e": {
       "root": "apps/boilerplate-e2e",
@@ -123,48 +122,6 @@
       },
       "tags": [],
       "implicitDependencies": ["boilerplate"]
-    },
-    "shared": {
-      "projectType": "library",
-      "root": "libs/shared",
-      "sourceRoot": "libs/shared/src",
-      "prefix": "shared",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "outputs": ["dist/libs/shared"],
-          "options": {
-            "project": "libs/shared/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/shared/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "libs/shared/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "libs/shared/src/test.ts",
-            "tsConfig": "libs/shared/tsconfig.spec.json",
-            "karmaConfig": "libs/shared/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/shared/src/**/*.ts",
-              "libs/shared/src/**/*.html"
-            ]
-          }
-        }
-      },
-      "tags": ["shared"]
     }
   }
 }

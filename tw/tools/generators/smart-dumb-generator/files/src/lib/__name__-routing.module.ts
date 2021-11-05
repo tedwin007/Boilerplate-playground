@@ -7,4 +7,4 @@ const routes: Routes = [];
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class <%=name%>RoutingModule { }
+export class <%= classify(name) %>RoutingModule { }
