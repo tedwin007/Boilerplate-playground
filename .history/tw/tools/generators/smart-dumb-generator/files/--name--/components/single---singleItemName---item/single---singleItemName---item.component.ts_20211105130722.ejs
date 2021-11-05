@@ -1,0 +1,15 @@
+import { Component, OnInit } from '@angular/core';
+import type {<%=singleItemName%>DataItem } from './../../models/types/--singleItemName---list.type'
+@Component({
+  selector: 'ui-<%= singleItemName%>-component',
+  templateUrl: './single-<%= singleItemName%>-item.component.html',
+  styleUrls: ['./single-<%= singleItemName%>-item.component.scss']
+})
+export class UI<%=singleItemName%>Component implements OnInit {
+  @Input() data: <%=singleItemName%>DataItem  =
+  constructor( ) { }
+
+  ngOnInit() {
+  }
+
+}

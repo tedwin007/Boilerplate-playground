@@ -1,0 +1,10 @@
+import { Injectable } from '@angular/core';
+import { <%=singleItemName%>DataItem } from './models/<%=singleItemName%>-data.class'
+@Injectable()
+export class <%=name%>-Service extends AbstractBaseFlux<{<%=singleItemName>: <%=singleItemName%>DataItem}>  {
+
+constructor() {
+  super([]);
+}
+
+}

@@ -1,0 +1,21 @@
+import { Component, OnInit } from '@angular/core';
+import {<%=name%>Service} from './../../<%=name%>.service.ts';
+
+
+@Component({
+  selector: '<%=name%>-feature',
+  template: `
+   <router-outlet></router-outlet>
+  `
+})
+export class <%=singleItemName%>ListComponent implements OnInit {
+
+  <%=singleItemName%>State$?:Observable<<%=singleItemName%>List>;
+
+  constructor(private <%=name.toLowerCase()%>Service:<%=name%>Service ) { }
+
+  ngOnInit() {
+    this.<%=singleItemName%>State$ = this.<%=name.toLowerCase()%>Service.getState();
+  }
+
+}

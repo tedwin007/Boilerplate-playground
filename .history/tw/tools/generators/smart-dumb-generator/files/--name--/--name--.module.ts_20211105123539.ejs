@@ -1,0 +1,16 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { <%=name%>RoutingModule } from './<%=name%>routing.module';
+import { <%=name%>Service } from './<%=name%>.service';
+
+
+@NgModule({
+  declarations: [],
+  imports: [
+    CommonModule,
+   <%=name%>RoutingModule
+  ],
+  providers:[<%=name%>-Service ]
+})
+export class NameModule { }

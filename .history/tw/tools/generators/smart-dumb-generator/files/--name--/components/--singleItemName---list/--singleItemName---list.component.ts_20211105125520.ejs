@@ -1,0 +1,17 @@
+import { Component, OnInit } from '@angular/core';
+import {<%=name%>Service} from './../../<%=name%>.service.ts';
+
+
+@Component({
+  selector: '<%=SingleItemName%>-list',
+  templateUrl: './<%=SingleItemName%>-list-.component.html',
+  styleUrls: ['./<%=SingleItemName%>-list.component.scss']
+})
+export class <%=SingleItemName%>ListComponent implements OnInit {
+
+  constructor(private <%=name.toLowerCase()%>Service:<%=name%>Service ) { }
+
+  ngOnInit() {
+  }
+
+}

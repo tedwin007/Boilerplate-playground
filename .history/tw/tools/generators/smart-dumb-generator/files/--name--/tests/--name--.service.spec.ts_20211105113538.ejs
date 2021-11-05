@@ -1,0 +1,16 @@
+/* tslint:disable:no-unused-variable */
+
+import { TestBed, async, inject } from '@angular/core/testing';
+import { <% name %>-Service } from './<%=name%>.service';
+
+describe('Service: <%name%>', () => {
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [-<%= name %>Service]
+    });
+  });
+
+  it('should ...', inject([<%= name %>Service], (service: <%= name %>Service) => {
+    expect(service).toBeTruthy();
+  }));
+});

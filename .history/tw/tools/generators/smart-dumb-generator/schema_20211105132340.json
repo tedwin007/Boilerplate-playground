@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "smart-dumb-generator",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "feature name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+
+    "singleItemName": {
+      "type": "string",
+      "description": "single item name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    }
+  },
+  "required": ["singleItemName"]
+}

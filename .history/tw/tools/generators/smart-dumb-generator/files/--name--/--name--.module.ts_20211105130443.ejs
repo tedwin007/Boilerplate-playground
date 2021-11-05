@@ -1,0 +1,17 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { <%=name%>RoutingModule } from './<%=name%>routing.module';
+import { <%=name%>Service } from './<%=name%>.service';
+import { <%=name%>Service } from './<%=name%>.service';
+
+
+@NgModule({
+  declarations: [UI<%=singleItemName%>Component ,],
+  imports: [
+    CommonModule,
+   <%=name%>RoutingModule
+  ],
+  declarations:[],
+  providers:[ <%=name%>-Service ]
+})
+export class <%=name%>Module { }
