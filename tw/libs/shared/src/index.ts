@@ -1,2 +1,2 @@
 export * from './lib/shared.module';
-export * from './lib/models/class/abstruct-flux-service';
+export * from './lib/services/abstruct-flux-service';
