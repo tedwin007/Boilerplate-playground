@@ -2,16 +2,22 @@ import {HttpClient} from "@angular/common/http";
 import {APIMethods, DomainApiConfig} from "./interfaces/domain-api.config.interface";
 import {BaseAPI} from "./abstruct-api.class";
 
-export abstract class AbstructDomainApi<T = DomainApiConfig> extends BaseAPI {
-  name: string;
-  abstract config: T;
-  abstract domainApis: APIMethods<T>;
+export abstract class AbstractDomainApi<T = DomainApiConfig> extends BaseAPI {
+  protected config = this.getApiConfig();
+  protected baseUrl: string;
+  abstract call: APIMethods<T>;
 
-  constructor(httpClient: HttpClient,
-              domainPath: string,
-              domainName: string = domainPath) {
-    super(httpClient, domainPath);
-    this.name = domainName;
+  protected abstract getApiConfig(): DomainApiConfig;
+
+  constructor(httpClient: HttpClient, baseUrl: string) {
+    super(httpClient);
+    this.baseUrl = baseUrl;
+
   }
+
+  protected getJoinedURL(path: string): string {
+    return `${this.baseUrl}/${path}`;
+  };
 }
+
 

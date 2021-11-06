@@ -1,4 +1,3 @@
-import {HttpResponseBase} from "@angular/common/http";
 import {Observable} from "rxjs";
 
 export type APIConfig = { url: string, option?: ApiCallOptions };
@@ -14,4 +13,4 @@ export interface DomainApiConfig {
 }
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-export type APIMethods<T = object> = { [k in keyof T]: <D, R = HttpResponseBase>(data?: D) => Observable<R> }
+export type APIMethods<T = object> = { [k in keyof T]: (data?:any) => Observable<any> }

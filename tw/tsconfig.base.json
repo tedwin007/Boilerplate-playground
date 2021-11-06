@@ -56,6 +56,7 @@
       "@tw/featured7": ["libs/featured7/src/index.ts"],
       "@tw/featuresd": ["libs/featuresd/src/index.ts"],
       "@tw/featuresdf4": ["libs/featuresdf4/src/index.ts"],
+      "@tw/forcast": ["libs/forcast/src/index.ts"],
       "@tw/shared": ["libs/shared/src/index.ts"],
       "@tw/test": ["libs/test/src/index.ts"],
       "@tw/test2": ["libs/test2/src/index.ts"],

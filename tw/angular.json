@@ -122,6 +122,29 @@
       },
       "tags": [],
       "implicitDependencies": ["boilerplate"]
+    },
+    "forcast": {
+      "root": "libs/forcast",
+      "sourceRoot": "libs/forcast/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/forcast/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/forcast"],
+          "options": {
+            "jestConfig": "libs/forcast/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
     }
   }
 }

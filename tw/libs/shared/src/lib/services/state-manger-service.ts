@@ -9,9 +9,9 @@ import { BehaviorSubject, Observable } from "rxjs";
  * @class AbstractBaseFlux
  * @template State
  */
-export abstract class AbstractBaseFlux<State> {
+export class StateManger<State> {
 
-  private _state$: BehaviorSubject<State>
+  protected _state$: BehaviorSubject<State>
 
   constructor(state: State) {
     this._state$ = new BehaviorSubject(state);
