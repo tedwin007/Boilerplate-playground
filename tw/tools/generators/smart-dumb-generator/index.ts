@@ -2,7 +2,7 @@ import {
   formatFiles,
   generateFiles,
   installPackagesTask,
-  joinPathFragments,
+  joinPathFragments, moveFilesToNewDirectory,
   readProjectConfiguration,
   Tree,
 } from '@nrwl/devkit';
@@ -51,6 +51,7 @@ async function createEntityFiles(filePath: string, tree, root) {
       }
     );
     await formatFiles(tree);
+    await moveFilesToNewDirectory(tree,root+'/'+filename+'-form',root+'/src/lib/components/form')
   } catch (e) {
     console.error(e);
   }

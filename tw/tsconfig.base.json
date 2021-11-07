@@ -17,6 +17,11 @@
     "paths": {
       "@tw/example": ["libs/example/src/index.ts"],
       "@tw/example2": ["libs/example2/src/index.ts"],
+      "@tw/example3": ["libs/example3/src/index.ts"],
+      "@tw/example4": ["libs/example4/src/index.ts"],
+      "@tw/example6": ["libs/example6/src/index.ts"],
+      "@tw/example7": ["libs/example7/src/index.ts"],
+      "@tw/example8": ["libs/example8/src/index.ts"],
       "@tw/forcast": ["libs/forcast/src/index.ts"],
       "@tw/gaya": ["libs/gaya/src/index.ts"],
       "@tw/gaya10": ["libs/gaya10/src/index.ts"],
