@@ -1,5 +1,7 @@
 import {Component, NgModule} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {<%=classify(singleItemName)%>ListComponent} from "./components/<%=singleItemName%>-list/<%=singleItemName%>-list.component";
+import {UI<%=classify(singleItemName)%>Component} from  "./components/single-<%=singleItemName%>-item/single-<%=singleItemName%>-item.component";
 
 const routes: Routes = [
   {path: 'single-<%=singleItemName%>', component: UI<%=classify(singleItemName)%>Component},

@@ -1,6 +1,397 @@
 {
   "version": 1,
   "projects": {
+    "1a": {
+      "root": "libs/1a",
+      "sourceRoot": "libs/1a/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/1a/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/1a"],
+          "options": {
+            "jestConfig": "libs/1a/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "a": {
+      "root": "libs/a",
+      "sourceRoot": "libs/a/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/a/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/a"],
+          "options": {
+            "jestConfig": "libs/a/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "ab": {
+      "root": "libs/ab",
+      "sourceRoot": "libs/ab/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/ab/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ab"],
+          "options": {
+            "jestConfig": "libs/ab/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "abc": {
+      "root": "libs/abc",
+      "sourceRoot": "libs/abc/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/abc/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/abc"],
+          "options": {
+            "jestConfig": "libs/abc/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "abcd": {
+      "root": "libs/abcd",
+      "sourceRoot": "libs/abcd/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/abcd/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/abcd"],
+          "options": {
+            "jestConfig": "libs/abcd/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "abcde": {
+      "root": "libs/abcde",
+      "sourceRoot": "libs/abcde/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/abcde/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/abcde"],
+          "options": {
+            "jestConfig": "libs/abcde/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "abcdef": {
+      "root": "libs/abcdef",
+      "sourceRoot": "libs/abcdef/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/abcdef/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/abcdef"],
+          "options": {
+            "jestConfig": "libs/abcdef/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "abcdfsef": {
+      "root": "libs/abcdfsef",
+      "sourceRoot": "libs/abcdfsef/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/abcdfsef/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/abcdfsef"],
+          "options": {
+            "jestConfig": "libs/abcdfsef/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "abcdfsesdff": {
+      "root": "libs/abcdfsesdff",
+      "sourceRoot": "libs/abcdfsesdff/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/abcdfsesdff/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/abcdfsesdff"],
+          "options": {
+            "jestConfig": "libs/abcdfsesdff/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "abcdfsesdffasddfff": {
+      "root": "libs/abcdfsesdffasddfff",
+      "sourceRoot": "libs/abcdfsesdffasddfff/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/abcdfsesdffasddfff/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/abcdfsesdffasddfff"],
+          "options": {
+            "jestConfig": "libs/abcdfsesdffasddfff/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "abcdfsesdffasddffsdff": {
+      "root": "libs/abcdfsesdffasddffsdff",
+      "sourceRoot": "libs/abcdfsesdffasddffsdff/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/abcdfsesdffasddffsdff/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/abcdfsesdffasddffsdff"],
+          "options": {
+            "jestConfig": "libs/abcdfsesdffasddffsdff/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "abcdfsesdffasddffsdffsdf": {
+      "root": "libs/abcdfsesdffasddffsdffsdf",
+      "sourceRoot": "libs/abcdfsesdffasddffsdffsdf/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/abcdfsesdffasddffsdffsdf/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/abcdfsesdffasddffsdffsdf"],
+          "options": {
+            "jestConfig": "libs/abcdfsesdffasddffsdffsdf/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "abcdfsesdffasddffsdffsdf1": {
+      "root": "libs/abcdfsesdffasddffsdffsdf1",
+      "sourceRoot": "libs/abcdfsesdffasddffsdffsdf1/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/abcdfsesdffasddffsdffsdf1/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/abcdfsesdffasddffsdffsdf1"],
+          "options": {
+            "jestConfig": "libs/abcdfsesdffasddffsdffsdf1/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "abcdfsesdffasddffsdffsdsdfsdff": {
+      "root": "libs/abcdfsesdffasddffsdffsdsdfsdff",
+      "sourceRoot": "libs/abcdfsesdffasddffsdffsdsdfsdff/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/abcdfsesdffasddffsdffsdsdfsdff/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/abcdfsesdffasddffsdffsdsdfsdff"],
+          "options": {
+            "jestConfig": "libs/abcdfsesdffasddffsdffsdsdfsdff/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "abcdfsesdffasdff": {
+      "root": "libs/abcdfsesdffasdff",
+      "sourceRoot": "libs/abcdfsesdffasdff/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/abcdfsesdffasdff/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/abcdfsesdffasdff"],
+          "options": {
+            "jestConfig": "libs/abcdfsesdffasdff/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "abcdfsesdfff": {
+      "root": "libs/abcdfsesdfff",
+      "sourceRoot": "libs/abcdfsesdfff/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/abcdfsesdfff/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/abcdfsesdfff"],
+          "options": {
+            "jestConfig": "libs/abcdfsesdfff/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "b": {
+      "root": "libs/b",
+      "sourceRoot": "libs/b/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/b/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/b"],
+          "options": {
+            "jestConfig": "libs/b/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
     "boilerplate": {
       "projectType": "application",
       "root": "apps/boilerplate",
@@ -123,6 +514,167 @@
       "tags": [],
       "implicitDependencies": ["boilerplate"]
     },
+    "c": {
+      "root": "libs/c",
+      "sourceRoot": "libs/c/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/c/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/c"],
+          "options": {
+            "jestConfig": "libs/c/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "d": {
+      "root": "libs/d",
+      "sourceRoot": "libs/d/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/d/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/d"],
+          "options": {
+            "jestConfig": "libs/d/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "e": {
+      "root": "libs/e",
+      "sourceRoot": "libs/e/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/e/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/e"],
+          "options": {
+            "jestConfig": "libs/e/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "f": {
+      "root": "libs/f",
+      "sourceRoot": "libs/f/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/f/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/f"],
+          "options": {
+            "jestConfig": "libs/f/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "featuradsfasdfasdfesdf16": {
+      "root": "libs/featuradsfasdfasdfesdf16",
+      "sourceRoot": "libs/featuradsfasdfasdfesdf16/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/featuradsfasdfasdfesdf16/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/featuradsfasdfasdfesdf16"],
+          "options": {
+            "jestConfig": "libs/featuradsfasdfasdfesdf16/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "featuradsfasdfasdfesdf1sdf6": {
+      "root": "libs/featuradsfasdfasdfesdf1sdf6",
+      "sourceRoot": "libs/featuradsfasdfasdfesdf1sdf6/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/featuradsfasdfasdfesdf1sdf6/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/featuradsfasdfasdfesdf1sdf6"],
+          "options": {
+            "jestConfig": "libs/featuradsfasdfasdfesdf1sdf6/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "featuradsfasdfasdfesdf1sdfd6": {
+      "root": "libs/featuradsfasdfasdfesdf1sdfd6",
+      "sourceRoot": "libs/featuradsfasdfasdfesdf1sdfd6/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/featuradsfasdfasdfesdf1sdfd6/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/featuradsfasdfasdfesdf1sdfd6"],
+          "options": {
+            "jestConfig": "libs/featuradsfasdfasdfesdf1sdfd6/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
     "forcast": {
       "root": "libs/forcast",
       "sourceRoot": "libs/forcast/src",
@@ -140,6 +692,1639 @@
           "outputs": ["coverage/libs/forcast"],
           "options": {
             "jestConfig": "libs/forcast/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "g": {
+      "root": "libs/g",
+      "sourceRoot": "libs/g/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/g/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/g"],
+          "options": {
+            "jestConfig": "libs/g/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya": {
+      "root": "libs/gaya",
+      "sourceRoot": "libs/gaya/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya"],
+          "options": {
+            "jestConfig": "libs/gaya/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya10": {
+      "root": "libs/gaya10",
+      "sourceRoot": "libs/gaya10/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya10/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya10"],
+          "options": {
+            "jestConfig": "libs/gaya10/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya11": {
+      "root": "libs/gaya11",
+      "sourceRoot": "libs/gaya11/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya11/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya11"],
+          "options": {
+            "jestConfig": "libs/gaya11/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya12": {
+      "root": "libs/gaya12",
+      "sourceRoot": "libs/gaya12/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya12/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya12"],
+          "options": {
+            "jestConfig": "libs/gaya12/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya13": {
+      "root": "libs/gaya13",
+      "sourceRoot": "libs/gaya13/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya13/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya13"],
+          "options": {
+            "jestConfig": "libs/gaya13/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya14": {
+      "root": "libs/gaya14",
+      "sourceRoot": "libs/gaya14/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya14/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya14"],
+          "options": {
+            "jestConfig": "libs/gaya14/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya15": {
+      "root": "libs/gaya15",
+      "sourceRoot": "libs/gaya15/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya15/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya15"],
+          "options": {
+            "jestConfig": "libs/gaya15/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya2": {
+      "root": "libs/gaya2",
+      "sourceRoot": "libs/gaya2/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya2/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya2"],
+          "options": {
+            "jestConfig": "libs/gaya2/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya20": {
+      "root": "libs/gaya20",
+      "sourceRoot": "libs/gaya20/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya20/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya20"],
+          "options": {
+            "jestConfig": "libs/gaya20/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya21": {
+      "root": "libs/gaya21",
+      "sourceRoot": "libs/gaya21/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya21/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya21"],
+          "options": {
+            "jestConfig": "libs/gaya21/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya22": {
+      "root": "libs/gaya22",
+      "sourceRoot": "libs/gaya22/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya22/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya22"],
+          "options": {
+            "jestConfig": "libs/gaya22/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya23": {
+      "root": "libs/gaya23",
+      "sourceRoot": "libs/gaya23/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya23/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya23"],
+          "options": {
+            "jestConfig": "libs/gaya23/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya24": {
+      "root": "libs/gaya24",
+      "sourceRoot": "libs/gaya24/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya24/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya24"],
+          "options": {
+            "jestConfig": "libs/gaya24/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya25": {
+      "root": "libs/gaya25",
+      "sourceRoot": "libs/gaya25/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya25/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya25"],
+          "options": {
+            "jestConfig": "libs/gaya25/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya26": {
+      "root": "libs/gaya26",
+      "sourceRoot": "libs/gaya26/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya26/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya26"],
+          "options": {
+            "jestConfig": "libs/gaya26/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya27": {
+      "root": "libs/gaya27",
+      "sourceRoot": "libs/gaya27/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya27/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya27"],
+          "options": {
+            "jestConfig": "libs/gaya27/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya28": {
+      "root": "libs/gaya28",
+      "sourceRoot": "libs/gaya28/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya28/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya28"],
+          "options": {
+            "jestConfig": "libs/gaya28/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya29": {
+      "root": "libs/gaya29",
+      "sourceRoot": "libs/gaya29/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya29/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya29"],
+          "options": {
+            "jestConfig": "libs/gaya29/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya30": {
+      "root": "libs/gaya30",
+      "sourceRoot": "libs/gaya30/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya30/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya30"],
+          "options": {
+            "jestConfig": "libs/gaya30/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya31": {
+      "root": "libs/gaya31",
+      "sourceRoot": "libs/gaya31/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya31/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya31"],
+          "options": {
+            "jestConfig": "libs/gaya31/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya32": {
+      "root": "libs/gaya32",
+      "sourceRoot": "libs/gaya32/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya32/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya32"],
+          "options": {
+            "jestConfig": "libs/gaya32/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya33": {
+      "root": "libs/gaya33",
+      "sourceRoot": "libs/gaya33/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya33/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya33"],
+          "options": {
+            "jestConfig": "libs/gaya33/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya34": {
+      "root": "libs/gaya34",
+      "sourceRoot": "libs/gaya34/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya34/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya34"],
+          "options": {
+            "jestConfig": "libs/gaya34/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya35": {
+      "root": "libs/gaya35",
+      "sourceRoot": "libs/gaya35/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya35/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya35"],
+          "options": {
+            "jestConfig": "libs/gaya35/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya36": {
+      "root": "libs/gaya36",
+      "sourceRoot": "libs/gaya36/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya36/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya36"],
+          "options": {
+            "jestConfig": "libs/gaya36/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya37": {
+      "root": "libs/gaya37",
+      "sourceRoot": "libs/gaya37/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya37/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya37"],
+          "options": {
+            "jestConfig": "libs/gaya37/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya38": {
+      "root": "libs/gaya38",
+      "sourceRoot": "libs/gaya38/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya38/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya38"],
+          "options": {
+            "jestConfig": "libs/gaya38/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya39": {
+      "root": "libs/gaya39",
+      "sourceRoot": "libs/gaya39/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya39/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya39"],
+          "options": {
+            "jestConfig": "libs/gaya39/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya4": {
+      "root": "libs/gaya4",
+      "sourceRoot": "libs/gaya4/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya4/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya4"],
+          "options": {
+            "jestConfig": "libs/gaya4/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya40": {
+      "root": "libs/gaya40",
+      "sourceRoot": "libs/gaya40/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya40/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya40"],
+          "options": {
+            "jestConfig": "libs/gaya40/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya41": {
+      "root": "libs/gaya41",
+      "sourceRoot": "libs/gaya41/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya41/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya41"],
+          "options": {
+            "jestConfig": "libs/gaya41/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya42": {
+      "root": "libs/gaya42",
+      "sourceRoot": "libs/gaya42/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya42/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya42"],
+          "options": {
+            "jestConfig": "libs/gaya42/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya5": {
+      "root": "libs/gaya5",
+      "sourceRoot": "libs/gaya5/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya5/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya5"],
+          "options": {
+            "jestConfig": "libs/gaya5/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya6": {
+      "root": "libs/gaya6",
+      "sourceRoot": "libs/gaya6/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya6/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya6"],
+          "options": {
+            "jestConfig": "libs/gaya6/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya7": {
+      "root": "libs/gaya7",
+      "sourceRoot": "libs/gaya7/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya7/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya7"],
+          "options": {
+            "jestConfig": "libs/gaya7/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya8": {
+      "root": "libs/gaya8",
+      "sourceRoot": "libs/gaya8/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya8/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya8"],
+          "options": {
+            "jestConfig": "libs/gaya8/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya9": {
+      "root": "libs/gaya9",
+      "sourceRoot": "libs/gaya9/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya9/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya9"],
+          "options": {
+            "jestConfig": "libs/gaya9/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdf": {
+      "root": "libs/gsdf",
+      "sourceRoot": "libs/gsdf/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdf/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdf"],
+          "options": {
+            "jestConfig": "libs/gsdf/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdf1": {
+      "root": "libs/gsdf1",
+      "sourceRoot": "libs/gsdf1/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdf1/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdf1"],
+          "options": {
+            "jestConfig": "libs/gsdf1/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdfs5": {
+      "root": "libs/gsdfs5",
+      "sourceRoot": "libs/gsdfs5/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdfs5/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdfs5"],
+          "options": {
+            "jestConfig": "libs/gsdfs5/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdfsdf1": {
+      "root": "libs/gsdfsdf1",
+      "sourceRoot": "libs/gsdfsdf1/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdfsdf1/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdfsdf1"],
+          "options": {
+            "jestConfig": "libs/gsdfsdf1/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdfsdf12": {
+      "root": "libs/gsdfsdf12",
+      "sourceRoot": "libs/gsdfsdf12/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdfsdf12/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdfsdf12"],
+          "options": {
+            "jestConfig": "libs/gsdfsdf12/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdfsdfadasdff12": {
+      "root": "libs/gsdfsdfadasdff12",
+      "sourceRoot": "libs/gsdfsdfadasdff12/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdfsdfadasdff12/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdfsdfadasdff12"],
+          "options": {
+            "jestConfig": "libs/gsdfsdfadasdff12/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdfsdfadasdfsfdasdff12": {
+      "root": "libs/gsdfsdfadasdfsfdasdff12",
+      "sourceRoot": "libs/gsdfsdfadasdfsfdasdff12/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdfsdfadasdfsfdasdff12/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdfsdfadasdfsfdasdff12"],
+          "options": {
+            "jestConfig": "libs/gsdfsdfadasdfsfdasdff12/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdfsdfadasdfsfdasdff123": {
+      "root": "libs/gsdfsdfadasdfsfdasdff123",
+      "sourceRoot": "libs/gsdfsdfadasdfsfdasdff123/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdfsdfadasdfsfdasdff123/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdfsdfadasdfsfdasdff123"],
+          "options": {
+            "jestConfig": "libs/gsdfsdfadasdfsfdasdff123/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdfsdfadasdfsfdasdff1234": {
+      "root": "libs/gsdfsdfadasdfsfdasdff1234",
+      "sourceRoot": "libs/gsdfsdfadasdfsfdasdff1234/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdfsdfadasdfsfdasdff1234/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdfsdfadasdfsfdasdff1234"],
+          "options": {
+            "jestConfig": "libs/gsdfsdfadasdfsfdasdff1234/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdfsdfadasdfsfdasdff12345": {
+      "root": "libs/gsdfsdfadasdfsfdasdff12345",
+      "sourceRoot": "libs/gsdfsdfadasdfsfdasdff12345/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdfsdfadasdfsfdasdff12345/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdfsdfadasdfsfdasdff12345"],
+          "options": {
+            "jestConfig": "libs/gsdfsdfadasdfsfdasdff12345/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdfsdfadasdfsfdf12": {
+      "root": "libs/gsdfsdfadasdfsfdf12",
+      "sourceRoot": "libs/gsdfsdfadasdfsfdf12/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdfsdfadasdfsfdf12/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdfsdfadasdfsfdf12"],
+          "options": {
+            "jestConfig": "libs/gsdfsdfadasdfsfdf12/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdfsdfadf12": {
+      "root": "libs/gsdfsdfadf12",
+      "sourceRoot": "libs/gsdfsdfadf12/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdfsdfadf12/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdfsdfadf12"],
+          "options": {
+            "jestConfig": "libs/gsdfsdfadf12/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdsdffs5": {
+      "root": "libs/gsdsdffs5",
+      "sourceRoot": "libs/gsdsdffs5/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdsdffs5/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdsdffs5"],
+          "options": {
+            "jestConfig": "libs/gsdsdffs5/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdsdffsddsff5": {
+      "root": "libs/gsdsdffsddsff5",
+      "sourceRoot": "libs/gsdsdffsddsff5/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdsdffsddsff5/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdsdffsddsff5"],
+          "options": {
+            "jestConfig": "libs/gsdsdffsddsff5/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdsdffsddsfsdfdf5": {
+      "root": "libs/gsdsdffsddsfsdfdf5",
+      "sourceRoot": "libs/gsdsdffsddsfsdfdf5/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdsdffsddsfsdfdf5/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdsdffsddsfsdfdf5"],
+          "options": {
+            "jestConfig": "libs/gsdsdffsddsfsdfdf5/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdsdffsddsfsdfdfdf5": {
+      "root": "libs/gsdsdffsddsfsdfdfdf5",
+      "sourceRoot": "libs/gsdsdffsddsfsdfdfdf5/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdsdffsddsfsdfdfdf5/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdsdffsddsfsdfdfdf5"],
+          "options": {
+            "jestConfig": "libs/gsdsdffsddsfsdfdfdf5/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdsdffsddsfsdfdfdfdf5": {
+      "root": "libs/gsdsdffsddsfsdfdfdfdf5",
+      "sourceRoot": "libs/gsdsdffsddsfsdfdfdfdf5/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdsdffsddsfsdfdfdfdf5/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdsdffsddsfsdfdfdfdf5"],
+          "options": {
+            "jestConfig": "libs/gsdsdffsddsfsdfdfdfdf5/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdsdffsddsfsdfdfdfdfsddff5": {
+      "root": "libs/gsdsdffsddsfsdfdfdfdfsddff5",
+      "sourceRoot": "libs/gsdsdffsddsfsdfdfdfdfsddff5/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdsdffsddsfsdfdfdfdfsddff5/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdsdffsddsfsdfdfdfdfsddff5"],
+          "options": {
+            "jestConfig": "libs/gsdsdffsddsfsdfdfdfdfsddff5/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdsdffsddsfsdfdfdfdfsddfff5": {
+      "root": "libs/gsdsdffsddsfsdfdfdfdfsddfff5",
+      "sourceRoot": "libs/gsdsdffsddsfsdfdfdfdfsddfff5/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdsdffsddsfsdfdfdfdfsddfff5/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdsdffsddsfsdfdfdfdfsddfff5"],
+          "options": {
+            "jestConfig": "libs/gsdsdffsddsfsdfdfdfdfsddfff5/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdsdffsddsfsdfdfdfdfsddffff5": {
+      "root": "libs/gsdsdffsddsfsdfdfdfdfsddffff5",
+      "sourceRoot": "libs/gsdsdffsddsfsdfdfdfdfsddffff5/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdsdffsddsfsdfdfdfdfsddffff5/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdsdffsddsfsdfdfdfdfsddffff5"],
+          "options": {
+            "jestConfig": "libs/gsdsdffsddsfsdfdfdfdfsddffff5/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdsdffsddsfsdfdfdfdfsddffffdf5": {
+      "root": "libs/gsdsdffsddsfsdfdfdfdfsddffffdf5",
+      "sourceRoot": "libs/gsdsdffsddsfsdfdfdfdfsddffffdf5/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdsdffsddsfsdfdfdfdfsddffffdf5/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdsdffsddsfsdfdfdfdfsddffffdf5"],
+          "options": {
+            "jestConfig": "libs/gsdsdffsddsfsdfdfdfdfsddffffdf5/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdsdffsddsfsdfdfdfdfsdf5": {
+      "root": "libs/gsdsdffsddsfsdfdfdfdfsdf5",
+      "sourceRoot": "libs/gsdsdffsddsfsdfdfdfdfsdf5/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdsdffsddsfsdfdfdfdfsdf5/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdsdffsddsfsdfdfdfdfsdf5"],
+          "options": {
+            "jestConfig": "libs/gsdsdffsddsfsdfdfdfdfsdf5/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdsdffsddsfsdfdff5": {
+      "root": "libs/gsdsdffsddsfsdfdff5",
+      "sourceRoot": "libs/gsdsdffsddsfsdfdff5/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdsdffsddsfsdfdff5/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdsdffsddsfsdfdff5"],
+          "options": {
+            "jestConfig": "libs/gsdsdffsddsfsdfdff5/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdsdffsddsfsdff5": {
+      "root": "libs/gsdsdffsddsfsdff5",
+      "sourceRoot": "libs/gsdsdffsddsfsdff5/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdsdffsddsfsdff5/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdsdffsddsfsdff5"],
+          "options": {
+            "jestConfig": "libs/gsdsdffsddsfsdff5/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gsdsdffsdf5": {
+      "root": "libs/gsdsdffsdf5",
+      "sourceRoot": "libs/gsdsdffsdf5/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gsdsdffsdf5/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gsdsdffsdf5"],
+          "options": {
+            "jestConfig": "libs/gsdsdffsdf5/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "person": {
+      "root": "libs/person",
+      "sourceRoot": "libs/person/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/person/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/person"],
+          "options": {
+            "jestConfig": "libs/person/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "personal": {
+      "root": "libs/personal",
+      "sourceRoot": "libs/personal/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/personal/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/personal"],
+          "options": {
+            "jestConfig": "libs/personal/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "personaly": {
+      "root": "libs/personaly",
+      "sourceRoot": "libs/personaly/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/personaly/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/personaly"],
+          "options": {
+            "jestConfig": "libs/personaly/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "personalyy": {
+      "root": "libs/personalyy",
+      "sourceRoot": "libs/personalyy/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/personalyy/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/personalyy"],
+          "options": {
+            "jestConfig": "libs/personalyy/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "teddy": {
+      "root": "libs/teddy",
+      "sourceRoot": "libs/teddy/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/teddy/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/teddy"],
+          "options": {
+            "jestConfig": "libs/teddy/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "teddybear": {
+      "root": "libs/teddybear",
+      "sourceRoot": "libs/teddybear/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/teddybear/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/teddybear"],
+          "options": {
+            "jestConfig": "libs/teddybear/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "teddybearosh": {
+      "root": "libs/teddybearosh",
+      "sourceRoot": "libs/teddybearosh/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/teddybearosh/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/teddybearosh"],
+          "options": {
+            "jestConfig": "libs/teddybearosh/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "tester": {
+      "root": "libs/tester",
+      "sourceRoot": "libs/tester/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/tester/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tester"],
+          "options": {
+            "jestConfig": "libs/tester/jest.config.js",
             "passWithNoTests": true
           }
         }

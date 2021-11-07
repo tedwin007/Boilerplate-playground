@@ -1,12 +1,10 @@
-import {
-  APIMethods,
-  DomainApiConfig
-} from "../../../../../../../libs/shared/src/lib/api/interfaces/domain-api.config.interface";
-import {AbstractDomainApi} from "../../../../../../../libs/shared/src/lib/api/abstruct-domain-api.class";
 import {HttpClient} from "@angular/common/http";
-import {environment} from "../../../../../../../apps/boilerplate/src/environments/environment";
+import {Injectable} from "@angular/core";
+import {environment} from "../../../../../apps/boilerplate/src/environments/environment";
+import { AbstractDomainApi } from '@tw/shared';
+import {APIMethods} from "@tw/shared";
 
-type <%=classify(name)%>Apis: DomainApiConfig= {};
+type <%=classify(name)%>Apis = {};
 
 @Injectable()
 export class <%=classify(name)%>ApiService extends AbstractDomainApi<<%=classify(name)%>Apis>  {

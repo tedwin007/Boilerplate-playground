@@ -1,0 +1,17 @@
+<% function renderFormProps(keys,json) {%>
+<% keys.forEach( function(prop){ %>
+<div class="input-group">
+  <label for="<%- prop %>"><%- prop %> </label>
+  <input id="<%- prop %>" type="text" formControlName="<%- prop %>">
+</div>
+<%})%>
+<%}%>
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <%-renderFormProps(Object.keys(json),json)%>
+  <div class="form-buttons-area">
+    <button type="submit" [disabled]="!form.valid">save</button>
+    <button type="submit" [disabled]="!form.valid" *ngIf="canEdit">edit</button>
+    <button type="submit" [disabled]="!form.valid">delete</button>
+  </div>
+</form>
