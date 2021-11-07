@@ -583,6 +583,52 @@
       },
       "tags": []
     },
+    "example": {
+      "root": "libs/example",
+      "sourceRoot": "libs/example/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/example/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/example"],
+          "options": {
+            "jestConfig": "libs/example/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "example2": {
+      "root": "libs/example2",
+      "sourceRoot": "libs/example2/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/example2/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/example2"],
+          "options": {
+            "jestConfig": "libs/example2/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
     "f": {
       "root": "libs/f",
       "sourceRoot": "libs/f/src",
@@ -1451,6 +1497,98 @@
           "outputs": ["coverage/libs/gaya42"],
           "options": {
             "jestConfig": "libs/gaya42/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya43": {
+      "root": "libs/gaya43",
+      "sourceRoot": "libs/gaya43/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya43/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya43"],
+          "options": {
+            "jestConfig": "libs/gaya43/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya44": {
+      "root": "libs/gaya44",
+      "sourceRoot": "libs/gaya44/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya44/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya44"],
+          "options": {
+            "jestConfig": "libs/gaya44/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya45": {
+      "root": "libs/gaya45",
+      "sourceRoot": "libs/gaya45/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya45/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya45"],
+          "options": {
+            "jestConfig": "libs/gaya45/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "gaya46": {
+      "root": "libs/gaya46",
+      "sourceRoot": "libs/gaya46/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/gaya46/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gaya46"],
+          "options": {
+            "jestConfig": "libs/gaya46/jest.config.js",
             "passWithNoTests": true
           }
         }

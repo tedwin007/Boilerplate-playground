@@ -2,7 +2,8 @@
 <% keys.forEach( function(prop){ %>
 <div class="input-group">
   <label for="<%- prop %>"><%- prop %> </label>
-  <input id="<%- prop %>" type="text" formControlName="<%- prop %>">
+  <input id="<%- prop %>" type="<%=json[prop]['type']%>" formControlName="<%- prop %>">
+  <div *ngIf="form.get('<%=prop%>').invalid" class="input-error"><%=json[prop]['form']['error'] %></div>
 </div>
 <%})%>
 <%}%>

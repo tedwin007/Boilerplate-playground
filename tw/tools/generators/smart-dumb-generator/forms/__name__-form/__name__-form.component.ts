@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
 import {<%=classify(name)%>Class} from "./class/<%=name%>-class";
+import {I<%=classify(name)%>} from "./class/<%=name%>-interface";
 
 <% function renderSingleValidator(validatorName,value) {%><%if(!!value){%>Validators.<%- validatorName %>(<%- value %>),<%}else{%>Validators.<%- validatorName %>,<%}%><%}%>
 <% function renderValidators(validators,json,currentProps) { %><% validators.forEach(function(validatorName){ %><% var value = json[currentProps]['form']['validators'][validatorName] %> <%- renderSingleValidator(validatorName,value)%> <%  }) _%> <% } %>
@@ -13,7 +14,7 @@ import {<%=classify(name)%>Class} from "./class/<%=name%>-class";
 
 export class <%= classify(name) %>FormComponent implements OnInit {
   @Input() canEdit = false;
-  @Input set data(content:I<%=classify(name)%>){
+  @Input() set data(content:I<%=classify(name)%>){
     if (content){
       this.canEdit = true;
     }
