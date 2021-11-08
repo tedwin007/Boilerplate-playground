@@ -1,4 +1,5 @@
 import { BehaviorSubject, Observable } from "rxjs";
+import {Injectable} from "@angular/core";
 
 /**
  * Abstract Base Flux
@@ -9,7 +10,7 @@ import { BehaviorSubject, Observable } from "rxjs";
  * @class AbstractBaseFlux
  * @template State
  */
-export class StateManger<State> {
+export class StateManger<State = any> {
 
   protected _state$: BehaviorSubject<State>
 

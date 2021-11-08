@@ -15,9 +15,6 @@ export abstract class AbstractDomainApi<T = DomainApiConfig> extends BaseAPI {
 
   }
 
-  protected getJoinedURL(path: string): string {
-    return `${this.baseUrl}/${path}`;
-  };
 }
 
 

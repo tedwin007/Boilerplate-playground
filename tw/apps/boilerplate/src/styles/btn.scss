@@ -1,0 +1,19 @@
+@import "color-palette";
+
+.btn {
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  border: 1px solid $shuttle-gray!important;
+  border-radius: 3px!important;
+  text-align: center;
+  font-size: 0.7rem!important;
+
+  &-regular {
+    padding: 0 10px!important;
+    height: 25px;
+    font-weight: 500!important;
+
+  }
+}
+

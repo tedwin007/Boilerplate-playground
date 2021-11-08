@@ -1,0 +1,10 @@
+@import './../../../styles/color-palette';
+
+:host {
+  background: white;
+  position:relative;
+  display: inherit;
+  height: 100%;
+  box-sizing: border-box;
+}
+

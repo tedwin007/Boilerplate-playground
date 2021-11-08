@@ -1,0 +1,14 @@
+
+a {
+  min-height: 40px;
+  max-width: 80%;
+  padding: 10px;
+
+  &.is-active {
+    background: #EEF5FA;
+    border-radius: 4px;
+    box-sizing: content-box;
+    border: 1px solid gray;
+  }
+}
+

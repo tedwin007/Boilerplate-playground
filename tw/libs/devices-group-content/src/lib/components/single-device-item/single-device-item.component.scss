@@ -1,0 +1,9 @@
+:host{
+  border: 4px solid #E5E5E5;
+  display: grid;
+  height: 100%;
+  align-content: center;
+  box-sizing: border-box;
+  padding: 20px;
+  grid-template-rows: 1fr 1fr 1fr;
+}

@@ -1,21 +1,27 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
 import {AppComponent} from './app.component';
-import {SharedModule} from "@tw/shared";
 import {RouterModule} from "@angular/router";
+import {LayoutModule} from "./layout/layout.module";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HttpClientModule} from "@angular/common/http";
+import {DevicesGroupContentModule} from "../../../../libs/devices-group-content/src/lib/devices-group-content.module";
 
 const routes = [{
-  path: 'forecast',
-  loadChildren: () => import('@tw/forcast').then(m => m.ForcastModule)
+  path: '',
+  loadChildren: () => import('@tw/devices-group-content').then(m => m.devicesGroupContent())
 }];
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    SharedModule,
-    RouterModule.forRoot(routes)],
+    BrowserAnimationsModule,
+    DevicesGroupContentModule,
+    HttpClientModule,
+    LayoutModule,
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {

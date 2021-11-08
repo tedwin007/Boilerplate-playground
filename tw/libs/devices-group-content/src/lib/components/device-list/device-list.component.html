@@ -1,0 +1,9 @@
+<div class="container-fluid">
+  <div class="d-flex row">
+    <ng-container *ngFor="let item of deviceState$ | async as device">
+      <div class="col-4 pb-5">
+        <ui-device-component [data]="item"></ui-device-component>
+      </div>
+    </ng-container>
+  </div>
+</div>

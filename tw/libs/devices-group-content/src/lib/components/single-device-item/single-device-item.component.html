@@ -1,0 +1,9 @@
+<div class="device-card-title">
+  <p><i class="fas fa-exclamation-triangle major mr-2"></i>{{data.Location}}</p>
+</div>
+
+<small class="device-card-title">{{data.Title}}</small>
+<div class="device-card-tags">
+  <span *ngFor="let item of (data.Aggregated | split:',')"> {{item}}</span>
+</div>
+

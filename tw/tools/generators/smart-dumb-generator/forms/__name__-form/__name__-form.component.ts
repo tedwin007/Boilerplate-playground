@@ -36,7 +36,8 @@ export class <%= classify(name) %>FormComponent implements OnInit {
     if(this.form.valid) {
       const item = new <%=classify(name)%>Class(this.form.value);
       this.onSave.emit(item);
-    } else {
+      this.form.reset();
+  } else {
       //todo: toaster/throw error/logger etc...
     }
   }

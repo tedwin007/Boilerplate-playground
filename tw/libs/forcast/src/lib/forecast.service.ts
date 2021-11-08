@@ -22,12 +22,6 @@ export class ForecastService extends StateManger<DayList> {
       .pipe(map((item: DayList) => item.map((data: DayDataItem) => new DayDataItem(data))));
   }
 
-  fetchDailyForecast(date: string): Observable<DayDataItem> {
-    return this.apiService.call.getDayForecast(date)
-      .pipe(tap((dailyData: DayDataItem) => {
-        //!! this is intentionally wrong
-        this.setState([dailyData]);
-      }))
-  }
+
 
 }

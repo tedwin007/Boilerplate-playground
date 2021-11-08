@@ -3,7 +3,10 @@
 <div class="input-group">
   <label for="<%- prop %>"><%- prop %> </label>
   <input id="<%- prop %>" type="<%=json[prop]['type']%>" formControlName="<%- prop %>">
-  <div *ngIf="form.get('<%=prop%>').invalid" class="input-error"><%=json[prop]['form']['error'] %></div>
+  <div class="input-error"
+       *ngIf="form.get('<%=prop%>').invalid  && (form.get('<%=prop%>').dirty || form.get('<%=prop%>').touched)">
+    <%- json[prop]['form']['error'] %>
+  </div>
 </div>
 <%})%>
 <%}%>

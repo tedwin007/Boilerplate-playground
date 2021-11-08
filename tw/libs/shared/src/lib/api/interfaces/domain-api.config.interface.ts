@@ -9,7 +9,8 @@ export interface ApiCallOptions {
 
 
 export interface DomainApiConfig {
-  [apiName: string]: APIConfig
+  //to fix any so it will support function
+  [apiName: string]: APIConfig | any
 }
 
 // eslint-disable-next-line @typescript-eslint/ban-types
