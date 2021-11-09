@@ -1,4 +1,9 @@
 
+:host {
+  position: relative;
+  display: inherit;
+}
+
 a {
   min-height: 40px;
   max-width: 80%;

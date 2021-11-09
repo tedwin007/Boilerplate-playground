@@ -7,18 +7,20 @@
 .searchbar-container {
   position: relative;
   display: grid;
+
   .searchbar-input {
     padding-left: 10px;
     padding-right: 10px;
-    box-shadow: inset 2px 2px 15px lightgray;
+    box-shadow: inset 1px 2px 9px grey;
     border-radius: 15px;
+    border: 0px;
   }
 
   span {
     position: absolute;
     border-radius: 15px;
     right: 0;
-    margin-top: 5px;
+    margin-top: 2px;
     margin-right: 10px;
     color: lightgray;
   }

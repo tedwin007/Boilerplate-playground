@@ -1,6 +1,6 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DevicesGroupContentService} from '../../devices-group-content.service';
-import {Observable, Subject} from "rxjs";
+import {Observable} from "rxjs";
 import {ActivatedRoute} from "@angular/router";
 
 @Component({
@@ -8,19 +8,17 @@ import {ActivatedRoute} from "@angular/router";
   templateUrl: './device-list.component.html',
   styleUrls: ['./device-list.component.scss']
 })
-export class DeviceListComponent implements OnInit, OnDestroy {
-  private _ngUnsubscirbe = new Subject();
+export class DeviceListComponent implements OnInit {
   deviceState$?: Observable<any[]>;
+  isTableView$: Observable<boolean> = this.devicesGroupContentService.getIsTableViewActive();
 
-  constructor(private devicesGroupContentService: DevicesGroupContentService, private route: ActivatedRoute) {
+  constructor(private devicesGroupContentService: DevicesGroupContentService,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit() {
-    this.deviceState$ = this.devicesGroupContentService.getData(this.route?.snapshot?.routeConfig?.path || 'allData');
+    let routeConfig = this.route?.snapshot?.routeConfig;
+    this.deviceState$ = this.devicesGroupContentService.getData(routeConfig?.path || 'allData');
   }
 
-  ngOnDestroy() {
-    this._ngUnsubscirbe.next();
-    this._ngUnsubscirbe.complete()
-  }
 }

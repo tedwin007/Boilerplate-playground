@@ -1,28 +1,29 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ColDef} from "ag-grid-community";
 import {DevicesGroupContentService} from "../../devices-group-content.service";
 import {ActivatedRoute} from "@angular/router";
 import {take} from "rxjs/operators";
+import {AgSeverityComponent} from "./ag-grid-components/ag-severity/ag-severity.component";
 
 @Component({
   selector: 'tw-table-view',
   templateUrl: './table-view.component.html',
   styleUrls: ['./table-view.component.scss']
 })
-export class TableViewComponent implements OnInit, OnDestroy {
-
+export class TableViewComponent implements OnInit {
+  rowData = [];
   columnDefs: ColDef[] = [
     {field: 'Acknowledged'},
-    {field: 'Severity', width:20},
+    {field: 'Severity', width: 20, cellRenderer: 'AgSeverityComponent'},
     {field: 'Location'},
     {field: 'Title'},
-    {field: 'Aggregated'},
+    {field: 'Aggregated', width: 250},
   ];
 
   constructor(private devicesGroupContentService: DevicesGroupContentService, private route: ActivatedRoute) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.devicesGroupContentService.getData(this.route?.snapshot?.routeConfig?.path || 'allData')
       .pipe(take(1))
       .subscribe((data) => {
@@ -30,8 +31,8 @@ export class TableViewComponent implements OnInit, OnDestroy {
       });
   }
 
-  rowData = [];
+  frameworkComponents = {
+    'AgSeverityComponent': AgSeverityComponent
+  };
 
-  ngOnDestroy(): void {
-  }
 }

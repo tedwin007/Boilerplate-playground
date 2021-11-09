@@ -1,15 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import {ICellRendererParams} from "ag-grid-community";
 
 @Component({
   selector: 'ag-severity',
-  templateUrl: './ag-severity.component.html',
-  styleUrls: ['./ag-severity.component.scss']
+  template: `
+    <span>
+      <i class="mr-2 {{cellValue| severity}}"></i>&nbsp;
+    </span>`
 })
-export class AgSeverityComponent implements OnInit {
+export class AgSeverityComponent {
+   cellValue: string = ''
 
-  constructor() { }
-
-  ngOnInit(): void {
+  // gets called once before the renderer is used
+  agInit(params: ICellRendererParams): void {
+    this.cellValue = this.getValueToDisplay(params);
   }
 
+  // gets called whenever the cell refreshes
+  refresh(params: ICellRendererParams) {
+    // set value into cell again
+    this.cellValue = this.getValueToDisplay(params);
+  }
+
+  getValueToDisplay(params: ICellRendererParams) {
+    return params.valueFormatted ? params.valueFormatted : params.value;
+  }
 }

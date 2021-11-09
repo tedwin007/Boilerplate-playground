@@ -1,5 +1,5 @@
 <div class="device-card-title">
-  <p><i class="fas fa-exclamation-triangle major mr-2"></i>{{data.Location}}</p>
+  <p><i class="mr-2 {{data.Severity | severity}}"></i>{{data.Location}}</p>
 </div>
 
 <small class="device-card-title">{{data.Title}}</small>
