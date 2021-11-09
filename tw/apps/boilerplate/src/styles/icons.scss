@@ -1,0 +1,31 @@
+
+.fas {
+  &.fa-exclamation-triangle.major {
+    color: #d1844e;
+    transform: rotate(180deg);
+}
+
+  &.fa-check-square.reachable {
+    color: #7aa647;
+}
+
+  &.fa-times-circle.critical {
+    color: #a0413d;
+}
+
+  &.fa-user-alt.user,
+  &.fa-check-square.clear,
+  &.fa-trash-alt.trash,
+  &.fa-cog.settings {
+    color: #3f535e;
+}
+
+  &.fa-search.search {
+    color: #b2b2b2;
+}
+
+  &.fa-caret-down,
+  &.fa-caret-right {
+    color: #848484;
+}
+}
