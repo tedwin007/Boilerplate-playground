@@ -1,7 +1,6 @@
 :host {
   display: inherit;
   position: relative;
-
 }
 
 .searchbar-container {
@@ -9,18 +8,22 @@
   display: grid;
 
   .searchbar-input {
-    padding-left: 10px;
-    padding-right: 10px;
-    box-shadow: inset 1px 2px 9px grey;
+    padding: 3px 3px 3px 10px;
+    box-shadow: inset 1px 2px 3px grey;
     border-radius: 15px;
-    border: 0px;
+    border: 0;
+  }
+
+  input::placeholder{
+    color: lightgray;
+    padding-left: 10px
   }
 
   span {
     position: absolute;
     border-radius: 15px;
     right: 0;
-    margin-top: 2px;
+    margin-top: 5px;
     margin-right: 10px;
     color: lightgray;
   }

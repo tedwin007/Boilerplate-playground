@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable, of, Subject} from "rxjs";
+import {Observable, of} from "rxjs";
 import {IDeviceGroup} from "../../models/interfaces/device-group.interface";
 import {DevicesGroupContentService} from "../../devices-group-content.service";
-import {takeUntil} from "rxjs/operators";
 
 @Component({
   selector: 'device-group-navigation',
@@ -10,18 +9,13 @@ import {takeUntil} from "rxjs/operators";
   styleUrls: ['./device-group-navigation.component.scss']
 })
 export class DeviceGroupNavigationComponent implements OnInit {
-  groupsList$: Observable<IDeviceGroup[]>=of([])
-  private _ngUnsubscribe = new Subject();
+  groupsList$: Observable<IDeviceGroup[]> = of([])
 
   constructor(private devicesGroupContentService: DevicesGroupContentService) {
   }
 
   ngOnInit() {
-    this.groupsList$ = this.devicesGroupContentService.getState().pipe(takeUntil(this._ngUnsubscribe));
+    this.groupsList$ = this.devicesGroupContentService.getState()
   }
 
-  ngOnDestroy() {
-    this._ngUnsubscribe.next();
-    this._ngUnsubscribe.complete()
-  }
 }

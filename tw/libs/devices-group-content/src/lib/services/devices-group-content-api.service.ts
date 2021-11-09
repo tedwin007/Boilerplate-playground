@@ -18,7 +18,6 @@ export class DevicesGroupContentApiService extends AbstractDomainApi<DevicesGrou
     },
     getAreaData: (areaName: string) => {
       const url = this.config.getAreaData.call(this, areaName);
-      console.log(url.url);
       return this.get<{ data: any[] }>(url.url).pipe(map((response: { data: any[] }) => response.data));
     }
   }
@@ -34,7 +33,6 @@ export class DevicesGroupContentApiService extends AbstractDomainApi<DevicesGrou
         url: 'assets/data/groups.json',
       },
       getAreaData(areaName: string) {
-        console.log(this)
         return {url: `assets/data/${areaName}.json`}
       }
     };

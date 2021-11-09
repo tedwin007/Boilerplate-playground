@@ -10,8 +10,7 @@ export class SeverityPipe implements PipeTransform {
     [3, 'fas fa-times-circle critical']
   ]);
 
-  transform(value: number | string): string | number  {
-    console.log(value);
+  transform(value: number | string): string | number {
     return this._severityIcons.get(Number(value)) || value;
   }
 

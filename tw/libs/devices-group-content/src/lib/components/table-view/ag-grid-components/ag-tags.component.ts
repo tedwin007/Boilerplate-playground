@@ -3,9 +3,7 @@ import {ICellRendererParams} from "ag-grid-community";
 
 @Component({
   selector: 'ag-tags',
-  template: `<span>
-    <tw-tags [tags]="cellValue"></tw-tags>
-  </span>`,
+  template: `<span><tw-tags [tags]="cellValue"></tw-tags></span>`,
 })
 export class AgTagsComponent {
   cellValue: string = ''

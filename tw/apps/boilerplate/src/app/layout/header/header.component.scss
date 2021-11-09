@@ -1,14 +1,16 @@
-
+@import "./apps/boilerplate/src/styles";
 :host {
+  top: 0;
   position: sticky;
   display: inherit;
-  top: 0;
   z-index: 99;
 
   .gradient-bg {
     height: 10vh;
     border-radius: 3px 3px;
-    background-image: linear-gradient(to bottom, #9ab8c8, #a0bdcd, #a7c2d2, #adc8d8, #b4cddd);
+    background-image: linear-gradient(to bottom, #a0bdcd, #a7c2d2, #a7c2d2, #8ba8b6, #9BBAC8);
   }
+
+
 }
 

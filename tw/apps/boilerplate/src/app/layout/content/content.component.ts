@@ -14,7 +14,7 @@ export class ContentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.isTableViewActive$ = this.devicesGroupContentService.getIsTableViewActive()
+    this.isTableViewActive$ = this.devicesGroupContentService.getIsTableViewState()
   }
 
   switchToCardView() {

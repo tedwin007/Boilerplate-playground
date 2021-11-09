@@ -1,3 +1,5 @@
+@import "./apps/boilerplate/src/styles/color-palette";
+
 .device-card-tags {
   span {
     font-style: normal;
@@ -7,13 +9,13 @@
     justify-items: center;
     align-items: center;
     height: 20px;
-    background-color: #D1E5F4;
+    background-color: $tag-color;
     border-radius: 5px;
     margin-right: 10px;
     padding: 5px;
     text-align: center;
     font-size: 0.7rem;
-    border: 1px solid #243846;
+    border: 1px solid $darken-me;
 
   }
 }

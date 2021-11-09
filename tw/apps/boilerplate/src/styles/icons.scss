@@ -1,3 +1,4 @@
+@import "color-palette";
 
 .fas {
   &.fa-exclamation-triangle.major {
@@ -21,7 +22,7 @@
 }
 
   &.fa-search.search {
-    color: #b2b2b2;
+    color: $tide;
 }
 
   &.fa-caret-down,

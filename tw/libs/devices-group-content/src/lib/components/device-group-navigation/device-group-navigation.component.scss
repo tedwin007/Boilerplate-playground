@@ -1,3 +1,4 @@
+@import "./apps/boilerplate/src/styles/color-palette";
 
 :host {
   position: relative;
@@ -10,8 +11,9 @@ a {
   padding: 10px;
 
   &.is-active {
-    background: #EEF5FA;
-    border-radius: 4px;
+    max-width: 50%;
+    background: #EEF4F7;
+    border-radius: 6px;
     box-sizing: content-box;
     border: 1px solid gray;
   }

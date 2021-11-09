@@ -4,7 +4,6 @@ import {DevicesGroupContentApiService} from "./services/devices-group-content-ap
 import {IDeviceGroup} from "./models/interfaces/device-group.interface";
 import {BehaviorSubject, Observable} from "rxjs";
 
-
 @Injectable()
 export class DevicesGroupContentService extends StateManger<IDeviceGroup[]> {
   private _isTableViewActive$ = new BehaviorSubject(false)
@@ -12,13 +11,12 @@ export class DevicesGroupContentService extends StateManger<IDeviceGroup[]> {
   constructor(private api: DevicesGroupContentApiService) {
     super([]);
     api.call.fetchAllGroups().subscribe((data: IDeviceGroup[]) => {
-      console.log("data", data)
       this.setState(data);
 
     })
   }
 
-  getIsTableViewActive(): Observable<boolean> {
+  getIsTableViewState(): Observable<boolean> {
     return this._isTableViewActive$.asObservable();
   }
 
@@ -26,6 +24,11 @@ export class DevicesGroupContentService extends StateManger<IDeviceGroup[]> {
     this._isTableViewActive$.next(isTableMode);
   }
 
+  /**
+   * Get Data
+   * 'any' type => WIP (schematics)
+   * @param str
+   */
   getData(str: string): Observable<any> {
     return this.api.call.getAreaData(str);
   }
