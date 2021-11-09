@@ -1,4 +1,4 @@
-<tw-header>
+<tw-header class="d-none d-sm-block">
   <!--First-Header-Row-->
   <div class="col-12 d-flex justify-content-center align-items-center h-30" twTopHeader>
     <button class="btn btn-regular"
@@ -26,26 +26,34 @@
 
   <!--Third-Header-Row-->
   <ng-container twSubHeader>
-    <div class="col-9 pl-0">
-      <button regular-btn><i class="fas fa-caret-right"></i> Show Filters</button>
+    <div class="col-10 col-sm-9 pl-0">
+
+      <button regular-btn>
+        <i class="fas fa-caret-right"></i>
+        Show Filters
+      </button>
+
       <button disabled regular-btn class="align-items-center">
-        <span style="display: flex;">
+        <span class="d-flex">
           <input type="checkbox" class="mr-1"/>Filters Active
         </span>
       </button>
+
       <button regular-btn>
         Last modified
         <i class="fas fa-caret-down"></i>
       </button>
+
       <span class="ml-1">
         <small> Sort by: </small>
-        <button regular-btn>
-          Last modified <i class="fas fa-caret-down"></i>
+        <button regular-btn>Last modified
+          <i class="fas fa-caret-down"></i>
         </button>
       </span>
+
     </div>
-    <div class="col-3 pr-0">
-      <tw-searchbar></tw-searchbar>
+    <div class="col-2 col-sm-3 pr-0">
+      <tw-searchbar [placeHolder]="'Quick Filters'" r></tw-searchbar>
     </div>
   </ng-container>
 </tw-header>

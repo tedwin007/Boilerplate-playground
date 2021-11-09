@@ -1,3 +1,5 @@
+@import "color-palette";
+
 body {
   margin: 0 !important;
   padding: 0;
@@ -12,7 +14,7 @@ h3 {
 
 .sub-header {
   height: 100%;
-  background-color: #E7E7EE;
+  background-image: linear-gradient(to bottom, #E7E9ED, #E7E9ED, #E7E9ED, #E7E9ED, #D5D6DB);
 }
 
 .h {

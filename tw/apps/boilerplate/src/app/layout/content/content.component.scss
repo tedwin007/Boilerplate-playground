@@ -1,3 +1,5 @@
+@import './apps/boilerplate/src/styles';
+
 :host {
   position:relative;
   height: 100%;
@@ -8,5 +10,5 @@
 
 
 .active-view{
-  background: #88A4B8;
+  background: #7E9BAD;
 }

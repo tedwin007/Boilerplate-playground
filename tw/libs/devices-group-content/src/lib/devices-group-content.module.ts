@@ -11,28 +11,28 @@ import {DeviceGroupNavigationComponent} from './components/device-group-navigati
 import {SharedModule} from "@tw/shared";
 import {TableViewComponent} from './components/table-view/table-view.component';
 import {AgGridModule} from "ag-grid-angular";
-import {AgSeverityComponent} from './components/table-view/ag-grid-components/ag-severity/ag-severity.component';
+import {AgSeverityComponent} from './components/table-view/ag-grid-components/ag-severity.component';
 import {DevicesSharedModule} from "./shared/devices-shared.module";
-import {AgTagsComponent} from './components/table-view/ag-grid-components/ag-tags/ag-tags.component';
+import {AgTagsComponent} from './components/table-view/ag-grid-components/ag-tags.component';
 
 @NgModule({
   declarations: [
     UIDeviceComponent,
     DeviceListComponent,
-    DevicesGroupContentFeatureComponent,
-    DeviceGroupNavigationComponent,
     TableViewComponent,
     AgSeverityComponent,
-    AgTagsComponent
+    AgTagsComponent,
+    DevicesGroupContentFeatureComponent,
+    DeviceGroupNavigationComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     HttpClientModule,
     SharedModule,
+    DevicesSharedModule,
     DevicesGroupContentRoutingModule,
     AgGridModule.withComponents([AgSeverityComponent, AgTagsComponent]),
-    DevicesSharedModule,
   ],
   providers: [DevicesGroupContentService],
   exports: [UIDeviceComponent, DeviceGroupNavigationComponent, SharedModule],
