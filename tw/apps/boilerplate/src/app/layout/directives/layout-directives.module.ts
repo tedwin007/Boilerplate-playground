@@ -21,4 +21,4 @@ import { SubHeaderDirective } from './sub-header.directive';
     CommonModule
   ]
 })
-export class DirectivesModule { }
+export class LayoutDirectivesModule { }

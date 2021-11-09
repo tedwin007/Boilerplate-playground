@@ -1,4 +1,5 @@
 <tw-header>
+  <!--First-Header-Row-->
   <div class="col-12 d-flex justify-content-center align-items-center h-30" twTopHeader>
     <button class="btn btn-regular"
             [ngClass]="{'active-view':(isTableViewActive$|async )}"
@@ -10,6 +11,7 @@
     </button>
   </div>
 
+  <!--Second-Header-Row-->
   <div class="col-12 d-flex gap-2 align-items-center h-30" twBottomHeader>
     <button regular-btn>
       <i class="fas fa-user-alt user"></i> Acknowledge
@@ -22,6 +24,7 @@
     </button>
   </div>
 
+  <!--Third-Header-Row-->
   <ng-container twSubHeader>
     <div class="col-9 pl-0">
       <button regular-btn><i class="fas fa-caret-right"></i> Show Filters</button>
@@ -47,6 +50,7 @@
   </ng-container>
 </tw-header>
 
+<!--Content-->
 <div class="col-12 bg-white h-100">
   <div class="row pt-4">
     <router-outlet></router-outlet>

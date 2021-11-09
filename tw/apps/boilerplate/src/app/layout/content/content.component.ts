@@ -4,10 +4,10 @@ import {Observable, of} from "rxjs";
 
 @Component({
   selector: 'tw-main-content',
-  templateUrl: './main-content.component.html',
-  styleUrls: ['./main-content.component.scss']
+  templateUrl: './content.component.html',
+  styleUrls: ['./content.component.scss']
 })
-export class MainContentComponent implements OnInit {
+export class ContentComponent implements OnInit {
   isTableViewActive$: Observable<boolean> = of(true)
 
   constructor(private devicesGroupContentService: DevicesGroupContentService) {

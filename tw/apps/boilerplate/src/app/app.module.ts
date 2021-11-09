@@ -21,7 +21,8 @@ const routes = [{
     HttpClientModule,
     LayoutModule,
     RouterModule.forRoot(routes),
-    BrowserAnimationsModule],
+    BrowserAnimationsModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {

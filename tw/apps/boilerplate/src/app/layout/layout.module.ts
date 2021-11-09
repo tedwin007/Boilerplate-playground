@@ -4,24 +4,26 @@ import {SidebarComponent} from './sidebar/sidebar.component';
 import {RouterModule} from "@angular/router";
 import {SharedModule} from "@tw/shared";
 import {HeaderComponent} from './header/header.component';
-import {DirectivesModule} from "./directives/directives.module";
-
+import {ContentComponent} from "./content/content.component";
+import {LayoutDirectivesModule} from "./directives/layout-directives.module";
 
 @NgModule({
   declarations: [
     SidebarComponent,
+    ContentComponent,
     HeaderComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
     SharedModule,
-    // DirectivesModule should be in the project's "shared module"
-    DirectivesModule,
+    LayoutDirectivesModule,
   ],
   exports: [
     SidebarComponent,
-    DirectivesModule
+    HeaderComponent,
+    ContentComponent,
+    LayoutDirectivesModule
   ]
 })
 export class LayoutModule {

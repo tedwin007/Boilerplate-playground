@@ -4,6 +4,7 @@ import {DevicesGroupContentService} from "../../devices-group-content.service";
 import {ActivatedRoute} from "@angular/router";
 import {take} from "rxjs/operators";
 import {AgSeverityComponent} from "./ag-grid-components/ag-severity/ag-severity.component";
+import {AgTagsComponent} from "./ag-grid-components/ag-tags/ag-tags.component";
 
 @Component({
   selector: 'tw-table-view',
@@ -17,10 +18,15 @@ export class TableViewComponent implements OnInit {
     {field: 'Severity', width: 20, cellRenderer: 'AgSeverityComponent'},
     {field: 'Location'},
     {field: 'Title'},
-    {field: 'Aggregated', width: 250},
+    {
+      field: 'Aggregated',
+      width: 250,
+      cellRenderer: 'AgTagsComponent'
+    },
   ];
 
-  constructor(private devicesGroupContentService: DevicesGroupContentService, private route: ActivatedRoute) {
+  constructor(private devicesGroupContentService: DevicesGroupContentService,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
@@ -32,7 +38,8 @@ export class TableViewComponent implements OnInit {
   }
 
   frameworkComponents = {
-    'AgSeverityComponent': AgSeverityComponent
+    'AgSeverityComponent': AgSeverityComponent,
+    'AgTagsComponent': AgTagsComponent
   };
 
 }
