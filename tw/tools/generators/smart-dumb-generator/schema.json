@@ -6,13 +6,12 @@
   "properties": {
     "name": {
       "type": "string",
-      "description": "feature name",
+      "description": "Feature name",
       "$default": {
         "$source": "argv",
         "index": 0
       }
     },
-
     "singleItemName": {
       "type": "string",
       "description": "single item name",

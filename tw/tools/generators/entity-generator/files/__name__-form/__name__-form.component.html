@@ -2,7 +2,7 @@
 <% keys.forEach( function(prop){ %>
 <div class="input-group">
   <label for="<%- prop %>"><%- prop %> </label>
-  <input id="<%- prop %>" type="<%=json[prop]['type']%>" formControlName="<%- prop %>">
+  <input id="<%- prop %>" type="<%- json[prop]['type'] === 'string' ? 'text' :json[prop]['type']  %>" formControlName="<%- prop %>">
   <div class="input-error"
        *ngIf="form.get('<%=prop%>').invalid  && (form.get('<%=prop%>').dirty || form.get('<%=prop%>').touched)">
     <%- json[prop]['form']['error'] %>

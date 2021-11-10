@@ -29,8 +29,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -93,35 +93,6 @@
           }
         }
       }
-    },
-    "boilerplate-e2e": {
-      "root": "apps/boilerplate-e2e",
-      "sourceRoot": "apps/boilerplate-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/boilerplate-e2e/cypress.json",
-            "devServerTarget": "boilerplate:serve:development",
-            "tsConfig": "apps/boilerplate-e2e/tsconfig.json"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "boilerplate:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["apps/boilerplate-e2e/**/*.{js,ts}"]
-          }
-        }
-      },
-      "tags": [],
-      "implicitDependencies": ["boilerplate"]
     },
     "devices-group-content": {
       "root": "libs/devices-group-content",
