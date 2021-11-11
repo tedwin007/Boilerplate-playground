@@ -8,8 +8,9 @@ export async function createEntityFiles(filePath: string, tree, root, inMemoryJs
     let fileName: string;
     const {content, filename} = getFile();
     data = !inMemoryJson ? content : inMemoryJson;
-    fileName = !inMemoryJson ? filename : 'someMockName';
-    generateFiles(tree, joinPathFragments(__dirname, './files'), root, {
+    console.log('inMemoryJson', JSON.stringify(inMemoryJson));
+    fileName = !!inMemoryJson ? filename : 'someMockName';
+    generateFiles(tree, joinPathFragments(__dirname, './../files'), root, {
       json: data,
       name: fileName,
       classify: (str: string) => strings.classify(str)

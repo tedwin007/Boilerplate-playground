@@ -1,4 +1,10 @@
-import {formatFiles, installPackagesTask, readProjectConfiguration, Tree,} from '@nrwl/devkit';
+import {
+  addDependenciesToPackageJson,
+  formatFiles,
+  installPackagesTask,
+  readProjectConfiguration,
+  Tree,
+} from '@nrwl/devkit';
 import * as path from "path";
 import {libraryGenerator} from "@nrwl/workspace";
 import {createEntityFiles} from "./utils/createEntityFiles";
@@ -12,6 +18,7 @@ export default async function (tree: Tree, schema: any): Promise<() => void> {
   await createEntityFiles(configEntityPath, tree, libraryRoot, json);
   await formatFiles(tree);
   return () => {
+    addDependenciesToPackageJson(tree, { 'ag-grid-community': 'latest' }, { });
     installPackagesTask(tree);
   };
 }
