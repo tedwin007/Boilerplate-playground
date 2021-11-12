@@ -9,7 +9,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/boilerplate",
             "index": "apps/boilerplate/src/index.html",
@@ -21,7 +23,9 @@
               "apps/boilerplate/src/favicon.ico",
               "apps/boilerplate/src/assets"
             ],
-            "styles": ["apps/boilerplate/src/styles.scss"],
+            "styles": [
+              "apps/boilerplate/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -86,7 +90,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/boilerplate"],
+          "outputs": [
+            "coverage/apps/boilerplate"
+          ],
           "options": {
             "jestConfig": "apps/boilerplate/jest.config.js",
             "passWithNoTests": true
@@ -101,14 +107,20 @@
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["libs/devices-group-content/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/devices-group-content/**/*.ts"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/devices-group-content"],
+          "outputs": [
+            "coverage/libs/devices-group-content"
+          ],
           "options": {
             "jestConfig": "libs/devices-group-content/jest.config.js",
             "passWithNoTests": true
@@ -124,9 +136,13 @@
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["libs/shared/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/shared/**/*.ts"
+            ]
           }
         }
       }

@@ -13,5 +13,3 @@ export interface DomainApiConfig {
   [apiName: string]: APIConfig | any
 }
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-export type APIMethods<T = object> = { [k in keyof T]: (data?:any) => Observable<any> }

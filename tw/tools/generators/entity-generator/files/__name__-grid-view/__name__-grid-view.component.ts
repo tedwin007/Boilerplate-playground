@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {AgGridEvent, ColDef} from "ag-grid-community";
-import {classify} from "@nrwl/workspace/src/utils/strings";
 
 @Component({
   selector: 'tw-<%= name %>-grid-view',
@@ -17,9 +16,7 @@ import {classify} from "@nrwl/workspace/src/utils/strings";
 export class <%= classify(name) %>GridViewComponent implements OnInit {
   frameworkComponents = {}
   rowData = [];
-  columnDefs: ColDef[] = [
-    <% Object.keys(json).forEach( function(prop){ %>{field: '<%- prop %>'},<%})%>
-  ];
+  columnDefs: ColDef[] = <%- JSON.stringify(grid.columns) %>;
 
   constructor() {
   }

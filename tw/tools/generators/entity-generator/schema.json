@@ -11,7 +11,15 @@
         "$source": "argv",
         "index": 0
       }
-    }
-  },
-  "required": ["name"]
+    },
+    "grid": {
+      "type": "string",
+      "description": "Adds agGrid component with columns definition",
+      "default": "",
+      "x-prompt": "name the grid component (Should also match the json file name)"
+    },
+    "required": [
+      "name"
+    ]
+  }
 }

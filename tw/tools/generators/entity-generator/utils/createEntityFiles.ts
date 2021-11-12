@@ -1,29 +1,21 @@
 import {generateFiles, joinPathFragments} from "@nrwl/devkit";
 import {strings} from "@angular-devkit/core";
-import * as fs from "fs";
 
-export async function createEntityFiles(filePath: string, tree, root, inMemoryJson?: any): Promise<void> {
+export async function createEntityFiles(fileName, tree, root, data: any, grid: false | object): Promise<void> {
   try {
-    let data: any;
-    let fileName: string;
-    const {content, filename} = getFile();
-    data = !inMemoryJson ? content : inMemoryJson;
-    console.log('inMemoryJson', JSON.stringify(inMemoryJson));
-    fileName = !!inMemoryJson ? filename : 'someMockName';
-    generateFiles(tree, joinPathFragments(__dirname, './../files'), root, {
+    let substitutions = {
       json: data,
       name: fileName,
-      classify: (str: string) => strings.classify(str)
-    });
+      classify: (str: string) => strings.classify(str),
+      grid
+    };
+
+    console.log(grid)
+    generateFiles(tree, joinPathFragments(__dirname, './../files'), root, substitutions);
   } catch (e) {
     console.error(e);
   }
 
-  function getFile(): { filename: string; content: object } {
-    const content = JSON.parse(fs.readFileSync(filePath).toString());
-    const pathArray = filePath.split('/');
-    const size = pathArray.length - 1;
-    const filename = pathArray[size].split('.json')[0];
-    return {content, filename};
-  }
+
 }
+

@@ -1,11 +1,12 @@
 import {EntityProxy} from "./proxy";
-import {PropType} from "./entity-schema.interface";
+import {GRID, PropType} from "./entity-schema.interface";
 import {FormData} from "./form.data";
 
 export class EntityProp {
 
     constructor(name: string, form: FormData, type: PropType) {
         Object.assign(this, {[name]: {form: {...form}, type}})
+
     }
 
     toJson() {
