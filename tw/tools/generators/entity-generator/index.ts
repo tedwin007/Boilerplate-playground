@@ -4,12 +4,14 @@ import {libraryGenerator} from "@nrwl/workspace";
 import {createEntityFiles} from "./utils/createEntityFiles";
 import * as fs from "fs";
 
-export default async function (tree: Tree, schema: any): Promise<() => void> {
+export default async function (tree: Tree, schema: any,standAlone:boolean = true): Promise<() => void> {
     let openAPISchema;
 
     let swaggerFilePath = path.join(__dirname, 'jsons', "swagger.json");
     if (!fs.existsSync(swaggerFilePath)) return;
-    await libraryGenerator(tree, {name: schema.name});
+    if (standAlone) {
+        await libraryGenerator(tree, {name: schema.name});
+    }
     const libraryRoot: string = readProjectConfiguration(tree, schema.name).root;
     openAPISchema = fs.readFileSync(swaggerFilePath, "utf-8");
     await createEntityFiles(schema.name, tree, libraryRoot, {swaggerData: JSON.parse(openAPISchema)})

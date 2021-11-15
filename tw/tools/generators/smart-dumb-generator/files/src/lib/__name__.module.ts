@@ -6,16 +6,14 @@ import { UI<%=classify(singleItemName)%>Component } from './components/single-<%
 import { <%=classify(name)%>Service } from './<%=name%>.service';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-import {<%=classify(name)%>FeatureComponent} from "./<%=name%>-feature.component";
-import {<%= classify(singleItemName) %>FormComponent } from "./components/form/<%=singleItemName%>-form.component";
+import {<%=classify(name)%>Component} from "./<%=name%>.component";
 
 
 @NgModule({
   declarations: [
     UI<%=classify(singleItemName)%>Component ,
     <%=classify(singleItemName)%>ListComponent,
-    <%=classify(name)%>FeatureComponent,
-    <%= classify(singleItemName) %>FormComponent
+    <%=classify(name)%>Component,
   ],
   imports: [
     CommonModule,

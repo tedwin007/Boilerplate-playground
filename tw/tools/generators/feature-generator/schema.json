@@ -13,5 +13,13 @@
       }
     }
   },
+  "singleItemName": {
+    "type": "string",
+    "description": "single item name",
+    "$default": {
+      "$source": "argv",
+      "index": 1
+    }
+  },
   "required": ["name"]
 }

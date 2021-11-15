@@ -9,8 +9,10 @@ import {
 import {strings} from '@angular-devkit/core';
 import {libraryGenerator} from "@nrwl/workspace";
 
-export default async function (tree: Tree, schema: any) {
-  await libraryGenerator(tree, {name: schema.name});
+export default async function (tree: Tree, schema: any,standAlone:boolean = true) {
+  if (standAlone){
+    await libraryGenerator(tree, {name: schema.name});
+  }
   const libraryRoot = readProjectConfiguration(tree, schema.name).root;
   await createFeatureLib(tree, libraryRoot, schema);
   return () => {
@@ -18,7 +20,7 @@ export default async function (tree: Tree, schema: any) {
   };
 }
 
-async function createFeatureLib(tree: Tree, libraryRoot: string, schema: any) {
+export async function createFeatureLib(tree: Tree, libraryRoot: string, schema: any) {
   generateFiles(
     tree, // the virtual file system
     joinPathFragments(__dirname, './files'), // path to the file templates

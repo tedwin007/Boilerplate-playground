@@ -613,6 +613,29 @@
         }
       },
       "tags": []
+    },
+    "tidhar": {
+      "root": "libs/tidhar",
+      "sourceRoot": "libs/tidhar/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/tidhar/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tidhar"],
+          "options": {
+            "jestConfig": "libs/tidhar/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
     }
   }
 }
