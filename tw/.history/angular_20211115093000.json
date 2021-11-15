@@ -131,483 +131,276 @@
         }
       }
     },
-    "ted1": {
-      "root": "libs/ted1",
-      "sourceRoot": "libs/ted1/src",
+    "ted14": {
+      "root": "libs/ted14",
+      "sourceRoot": "libs/ted14/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["libs/ted1/**/*.ts"]
+            "lintFilePatterns": ["libs/ted14/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/ted1"],
+          "outputs": ["coverage/libs/ted14"],
           "options": {
-            "jestConfig": "libs/ted1/jest.config.js",
+            "jestConfig": "libs/ted14/jest.config.js",
             "passWithNoTests": true
           }
         }
       },
       "tags": []
     },
-    "ted2": {
-      "root": "libs/ted2",
-      "sourceRoot": "libs/ted2/src",
+    "ted15": {
+      "root": "libs/ted15",
+      "sourceRoot": "libs/ted15/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["libs/ted2/**/*.ts"]
+            "lintFilePatterns": ["libs/ted15/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/ted2"],
+          "outputs": ["coverage/libs/ted15"],
           "options": {
-            "jestConfig": "libs/ted2/jest.config.js",
+            "jestConfig": "libs/ted15/jest.config.js",
             "passWithNoTests": true
           }
         }
       },
       "tags": []
     },
-    "ted3": {
-      "root": "libs/ted3",
-      "sourceRoot": "libs/ted3/src",
+    "ted16": {
+      "root": "libs/ted16",
+      "sourceRoot": "libs/ted16/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["libs/ted3/**/*.ts"]
+            "lintFilePatterns": ["libs/ted16/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/ted3"],
+          "outputs": ["coverage/libs/ted16"],
           "options": {
-            "jestConfig": "libs/ted3/jest.config.js",
+            "jestConfig": "libs/ted16/jest.config.js",
             "passWithNoTests": true
           }
         }
       },
       "tags": []
     },
-    "ted4": {
-      "root": "libs/ted4",
-      "sourceRoot": "libs/ted4/src",
+    "ted166": {
+      "root": "libs/ted166",
+      "sourceRoot": "libs/ted166/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["libs/ted4/**/*.ts"]
+            "lintFilePatterns": ["libs/ted166/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/ted4"],
+          "outputs": ["coverage/libs/ted166"],
           "options": {
-            "jestConfig": "libs/ted4/jest.config.js",
+            "jestConfig": "libs/ted166/jest.config.js",
             "passWithNoTests": true
           }
         }
       },
       "tags": []
     },
-    "ted66": {
-      "root": "libs/ted66",
-      "sourceRoot": "libs/ted66/src",
+    "ted17": {
+      "root": "libs/ted17",
+      "sourceRoot": "libs/ted17/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["libs/ted66/**/*.ts"]
+            "lintFilePatterns": ["libs/ted17/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/ted66"],
+          "outputs": ["coverage/libs/ted17"],
           "options": {
-            "jestConfig": "libs/ted66/jest.config.js",
+            "jestConfig": "libs/ted17/jest.config.js",
             "passWithNoTests": true
           }
         }
       },
       "tags": []
     },
-    "test1": {
-      "root": "libs/test1",
-      "sourceRoot": "libs/test1/src",
+    "ted54": {
+      "root": "libs/ted54",
+      "sourceRoot": "libs/ted54/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["libs/test1/**/*.ts"]
+            "lintFilePatterns": ["libs/ted54/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/test1"],
+          "outputs": ["coverage/libs/ted54"],
           "options": {
-            "jestConfig": "libs/test1/jest.config.js",
+            "jestConfig": "libs/ted54/jest.config.js",
             "passWithNoTests": true
           }
         }
       },
       "tags": []
     },
-    "test10": {
-      "root": "libs/test10",
-      "sourceRoot": "libs/test10/src",
+    "ted55": {
+      "root": "libs/ted55",
+      "sourceRoot": "libs/ted55/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["libs/test10/**/*.ts"]
+            "lintFilePatterns": ["libs/ted55/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/test10"],
+          "outputs": ["coverage/libs/ted55"],
           "options": {
-            "jestConfig": "libs/test10/jest.config.js",
+            "jestConfig": "libs/ted55/jest.config.js",
             "passWithNoTests": true
           }
         }
       },
       "tags": []
     },
-    "test11": {
-      "root": "libs/test11",
-      "sourceRoot": "libs/test11/src",
+    "ted56": {
+      "root": "libs/ted56",
+      "sourceRoot": "libs/ted56/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["libs/test11/**/*.ts"]
+            "lintFilePatterns": ["libs/ted56/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/test11"],
+          "outputs": ["coverage/libs/ted56"],
           "options": {
-            "jestConfig": "libs/test11/jest.config.js",
+            "jestConfig": "libs/ted56/jest.config.js",
             "passWithNoTests": true
           }
         }
       },
       "tags": []
     },
-    "test12": {
-      "root": "libs/test12",
-      "sourceRoot": "libs/test12/src",
+    "ted57": {
+      "root": "libs/ted57",
+      "sourceRoot": "libs/ted57/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["libs/test12/**/*.ts"]
+            "lintFilePatterns": ["libs/ted57/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/test12"],
+          "outputs": ["coverage/libs/ted57"],
           "options": {
-            "jestConfig": "libs/test12/jest.config.js",
+            "jestConfig": "libs/ted57/jest.config.js",
             "passWithNoTests": true
           }
         }
       },
       "tags": []
     },
-    "test13": {
-      "root": "libs/test13",
-      "sourceRoot": "libs/test13/src",
+    "ted58": {
+      "root": "libs/ted58",
+      "sourceRoot": "libs/ted58/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["libs/test13/**/*.ts"]
+            "lintFilePatterns": ["libs/ted58/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/test13"],
+          "outputs": ["coverage/libs/ted58"],
           "options": {
-            "jestConfig": "libs/test13/jest.config.js",
+            "jestConfig": "libs/ted58/jest.config.js",
             "passWithNoTests": true
           }
         }
       },
       "tags": []
     },
-    "test14": {
-      "root": "libs/test14",
-      "sourceRoot": "libs/test14/src",
+    "ted60": {
+      "root": "libs/ted60",
+      "sourceRoot": "libs/ted60/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["libs/test14/**/*.ts"]
+            "lintFilePatterns": ["libs/ted60/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/test14"],
+          "outputs": ["coverage/libs/ted60"],
           "options": {
-            "jestConfig": "libs/test14/jest.config.js",
+            "jestConfig": "libs/ted60/jest.config.js",
             "passWithNoTests": true
           }
         }
       },
       "tags": []
     },
-    "test15": {
-      "root": "libs/test15",
-      "sourceRoot": "libs/test15/src",
+    "ted61": {
+      "root": "libs/ted61",
+      "sourceRoot": "libs/ted61/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["libs/test15/**/*.ts"]
+            "lintFilePatterns": ["libs/ted61/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/test15"],
+          "outputs": ["coverage/libs/ted61"],
           "options": {
-            "jestConfig": "libs/test15/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      },
-      "tags": []
-    },
-    "test16": {
-      "root": "libs/test16",
-      "sourceRoot": "libs/test16/src",
-      "projectType": "library",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["libs/test16/**/*.ts"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/test16"],
-          "options": {
-            "jestConfig": "libs/test16/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      },
-      "tags": []
-    },
-    "test2": {
-      "root": "libs/test2",
-      "sourceRoot": "libs/test2/src",
-      "projectType": "library",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["libs/test2/**/*.ts"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/test2"],
-          "options": {
-            "jestConfig": "libs/test2/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      },
-      "tags": []
-    },
-    "test3": {
-      "root": "libs/test3",
-      "sourceRoot": "libs/test3/src",
-      "projectType": "library",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["libs/test3/**/*.ts"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/test3"],
-          "options": {
-            "jestConfig": "libs/test3/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      },
-      "tags": []
-    },
-    "test4": {
-      "root": "libs/test4",
-      "sourceRoot": "libs/test4/src",
-      "projectType": "library",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["libs/test4/**/*.ts"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/test4"],
-          "options": {
-            "jestConfig": "libs/test4/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      },
-      "tags": []
-    },
-    "test5": {
-      "root": "libs/test5",
-      "sourceRoot": "libs/test5/src",
-      "projectType": "library",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["libs/test5/**/*.ts"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/test5"],
-          "options": {
-            "jestConfig": "libs/test5/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      },
-      "tags": []
-    },
-    "test6": {
-      "root": "libs/test6",
-      "sourceRoot": "libs/test6/src",
-      "projectType": "library",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["libs/test6/**/*.ts"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/test6"],
-          "options": {
-            "jestConfig": "libs/test6/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      },
-      "tags": []
-    },
-    "test7": {
-      "root": "libs/test7",
-      "sourceRoot": "libs/test7/src",
-      "projectType": "library",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["libs/test7/**/*.ts"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/test7"],
-          "options": {
-            "jestConfig": "libs/test7/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      },
-      "tags": []
-    },
-    "test8": {
-      "root": "libs/test8",
-      "sourceRoot": "libs/test8/src",
-      "projectType": "library",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["libs/test8/**/*.ts"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/test8"],
-          "options": {
-            "jestConfig": "libs/test8/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      },
-      "tags": []
-    },
-    "test9": {
-      "root": "libs/test9",
-      "sourceRoot": "libs/test9/src",
-      "projectType": "library",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["libs/test9/**/*.ts"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/test9"],
-          "options": {
-            "jestConfig": "libs/test9/jest.config.js",
+            "jestConfig": "libs/ted61/jest.config.js",
             "passWithNoTests": true
           }
         }

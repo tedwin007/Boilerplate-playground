@@ -1,5 +1,5 @@
 import { HttpClient } from "@angular/common/http";
-import { BaseAPI } from "./base-api.class";
+import {BaseAPI} from "./abstruct-api.class";
 
 export abstract class AbstractDomainApi extends BaseAPI {
   protected baseUrl: string;

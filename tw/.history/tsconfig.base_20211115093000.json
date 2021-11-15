@@ -1,0 +1,35 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@tw/devices-group-content": ["libs/devices-group-content/src/index.ts"],
+      "@tw/shared": ["libs/shared/src/index.ts"],
+      "@tw/ted14": ["libs/ted14/src/index.ts"],
+      "@tw/ted15": ["libs/ted15/src/index.ts"],
+      "@tw/ted16": ["libs/ted16/src/index.ts"],
+      "@tw/ted166": ["libs/ted166/src/index.ts"],
+      "@tw/ted17": ["libs/ted17/src/index.ts"],
+      "@tw/ted54": ["libs/ted54/src/index.ts"],
+      "@tw/ted55": ["libs/ted55/src/index.ts"],
+      "@tw/ted56": ["libs/ted56/src/index.ts"],
+      "@tw/ted57": ["libs/ted57/src/index.ts"],
+      "@tw/ted58": ["libs/ted58/src/index.ts"],
+      "@tw/ted60": ["libs/ted60/src/index.ts"],
+      "@tw/ted61": ["libs/ted61/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp", "**/forms/**", "**/files/**"]
+}

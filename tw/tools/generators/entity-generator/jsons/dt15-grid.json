@@ -1,4 +1,11 @@
 {
-    "columns":[{"field": "name"},{"field": "age"}],
-    "useColAutoSize": true
+  "columns": [
+    {
+      "field": "name"
+    },
+    {
+      "field": "age"
+    }
+  ],
+  "useColAutoSize": true
 }

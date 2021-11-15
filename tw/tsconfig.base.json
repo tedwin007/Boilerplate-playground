@@ -16,7 +16,28 @@
     "baseUrl": ".",
     "paths": {
       "@tw/devices-group-content": ["libs/devices-group-content/src/index.ts"],
-      "@tw/shared": ["libs/shared/src/index.ts"]
+      "@tw/shared": ["libs/shared/src/index.ts"],
+      "@tw/ted1": ["libs/ted1/src/index.ts"],
+      "@tw/ted2": ["libs/ted2/src/index.ts"],
+      "@tw/ted3": ["libs/ted3/src/index.ts"],
+      "@tw/ted4": ["libs/ted4/src/index.ts"],
+      "@tw/ted66": ["libs/ted66/src/index.ts"],
+      "@tw/test1": ["libs/test1/src/index.ts"],
+      "@tw/test10": ["libs/test10/src/index.ts"],
+      "@tw/test11": ["libs/test11/src/index.ts"],
+      "@tw/test12": ["libs/test12/src/index.ts"],
+      "@tw/test13": ["libs/test13/src/index.ts"],
+      "@tw/test14": ["libs/test14/src/index.ts"],
+      "@tw/test15": ["libs/test15/src/index.ts"],
+      "@tw/test16": ["libs/test16/src/index.ts"],
+      "@tw/test2": ["libs/test2/src/index.ts"],
+      "@tw/test3": ["libs/test3/src/index.ts"],
+      "@tw/test4": ["libs/test4/src/index.ts"],
+      "@tw/test5": ["libs/test5/src/index.ts"],
+      "@tw/test6": ["libs/test6/src/index.ts"],
+      "@tw/test7": ["libs/test7/src/index.ts"],
+      "@tw/test8": ["libs/test8/src/index.ts"],
+      "@tw/test9": ["libs/test9/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp", "**/forms/**", "**/files/**"]

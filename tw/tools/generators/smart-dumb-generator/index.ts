@@ -12,7 +12,6 @@ import {libraryGenerator} from "@nrwl/workspace";
 export default async function (tree: Tree, schema: any) {
   await libraryGenerator(tree, {name: schema.name});
   const libraryRoot = readProjectConfiguration(tree, schema.name).root;
-
   await createFeatureLib(tree, libraryRoot, schema);
   return () => {
     installPackagesTask(tree);

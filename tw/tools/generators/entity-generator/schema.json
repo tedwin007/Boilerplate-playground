@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/schema",
+  "$schema": "https://json-schema.org/schema",
   "cli": "nx",
   "$id": "entity-generator",
   "type": "object",
@@ -15,8 +15,7 @@
     "grid": {
       "type": "string",
       "description": "Adds agGrid component with columns definition",
-      "default": "",
-      "x-prompt": "name the grid component (Should also match the json file name)"
+      "default": "dt15-grid.json"
     },
     "required": [
       "name"
