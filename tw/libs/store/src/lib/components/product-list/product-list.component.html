@@ -1,0 +1,3 @@
+<ng-container *ngFor="let item of productState$ | async as product">
+  <ui-single-product-item [data]="product"> </ui-single-product-item>
+</ng-container>
