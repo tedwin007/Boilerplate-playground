@@ -1,7 +1,3 @@
-# devices-group-content
+##Deployed Website
+https://relaxed-heyrovsky-f227e8.netlify.app/apps/boilerplate/index.html
 
-This library was generated with [Nx](https://nx.dev).
-
-## Running unit tests
-
-Run `nx test devices-group-content` to execute the unit tests via [Jest](https://jestjs.io).
