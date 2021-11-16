@@ -20,7 +20,6 @@
           "Products"
         ],
         "summary": "Product Types",
-        "description": "The Products endpoint returns information about the *Uber* products\noffered at a given location. The response includes the display name\nand other details about each product, and lists the products in the\nproper display order.\n",
         "parameters": [
           {
             "name": "latitude",
@@ -62,7 +61,6 @@
           "Products"
         ],
         "summary": "Product Types",
-        "description": "The Products endpoint returns information about the *Uber* products\noffered at a given location. The response includes the display name\nand other details about each product, and lists the products in the\nproper display order.\n",
         "parameters": [
           {
             "name": "latitude",
@@ -107,7 +105,6 @@
       "properties": {
         "product_id": {
           "type": "string",
-          "description": "Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles."
         },
         "description": {
           "type": "string",

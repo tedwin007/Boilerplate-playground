@@ -4,8 +4,8 @@ import {<%=classify(singleItemName)%>ListComponent} from "./components/<%=single
 import {UI<%=classify(singleItemName)%>Component} from  "./components/single-<%=singleItemName%>-item/single-<%=singleItemName%>-item.component";
 
 const routes: Routes = [
-  {path: 'single-<%=singleItemName%>', component: UI<%=classify(singleItemName)%>Component},
-  {path: 'multi-<%=singleItemName%>', component: <%=classify(singleItemName)%>ListComponent},
+  {path: 'single-<%=singleItemName%>/:id', component: UI<%=classify(singleItemName)%>Component},
+  {path: '<%=singleItemName%>-list', component: <%=classify(singleItemName)%>ListComponent},
   {path: '**', component:  <%=classify(singleItemName)%>ListComponent},  // Wildcard route for a 404 page
 ]
 @NgModule({

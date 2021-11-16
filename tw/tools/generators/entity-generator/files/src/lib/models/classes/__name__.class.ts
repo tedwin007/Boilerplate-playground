@@ -1,4 +1,5 @@
-import {<%Object.keys(swaggerData['definitions']).forEach(function (entityName){%>I<%=classify(entityName)%>, <%})%>} from "../interfaces/<%=name%>.interface"
+import {<%Object.keys(swaggerData['definitions']).forEach(function (entityName){%>I<%=classify(entityName)%>,
+<%})%>} from "../interfaces/<%=name%>.interface"
 
 
 <% function buildClass(name, obj) {%>
@@ -12,8 +13,8 @@ import {<%Object.keys(swaggerData['definitions']).forEach(function (entityName){
    * <%- JSON.stringify(swaggerData['definitions'][name]['example'])%>
    * ```
    */
-  export class <%=classify(name)%>Class{
-    <%- include(dirPath+'/utils',{obj:swaggerData['definitions'][name]['properties']}) %>
+  export class <%=classify(name)%> implements I<%=classify(name)%>{
+    <%- include(dirPath+'/ejs/classPropsView',{obj:swaggerData['definitions'][name]['properties']}) %>
     constructor(data: I<%=classify(name)%>){
       Object.assign(this, data);
     }
@@ -21,8 +22,8 @@ import {<%Object.keys(swaggerData['definitions']).forEach(function (entityName){
       return {
       }
     }
-  static fromResponseData(data: I<%=classify(name)%>) : <%=classify(name)%>Class {
-        return new <%=classify(name)%>Class(data);
+  static fromResponseData(data: I<%=classify(name)%>) : <%=classify(name)%> {
+        return new <%=classify(name)%>(data);
     }
   }<%}%>
   <%Object.keys(swaggerData['definitions']).forEach(function (entityName){%>

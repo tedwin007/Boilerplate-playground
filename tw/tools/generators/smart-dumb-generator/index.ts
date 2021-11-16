@@ -1,35 +1,17 @@
-import {
-  formatFiles,
-  generateFiles,
-  installPackagesTask,
-  joinPathFragments,
-  readProjectConfiguration,
-  Tree,
-} from '@nrwl/devkit';
-import {strings} from '@angular-devkit/core';
-import {libraryGenerator} from "@nrwl/workspace";
+import {installPackagesTask, Tree,} from '@nrwl/devkit';
+import {readSwaggerFile} from "../shared/readSwaggerFile";
+import * as path from "path";
+import {generateLib} from "../shared/generateLib";
+import {localFilesGenerator} from "../shared/localFilesGenerator";
 
-export default async function (tree: Tree, schema: any,standAlone:boolean = true) {
-  if (standAlone){
-    await libraryGenerator(tree, {name: schema.name});
-  }
-  const libraryRoot = readProjectConfiguration(tree, schema.name).root;
-  await createFeatureLib(tree, libraryRoot, schema);
-  return () => {
-    installPackagesTask(tree);
-  };
+export default async function (tree: Tree, schema: any) {
+    const {swaggerData} = readSwaggerFile(path.join(__dirname, 'jsons', "swagger.json"))
+    const {libraryRoot} = await generateLib(tree, schema.name);
+    await localFilesGenerator(schema.name, tree, libraryRoot, {
+        ...schema, swaggerData, singleItemName: schema.singleItemName
+    });
+    return () => {
+        installPackagesTask(tree);
+    };
 }
 
-export async function createFeatureLib(tree: Tree, libraryRoot: string, schema: any) {
-  generateFiles(
-    tree, // the virtual file system
-    joinPathFragments(__dirname, './files'), // path to the file templates
-    libraryRoot, // destination path of the files
-    {
-      ...schema,
-      classify: (str: string) => strings.classify(str),
-      singleItemName: schema.singleItemName
-    }
-  );
-  await formatFiles(tree);
-}

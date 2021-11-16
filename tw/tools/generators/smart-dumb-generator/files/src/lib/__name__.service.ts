@@ -5,7 +5,7 @@ import {StateManger} from "../../../shared/src/lib/services/state-manger-service
 export class <%=classify(name)%>Service extends StateManger<any>  {
 
   constructor() {
-    super(<any[]>[]);
+    super([]);
   }
 
 }

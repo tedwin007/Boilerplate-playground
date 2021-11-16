@@ -7,6 +7,7 @@ import { <%=classify(name)%>Service } from './<%=name%>.service';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {<%=classify(name)%>Component} from "./<%=name%>.component";
+import {<%= classify(name) %>EntityModule} from "./<%= classify(name) %>-entity.module";
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import {<%=classify(name)%>Component} from "./<%=name%>.component";
     <%=classify(name)%>Component,
   ],
   imports: [
+    <%= classify(name) %>EntityModule,
     CommonModule,
     ReactiveFormsModule,
     HttpClientModule,

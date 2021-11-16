@@ -16,8 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@tw/devices-group-content": ["libs/devices-group-content/src/index.ts"],
-      "@tw/shared": ["libs/shared/src/index.ts"],
-      "@tw/tidhar": ["libs/tidhar/src/index.ts"]
+      "@tw/shared": ["libs/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp", "**/forms/**", "**/files/**"]
