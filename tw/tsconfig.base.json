@@ -15,7 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@tw/devices-group-content": ["libs/devices-group-content/src/index.ts"],
       "@tw/example": ["libs/example/src/index.ts"],
       "@tw/shared": ["libs/shared/src/index.ts"]
     }

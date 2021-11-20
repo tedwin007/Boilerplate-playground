@@ -1,6 +1,6 @@
 import {formatFiles, generateFiles, joinPathFragments, Tree} from "@nrwl/devkit";
 import {strings} from "@angular-devkit/core";
-import {dasherize} from "@nrwl/workspace/src/utils/strings";
+import {dasherize,camelize} from "@nrwl/workspace/src/utils/strings";
 
 export async function localFilesGenerator(name: string, tree: Tree, root: string, subs: false | object, pathToFiles = './../files'): Promise<void> {
     try {
@@ -8,6 +8,7 @@ export async function localFilesGenerator(name: string, tree: Tree, root: string
         await generateFiles(tree, joinPathFragments(__dirname, pathToFiles), root,
             {
                 singleItemFileName,
+                camelize,
                 dasherize,
                 fileName: dasherize(name).trim(),
                 name,

@@ -31,9 +31,10 @@ function isDeleteHttpMethod(current){
       <%var method = cb(current)%>
      <% var pathData= current[method]%>
       <%var successData = pathData?.responses['200']%>
-      <%var responseType=successData?.schema?.items['$ref'] || successData?.schema['$ref'] || 'any'%>
+      <%# var responseType=successData?.schema?.items?.['$ref'] || successData?.schema?.['$ref'] || 'any'%>
+      <% var methodName = camelize(pathData?.operationId || pathData?.summary || '') %>
       /**
-       * ###  <%=classify(cb(current)+current[ cb(current)]['tags']) %>
+       * ### <%-camelize(methodName)%>
        * <%- current['description'] %>
        *
        * Path: <%-urlPath%>
@@ -49,7 +50,7 @@ function isDeleteHttpMethod(current){
        *
        *  @example ```<%= current['example'] %>```
        */
-       <%-cb(current)%><%-pathData?.summary?.replace(new RegExp(' ','gm'),'')%>(params:{<%pathData.parameters?.forEach(function(item){ %><%= item.name %>: <%-item.type %>, <%}) %>}):Observable<typeof Models> {
+       <%-methodName%>(params:{<%pathData.parameters?.forEach(function(item){ %><%= item.name %>: <%-item.type %>, <%}) %>}):Observable<typeof Models> {
       <%if(method === "get" || method === "delete"){%>const query = new URLSearchParams(<any>params).toString();<%}%>
         return this.httpClient.<%=method%><typeof Models>(this.baseUrl+'<%=urlPath%>'<%if(method === "get" || method === "delete" ){  %>+query <%}%><%if(method!=='get' && method !== "delete"){%>,params<%}%> ,{observe:'body'}).pipe(catchError((err)=>{return throwError(new Error(err))}))
   }

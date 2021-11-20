@@ -8,35 +8,22 @@ import type * as Models from '../models/classes/example.class';
 @Injectable()
 export class ExampleApiService extends AbstractDomainApi {
   /**
-   * ###  GetProducts
+   * ### getAPIList
    *
    *
-   * Path: /products
+   * Path: /apis
    *
    * Method: get
    *
    * Params:
    *
-   *  latitude: number - description: Latitude component of location.,
-   *
-   *
-   *
-   *  longitude: number - description: Longitude component of location.,
-   *
-   *
-   *
    *
    *  @example ``````
    */
-  getProductTypes(params: {
-    latitude: number;
-    longitude: number;
-  }): Observable<typeof Models> {
+  getAPIList(params: {}): Observable<typeof Models> {
     const query = new URLSearchParams(<any>params).toString();
     return this.httpClient
-      .get<typeof Models>(this.baseUrl + '/products' + query, {
-        observe: 'body',
-      })
+      .get<typeof Models>(this.baseUrl + '/apis' + query, { observe: 'body' })
       .pipe(
         catchError((err) => {
           return throwError(new Error(err));
@@ -45,34 +32,21 @@ export class ExampleApiService extends AbstractDomainApi {
   }
 
   /**
-   * ###  PostProducts
+   * ### saveSomeData
    *
    *
-   * Path: /products
+   * Path: /apis
    *
    * Method: post
    *
    * Params:
    *
-   *  latitude: number - description: Latitude component of location.,
-   *
-   *
-   *
-   *  longitude: number - description: Longitude component of location.,
-   *
-   *
-   *
    *
    *  @example ``````
    */
-  postProductTypes(params: {
-    latitude: number;
-    longitude: number;
-  }): Observable<typeof Models> {
+  saveSomeData(params: {}): Observable<typeof Models> {
     return this.httpClient
-      .post<typeof Models>(this.baseUrl + '/products', params, {
-        observe: 'body',
-      })
+      .post<typeof Models>(this.baseUrl + '/apis', params, { observe: 'body' })
       .pipe(
         catchError((err) => {
           return throwError(new Error(err));
@@ -80,7 +54,10 @@ export class ExampleApiService extends AbstractDomainApi {
       );
   }
 
-  constructor(private httpClient: HttpClient, apiURL = 'api.uber.com/v1/') {
+  constructor(
+    private httpClient: HttpClient,
+    apiURL = 'virtserver.swaggerhub.com/TidharWienreb/angular-api/1/'
+  ) {
     super(httpClient, apiURL);
   }
 }

@@ -2,17 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { AgGridEvent, ColDef } from 'ag-grid-community';
 
 export enum GridStyleOf {
-  Product = 'product-grid',
-
-  PriceEstimate = 'price-estimate-grid',
-
-  Profile = 'profile-grid',
-
-  Activity = 'activity-grid',
-
-  Activities = 'activities-grid',
-
-  Error = 'error-grid',
+  Single = 'single-grid',
 }
 
 @Component({

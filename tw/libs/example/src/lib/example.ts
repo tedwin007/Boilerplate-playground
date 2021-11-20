@@ -1,5 +1,5 @@
 import { ExampleModule } from './example.module';
 
-export function example(): ExampleModule {
+export function Example(): ExampleModule {
   return ExampleModule;
 }

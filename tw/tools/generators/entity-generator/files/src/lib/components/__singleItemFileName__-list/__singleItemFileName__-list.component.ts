@@ -10,9 +10,9 @@ import {Observable} from "rxjs";
 export class <%=classify(singleItemName)%>ListComponent<T=any> implements OnInit {
   <%=classify(singleItemName)%>State$?:Observable<T>;
 
-  constructor(private <%=name.toLowerCase()%>Service:<%=classify(name)%>Service) { }
+  constructor(private <%=classify(name).toLowerCase()%>Service:<%=classify(name)%>Service) { }
 
   ngOnInit() {
-    this.<%=classify(singleItemName)%>State$ = this.<%=name.toLowerCase()%>Service.getState();
+    this.<%=classify(singleItemName)%>State$ = this.<%=classify(name).toLowerCase()%>Service.getState();
   }
 }

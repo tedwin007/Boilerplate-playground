@@ -8,22 +8,9 @@ import {
 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import {
-  IProduct,
-  IPriceEstimate,
-  IProfile,
-  IActivity,
-  IActivities,
-  IError,
-} from '../../models/interfaces/example.interface';
+import { ISingle } from '../../models/interfaces/example.interface';
 
-export type EntityType =
-  | IProduct
-  | IPriceEstimate
-  | IProfile
-  | IActivity
-  | IActivities
-  | IError;
+export type EntityType = ISingle;
 
 export type FormType<T = EntityType> = { [k in keyof T]: [any] };
 
@@ -48,41 +35,7 @@ export class ExampleFormComponent implements OnInit, AfterViewInit {
 
   private _form: FormGroup;
 
-  ProductFormGroupDef: FormType<IProduct> = {
-    product_id: [''],
-    description: [''],
-    display_name: [''],
-    capacity: [''],
-    image: [''],
-  };
-  PriceEstimateFormGroupDef: FormType<IPriceEstimate> = {
-    product_id: [''],
-    currency_code: [''],
-    display_name: [''],
-    estimate: [''],
-    low_estimate: [''],
-    high_estimate: [''],
-    surge_multiplier: [''],
-  };
-  ProfileFormGroupDef: FormType<IProfile> = {
-    first_name: [''],
-    last_name: [''],
-    email: [''],
-    picture: [''],
-    role: [''],
-  };
-  ActivityFormGroupDef: FormType<IActivity> = { uuid: [''] };
-  ActivitiesFormGroupDef: FormType<IActivities> = {
-    offset: [''],
-    limit: [''],
-    count: [''],
-    history: [''],
-  };
-  ErrorFormGroupDef: FormType<IError> = {
-    code: [''],
-    message: [''],
-    fields: [''],
-  };
+  SingleFormGroupDef: FormType<ISingle> = { id: [''] };
 
   constructor(private fb: FormBuilder) {}
 

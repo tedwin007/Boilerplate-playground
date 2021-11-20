@@ -2,9 +2,13 @@
 ### Generate & Configure full Feature, with one line
 #### *deps: a valid swagger.json file
 
-CMD
-- nx workspace-generator smart-dumb-generator <FeatureName> <ItemName>
-- nx workspace-generator feature-generator <FeatureName> <ItemName>
+####CMD:
+
+nx workspace-generator feature-generator <FeatureName> <ItemName>
+
+OR
+
+node node_modules/@nrwl/cli/bin/nx.js workspace-schematic feature-generator --name=store --singleItemName=product
 
 
 To-Do:

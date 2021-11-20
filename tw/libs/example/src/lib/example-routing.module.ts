@@ -4,13 +4,14 @@ import { YokoListComponent } from './components/yoko-list/yoko-list.component';
 import { UIYokoComponent } from './components/single-yoko-item/single-yoko-item.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/yoko-list', pathMatch: 'full' },
   { path: 'single-yoko/:id', component: UIYokoComponent },
   { path: 'yoko-list', component: YokoListComponent },
   //todo: add 404 page
   { path: '**', component: YokoListComponent },
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
 export class ExampleRoutingModule {}

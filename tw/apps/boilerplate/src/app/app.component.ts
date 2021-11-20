@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'tw-root',
-  templateUrl: './app.component.html',
+  template: `<div class="row h-100 overflow-hidden">App Component</div>
+  `,
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {

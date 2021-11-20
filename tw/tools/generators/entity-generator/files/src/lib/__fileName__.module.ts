@@ -1,4 +1,4 @@
-import {ModuleWithProviders, NgModule} from '@angular/core';
+import {Component, ModuleWithProviders, NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {<%= classify(name) %>GridViewComponent } from "./components/<%=dasherize(name)%>-grid-view/<%=dasherize(name)%>-grid-view.component";
 import { <%=classify(name)%>RoutingModule } from './<%=dasherize(name)%>-routing.module';
@@ -21,7 +21,8 @@ import {<%=classify(name)%>StubService} from "./test/stubs/<%=fileName%>-stub.se
     <%=classify(singleItemName)%>ListComponent,
     <%=classify(name)%>Component,
     <%= classify(name) %>FormComponent,
-    <%= classify(name) %>GridViewComponent
+    <%= classify(name) %>GridViewComponent,
+    <%=classify(name)%>Component
   ],
   imports: [
     CommonModule,
@@ -34,8 +35,9 @@ import {<%=classify(name)%>StubService} from "./test/stubs/<%=fileName%>-stub.se
   exports:[
       UI<%=classify(singleItemName)%>Component,
       <%= classify(name)%>FormComponent,
-      <%= classify(name) %>GridViewComponent
-    ]
+      <%= classify(name) %>GridViewComponent,
+      <%=classify(name)%>Component
+  ]
 })
 export class <%=classify(name)%>Module {
   static forRoot(): ModuleWithProviders<<%=classify(name)%>Module> {

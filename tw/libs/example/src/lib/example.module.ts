@@ -1,4 +1,4 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { Component, ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExampleGridViewComponent } from './components/example-grid-view/example-grid-view.component';
 import { ExampleRoutingModule } from './example-routing.module';
@@ -25,6 +25,7 @@ import { ExampleStubService } from './test/stubs/example-stub.service';
     ExampleComponent,
     ExampleFormComponent,
     ExampleGridViewComponent,
+    ExampleComponent,
   ],
   imports: [
     CommonModule,
@@ -34,7 +35,12 @@ import { ExampleStubService } from './test/stubs/example-stub.service';
     AgGridModule.withComponents([]),
   ],
   providers: [ExampleService],
-  exports: [UIYokoComponent, ExampleFormComponent, ExampleGridViewComponent],
+  exports: [
+    UIYokoComponent,
+    ExampleFormComponent,
+    ExampleGridViewComponent,
+    ExampleComponent,
+  ],
 })
 export class ExampleModule {
   static forRoot(): ModuleWithProviders<ExampleModule> {
