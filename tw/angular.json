@@ -117,6 +117,29 @@
       },
       "tags": []
     },
+    "example": {
+      "root": "libs/example",
+      "sourceRoot": "libs/example/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/example/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/example"],
+          "options": {
+            "jestConfig": "libs/example/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
     "shared": {
       "root": "libs/shared",
       "sourceRoot": "libs/shared/src",
@@ -130,29 +153,6 @@
           }
         }
       }
-    },
-    "store": {
-      "root": "libs/store",
-      "sourceRoot": "libs/store/src",
-      "projectType": "library",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["libs/store/**/*.ts"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/store"],
-          "options": {
-            "jestConfig": "libs/store/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      },
-      "tags": []
     }
   }
 }

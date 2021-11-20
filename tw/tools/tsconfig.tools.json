@@ -8,5 +8,7 @@
     "types": ["node"],
     "importHelpers": false
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "tmp", "**/forms/**", "**/files/**"]
+
 }

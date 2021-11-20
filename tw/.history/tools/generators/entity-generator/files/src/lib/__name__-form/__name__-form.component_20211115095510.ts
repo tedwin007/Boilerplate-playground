@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output, AfterViewInit } from '@
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 <%var obj = swaggerData['definitions']; %>
   <%var keys = Object.keys(obj); %>
-import {<% keys.forEach(function (entity, index) { %> I <%=entity %> <%if (index < keys.length - 1) {%>, <%}%> <% }) %>} from "../models/interfaces/<%=name%>.interface";
+import {<% keys.forEach(function (entity, index) { %> I <%=entity %> <%if (index < keys.length - 1) {%>, <%}%> <% }) %>} from "../models/interfaces/<%=dasherize(name)%>.interface";
 import { from } from "rxjs";
 
 export type EntityType = <% keys.forEach(function (entity, index) { %> I <%=entity %> <%if (index < keys.length - 1) {%>| <%}%> <% }) %>;
@@ -10,9 +10,9 @@ export type EntityType = <% keys.forEach(function (entity, index) { %> I <%=enti
 type FromType = { [k in keyof EntityType]: [any] }
 
 @Component({
-  selector: 'ui-<%=name%>-form',
-  templateUrl: './<%=name%>-form.component.html',
-  styleUrls: ['./<%=name%>-form.component.scss']
+  selector: 'ui-<%=dasherize(name)%>-form',
+  templateUrl: './<%=dasherize(name)%>-form.component.html',
+  styleUrls: ['./<%=dasherize(name)%>-form.component.scss']
 })
 export class <%= classify(name) %> FormComponent implements OnInit, AfterViewInit {
   @Input() canEdit = false;

@@ -2,20 +2,20 @@ import { Component, EventEmitter, Input, OnInit, Output, AfterViewInit } from '@
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 <%var obj = swaggerData['definitions']; %>
   <%var keys = Object.keys(obj); %>
-import {<% keys.forEach(function (entity, index) { %> I <%=entity %> <%if (index < keys.length - 1) {%>, <%}%> <% }) %>} from "../models/interfaces/<%=dasherize(name)%>.interface";
-import { from } from "rxjs";
+import {<% keys.forEach(function (entity, index) { %> I<%=entity %> <%if (index < keys.length - 1) {%>, <%}%> <% }) %>} from "../../models/interfaces/<%=dasherize(name)%>.interface";
 
-export type EntityType = <% keys.forEach(function (entity, index) { %> I <%=entity %> <%if (index < keys.length - 1) {%>| <%}%> <% }) %>;
+export type EntityType = <% keys.forEach(function (entity, index) { %> I<%=entity %> <%if (index < keys.length - 1) {%>| <%}%> <% }) %>;
 
-type FromType = { [k in keyof EntityType]: [any] }
+export type FormType<T = EntityType> = { [k in keyof T]: [any] };
 
 @Component({
   selector: 'ui-<%=dasherize(name)%>-form',
   templateUrl: './<%=dasherize(name)%>-form.component.html',
   styleUrls: ['./<%=dasherize(name)%>-form.component.scss']
 })
-export class <%= classify(name) %> FormComponent implements OnInit, AfterViewInit {
-  @Input() canEdit = false;
+export class <%= classify(name) %>FormComponent implements OnInit, AfterViewInit {
+@Output() onSave = new EventEmitter<EntityType>();
+@Input() canEdit = false;
   @Input() set data(content: FormType){
     if (!!content) {
       this.canEdit = true;
@@ -27,10 +27,9 @@ export class <%= classify(name) %> FormComponent implements OnInit, AfterViewIni
     return this._form
   }
 
-  @Output() onSave = new EventEmitter<any>();
   private _form: FormGroup;
   <% keys.forEach(function (entity) { %>
-    <%=entity %> FormGroupDef = { <% Object.keys(obj[entity]['properties']).forEach(function (propName) { %> <%=propName %>: [''], <% }) %>} <% }) %>
+    <%=entity %>FormGroupDef: FormType<I<%=entity%>> = { <% Object.keys(obj[entity]['properties']).forEach(function (propName) { %> <%=propName %>: [''], <% }) %>} <% }) %>
 
     constructor(private fb: FormBuilder) {
   }
@@ -46,11 +45,12 @@ export class <%= classify(name) %> FormComponent implements OnInit, AfterViewIni
     //todo: toaster/throw error/logger etc...
   }
 }
+
 ngAfterViewInit(): void {
   throw '<%= classify(name) %>FormComponent -> ngAfterViewInit : should set "form" with this.setGroup(formGroup,formValue)';
 }
 
-setFormGroup(formGroup: FormType, formValue ?: FormType) : void {
+setFormGroup(formGroup: FormType, formValue?: EntityType) : void {
   this._form = this.fb.group(formGroup);
   if(formValue) {
     this._form.setValue(formValue);
