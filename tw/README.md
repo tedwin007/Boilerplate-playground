@@ -3,7 +3,6 @@
 #### *deps: a valid swagger.json file
 
 CMD
-- nx workspace-generator smart-dumb-generator <FeatureName> <ItemName>
 - nx workspace-generator feature-generator <FeatureName> <ItemName>
 
 
