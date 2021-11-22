@@ -8,7 +8,6 @@ import { <%=classify(name)%>Service } from './<%=dasherize(name)%>.service';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {<%=classify(name)%>Component} from "./<%=dasherize(name)%>.component";
-import {<%= classify(name) %>FormComponent } from "./components/<%=dasherize(name)%>-form/<%=dasherize(name)%>-form.component";
 import {AgGridModule} from "ag-grid-angular";
 import {TestBed, TestBedStatic, TestModuleMetadata} from '@angular/core/testing';
 import {HttpClientTestingModule} from "@angular/common/http/testing";
@@ -17,10 +16,10 @@ import {<%=classify(name)%>StubService} from "./test/stubs/<%=fileName%>-stub.se
 
 @NgModule({
   declarations: [
+    // todo: add Form components
     UI<%=classify(singleItemName)%>Component ,
     <%=classify(singleItemName)%>ListComponent,
     <%=classify(name)%>Component,
-    <%= classify(name) %>FormComponent,
     <%= classify(name) %>GridViewComponent,
     <%=classify(name)%>Component
   ],
@@ -55,7 +54,7 @@ export class <%=classify(name)%>Module {
   }
 
   /**
-   * ### forTest
+   * <%=classify(name)%>Module.forTest()
    * Helpful util method that replaces services with Stub services,
    * modules with their TestingModule (Httpclient for example).
    * so when we will want to test different parts and component, we can simply do

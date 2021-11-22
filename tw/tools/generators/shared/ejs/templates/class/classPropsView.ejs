@@ -1,0 +1,2 @@
+<% if (obj){ %><% var keys = Object.keys(obj); %><% keys.forEach(function(prop){ %><% if(obj[prop]?.type === 'object'){ %><%- include('./classPropsView',{obj:obj[prop]['properties']}) %><% } else { %>// <%-obj[prop]['description'] || ''%>
+    public <%= prop %>:<%-obj[prop]['type'] === 'integer' ? 'number' :obj[prop]['type']=== 'array'? 'any[]':obj[prop]['type'] %><% } %><% }) %><% } %>

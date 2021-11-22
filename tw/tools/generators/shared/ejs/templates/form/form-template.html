@@ -1,0 +1,23 @@
+<!-- ******************************-->
+<!-- <%=classify(entityName)%>Form -->
+<!-- ******************************-->
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="<%=dasherize(entityName)%>-form">
+        <% Object.keys(properties).forEach(function(propName){ %>
+        <%var currentProp = properties[propName]%>
+        <div class="input-group">
+            <label for="<%- propName %>"><%- propName %> </label>
+            <input formControlName="<%- propName %>" id="<%- propName %>" type="<%- currentProp['type'] %>">
+            <div class="input-error" *ngIf="form.get('<%=propName%>').invalid  && (form.get('<%=propName%>').dirty || form.get('<%=propName%>').touched)">hard coded (not generated) error</div>
+        </div>
+        <% }) %>
+    </div>
+    <!-- ******************************-->
+    <!--           Buttons             -->
+    <!-- ******************************-->
+    <div class="form-buttons-area">
+        <button type="submit" [disabled]="!form.valid">save</button>
+        <button type="submit" [disabled]="!form.valid" *ngIf="canEdit">edit</button>
+        <button type="submit" [disabled]="!form.valid">delete</button>
+    </div>
+</form>

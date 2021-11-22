@@ -36,4 +36,12 @@ export class ExampleApiStubService implements ExampleApiService {
   ): Observable<R> {
     return of({});
   }
+
+  getAPIList(params: {}): Observable<typeof Models> {
+    return undefined;
+  }
+
+  saveSomeData(params: {}): Observable<typeof Models> {
+    return undefined;
+  }
 }

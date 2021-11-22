@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { AbstractDomainApi } from '@tw/shared';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+//todo
 import type * as Models from '../models/classes/example.class';
 
 @Injectable()

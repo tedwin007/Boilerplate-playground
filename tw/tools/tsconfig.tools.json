@@ -9,6 +9,6 @@
     "importHelpers": false
   },
   "include": ["**/*.ts"],
-  "exclude": ["node_modules", "tmp", "**/forms/**", "**/files/**"]
+  "exclude": ["node_modules", "tmp", "**/forms/**", "**/files/**", "**/templates/**"]
 
 }
