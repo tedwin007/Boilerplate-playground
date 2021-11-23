@@ -1,6 +1,6 @@
 [WIP]
-# Generate & Configure full Feature, with one line
-*deps: a valid swagger.json file
+# Generate a domain feature, with one line
+* deps: a valid swagger.json file
 
 ####CMD:
 
