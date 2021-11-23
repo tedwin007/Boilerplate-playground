@@ -37,7 +37,14 @@ export class TemplateManger {
     }
 
     static makeFormFiles(rootPath: string, data: any): TemplateManger {
-        data = {...data, classify, camelize, capitalize, dasherize, definitions: data.swaggerData.definitions}
+        data = {
+            ...data,
+            classify,
+            camelize,
+            capitalize,
+            dasherize,
+            definitions: this.normalizeDefinitions(data.swaggerData.definitions, TemplateOption.Form)
+        }
         Object.keys(data.definitions).forEach((entityName: string) => {
             const destFolder = path.join(rootPath, 'src', 'lib', 'components', `${dasherize(entityName)}-form`);
             this.generateComponentFiles(entityName, data, destFolder);
@@ -45,10 +52,42 @@ export class TemplateManger {
         return TemplateManger;
     }
 
-    static generateComponentFiles(entityName: string, data: any, destFolder: string,compType?:string) {
+    private static normalizeDefinitions(definitions: any, templateType: TemplateOption) {
+        // getting the keys of the Object in an array
+        const entitiesKeys = Object.keys(definitions);
+        // we do not want the change the object directly (in case there are other templates that use it);
+        const copiedObject = Object.assign({}, definitions)
+        // recursively traversal any nested objects.
+        entitiesKeys.forEach((current: string) => {
+            const currentPropValue = copiedObject[current];
+            const currentPropType = currentPropValue['type'];
+            if (currentPropType === 'object')
+                this.normalizeDefinitions(currentPropValue.properties, templateType);
+
+            // normalize props by TemplateOption
+            switch (templateType) {
+                case TemplateOption.Form:
+                    if (currentPropType === 'string')
+                        currentPropValue['type'] = 'text';
+                    break
+            }
+
+            if (currentPropType === 'integer')
+                currentPropValue['type'] = 'number';
+
+        })
+        return copiedObject;
+    }
+
+    static generateComponentFiles(entityName: string, data: any, destFolder: string, compType?: string) {
         for (let suffix of SUFFIX_TYPES) {
-            const tmplPath = path.join(TEMPLATE_DIR_PATH,compType ?? TemplateOption.Form, `${compType ?? TemplateOption.Form}-template.${suffix}`);
-            const fileName = `${dasherize(entityName)}.component.${suffix}`;
+            const tmplPath = path.join(TEMPLATE_DIR_PATH, compType ?? TemplateOption.Form, `${compType ?? TemplateOption.Form}-template.${suffix}`);
+            let fileName ;
+            if (destFolder.includes('-form')){
+                fileName=`${dasherize(entityName)}-form.component.${suffix}`;
+            }else{
+                fileName = `${dasherize(entityName)}.component.${suffix}`;
+            }
             this.generateSingleFile(tmplPath, fileName, data, entityName, destFolder)
         }
         return TemplateManger
@@ -77,6 +116,7 @@ export class TemplateManger {
         if (!fs.existsSync(destFolder)) {
             fs.mkdirSync(destFolder);
         }
+
         fs.writeFileSync(path.join(destFolder, fileName), content);
     }
 

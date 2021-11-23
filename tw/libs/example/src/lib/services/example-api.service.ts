@@ -3,8 +3,6 @@ import { Injectable } from '@angular/core';
 import { AbstractDomainApi } from '@tw/shared';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-//todo
-import type * as Models from '../models/classes/example.class';
 
 @Injectable()
 export class ExampleApiService extends AbstractDomainApi {
@@ -21,10 +19,10 @@ export class ExampleApiService extends AbstractDomainApi {
    *
    *  @example ``````
    */
-  getAPIList(params: {}): Observable<typeof Models> {
+  getAPIList(params: {}): Observable<any> {
     const query = new URLSearchParams(<any>params).toString();
     return this.httpClient
-      .get<typeof Models>(this.baseUrl + '/apis' + query, { observe: 'body' })
+      .get<any>(this.baseUrl + '/apis' + query, { observe: 'body' })
       .pipe(
         catchError((err) => {
           return throwError(new Error(err));
@@ -45,9 +43,9 @@ export class ExampleApiService extends AbstractDomainApi {
    *
    *  @example ``````
    */
-  saveSomeData(params: {}): Observable<typeof Models> {
+  saveSomeData(params: {}): Observable<any> {
     return this.httpClient
-      .post<typeof Models>(this.baseUrl + '/apis', params, { observe: 'body' })
+      .post<any>(this.baseUrl + '/apis', params, { observe: 'body' })
       .pipe(
         catchError((err) => {
           return throwError(new Error(err));

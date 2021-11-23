@@ -26,6 +26,5 @@ export default async function (tree: Tree, schema: any) {
             .makeFormFiles(libraryRoot, {name: schema.name, ...dataTranspiler})
         await postGenerateFlow(tree, libraryRoot, swaggerData);
         await formatFiles(tree);
-
     };
 }

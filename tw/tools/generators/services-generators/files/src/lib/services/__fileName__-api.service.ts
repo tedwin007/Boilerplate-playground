@@ -3,7 +3,6 @@ import {Injectable} from "@angular/core";
 import { AbstractDomainApi } from '@tw/shared';
 import {Observable,throwError} from "rxjs";
 import {catchError} from "rxjs/operators";
-import type * as Models from '../models/classes/<%=dasherize(name)%>.class';
 
 <%
 var paths = swaggerData['paths'];
@@ -31,7 +30,7 @@ function isDeleteHttpMethod(current){
       <%var method = cb(current)%>
      <% var pathData= current[method]%>
       <%var successData = pathData?.responses['200']%>
-      <%# var responseType=successData?.schema?.items?.['$ref'] || successData?.schema?.['$ref'] || 'any'%>
+      <%var responseType=successData?.schema?.items?.['$ref'] || successData?.schema?.['$ref'] %>
       <% var methodName = camelize(pathData?.operationId || pathData?.summary || '') %>
       /**
        * ### <%-camelize(methodName)%>
@@ -50,9 +49,9 @@ function isDeleteHttpMethod(current){
        *
        *  @example ```<%= current['example'] %>```
        */
-       <%-methodName%>(params:{<%pathData.parameters?.forEach(function(item){ %><%= item.name %>: <%-item.type %>, <%}) %>}):Observable<typeof Models> {
+       <%-methodName%>(params:{<%pathData.parameters?.forEach(function(item){ %><%= item.name %>: <%-item.type %>, <%}) %>}):Observable<<%-classify( responseType|| '') || 'any' %>> {
       <%if(method === "get" || method === "delete"){%>const query = new URLSearchParams(<any>params).toString();<%}%>
-        return this.httpClient.<%=method%><typeof Models>(this.baseUrl+'<%=urlPath%>'<%if(method === "get" || method === "delete" ){  %>+query <%}%><%if(method!=='get' && method !== "delete"){%>,params<%}%> ,{observe:'body'}).pipe(catchError((err)=>{return throwError(new Error(err))}))
+        return this.httpClient.<%=method%><<%-classify( responseType|| '') || 'any'%>>(this.baseUrl+'<%=urlPath%>'<%if(method === "get" || method === "delete" ){  %>+query <%}%><%if(method!=='get' && method !== "delete"){%>,params<%}%> ,{observe:'body'}).pipe(catchError((err)=>{return throwError(new Error(err))}))
   }
 <%} %>
 

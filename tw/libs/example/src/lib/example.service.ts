@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { StateManger } from '../../../shared/src/lib/services/state-manger-service';
+import { StateManger } from '@tw/shared';
+import { ExampleApiService } from './services/example-api.service';
 
 @Injectable()
 export class ExampleService extends StateManger<any> {
-  constructor() {
+  constructor(private example: ExampleApiService) {
     super([]);
   }
 }

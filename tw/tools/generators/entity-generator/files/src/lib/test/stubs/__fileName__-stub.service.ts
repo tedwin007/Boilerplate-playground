@@ -1,21 +1,12 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, Observable, of} from "rxjs";
+import { StateManger } from "@tw/shared";
+import {<%=classify(name)%>Service} from  './../<%=dasherize(name)%>.service';
+import {<%=classify(name)%>ApiService} from "./../services/<%=dasherize(name)%>-api.service";
 
 @Injectable()
-export class <%=classify(name)%>StubService implements <%=classify(name)%>Service {
-  protected _state$: BehaviorSubject<any>;
-  // todo (auto-generated)
-  getState(): Observable<any> {
-    return of('Method not implemented.')
-  }
+export class <%=classify(name)%>StubService  extends StateManger implements <%=classify(name)%>Service {
 
-  // todo (auto-generated)
-  setState(data: any): void {
-    return of('Method not implemented.')
-  }
-
-  // todo (auto-generated)
-  getValue() {
-    return of('Method not implemented.')
-  }
+    constructor(private <%=classify(name).toLowerCase()%>Service:<%=classify(name)%>ApiService) {
+        super([]);
+    }
 }

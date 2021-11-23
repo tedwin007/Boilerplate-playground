@@ -5,21 +5,26 @@
   "type": "object",
   "properties": {
     "name": {
+      "x-prompt": "Library name?",
       "type": "string",
       "description": "Library name",
       "$default": {
         "$source": "argv",
         "index": 0
       }
+    },
+    "singleItemName": {
+      "type": "string",
+      "description": "single item name",
+      "x-prompt": "single item name?",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      }
     }
   },
-  "singleItemName": {
-    "type": "string",
-    "description": "single item name",
-    "$default": {
-      "$source": "argv",
-      "index": 1
-    }
-  },
-  "required": ["name"]
+  "required": [
+    "name",
+    "singleItemName"
+  ]
 }

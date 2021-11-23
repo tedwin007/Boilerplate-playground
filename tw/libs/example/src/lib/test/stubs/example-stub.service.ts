@@ -1,21 +1,11 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, of } from 'rxjs';
+import { StateManger } from '@tw/shared';
+import { ExampleService } from './../example.service';
+import { ExampleApiService } from './../services/example-api.service';
 
 @Injectable()
-export class ExampleStubService implements ExampleService {
-  protected _state$: BehaviorSubject<any>;
-  // todo (auto-generated)
-  getState(): Observable<any> {
-    return of('Method not implemented.');
-  }
-
-  // todo (auto-generated)
-  setState(data: any): void {
-    return of('Method not implemented.');
-  }
-
-  // todo (auto-generated)
-  getValue() {
-    return of('Method not implemented.');
+export class ExampleStubService extends StateManger implements ExampleService {
+  constructor(private example: ExampleApiService) {
+    super([]);
   }
 }

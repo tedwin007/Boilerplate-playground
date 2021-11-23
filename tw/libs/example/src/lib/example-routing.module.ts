@@ -1,14 +1,14 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { YokoListComponent } from './components/yoko-list/yoko-list.component';
-import { UIYokoComponent } from './components/single-yoko-item/single-yoko-item.component';
+import { OneListComponent } from './components/one-list/one-list.component';
+import { SingleOneComponent } from './components/single-one-item/single-one-item.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/yoko-list', pathMatch: 'full' },
-  { path: 'single-yoko/:id', component: UIYokoComponent },
-  { path: 'yoko-list', component: YokoListComponent },
+  { path: '', redirectTo: '/one-list', pathMatch: 'full' },
+  { path: 'single-one/:id', component: SingleOneComponent },
+  { path: 'one-list', component: OneListComponent },
   //todo: add 404 page
-  { path: '**', component: YokoListComponent },
+  { path: '**', component: OneListComponent },
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],
