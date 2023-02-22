@@ -1,3 +1,8 @@
 @import 'styles/color-palette';
 @import "~bootstrap/scss/bootstrap";
 @import "~ngx-bootstrap/datepicker/bs-datepicker";
+
+body{
+  background:$primary;
+  color:$secondary
+}

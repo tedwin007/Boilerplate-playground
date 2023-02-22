@@ -2,4 +2,16 @@
   display: block;
   height: 100vh;
   box-sizing: border-box;
+
+  .row {
+    position: relative;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+
+  .container {
+    display: grid;
+    border: 1px solid red;
+    grid-row-gap: 20px;
+  }
 }

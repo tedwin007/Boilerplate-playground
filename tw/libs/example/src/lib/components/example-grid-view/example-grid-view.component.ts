@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { AgGridEvent, ColDef } from 'ag-grid-community';
+import {Component, Input, OnInit} from '@angular/core';
+import {AgGridEvent, ColDef} from 'ag-grid-community';
 
 export enum GridStyleOf {
   Single = 'single-grid',
@@ -21,8 +21,8 @@ export enum GridStyleOf {
   styleUrls: ['./example-grid-view.component.scss'],
 })
 export class ExampleGridViewComponent implements OnInit {
-  private _columnDefs: ColDef[];
-  gridClass: GridStyleOf;
+  private _columnDefs!: ColDef[];
+  gridClass!:GridStyleOf;
   frameworkComponents = {};
   @Input() rowData = [];
 

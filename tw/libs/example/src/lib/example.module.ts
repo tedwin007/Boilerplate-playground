@@ -16,7 +16,6 @@ import {
   TestModuleMetadata,
 } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ExampleStubService } from './test/stubs/example-stub.service';
 import { SingleFormComponent } from './components/single-form/single-form.component';
 
 @NgModule({
@@ -38,7 +37,6 @@ import { SingleFormComponent } from './components/single-form/single-form.compon
   ],
   providers: [ExampleService],
   exports: [
-    SharedModule,
     SingleOneComponent,
     ExampleGridViewComponent,
     ExampleComponent,
@@ -69,7 +67,7 @@ export class ExampleModule {
    * note:
    * - this assumes we are using Karma & Jasmin
    * - this is not necessarily works, at the moment it is only demonstrates concept
-   * - I did built a working version of this (it saves a lot of time and encourages "testing")
+   * - I did build a working version of this (it saves a lot of time and encourages "testing")
    */
   static forTest(moduleDef: TestModuleMetadata): TestBedStatic {
     return TestBed.configureTestingModule({
@@ -82,7 +80,7 @@ export class ExampleModule {
       },
       add: {
         imports: [HttpClientTestingModule],
-        providers: [ExampleStubService],
+        providers: [],
       },
     });
   }
