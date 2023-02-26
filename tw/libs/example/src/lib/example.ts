@@ -1,5 +1,5 @@
 import { ExampleModule } from './example.module';
 
-export function Example(): ExampleModule {
-  return ExampleModule;
+export function Example(): any {
+  return ExampleModule.forRoot();
 }

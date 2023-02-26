@@ -1,12 +1,12 @@
 import {HttpClient, HttpResponseBase} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {BaseHttpConfig} from "./interfaces/domain-api.config.interface";
 
 
-//todo: Can be redundant...
 export abstract class BaseAPI {
   protected _httpClient: HttpClient;
 
-  constructor(httpClient: HttpClient) {
+  protected constructor(httpClient: HttpClient) {
     this._httpClient = httpClient;
   }
 
@@ -22,7 +22,7 @@ export abstract class BaseAPI {
     return this._httpClient.put<R>(path, data, {withCredentials: true});
   }
 
-  protected delete<D, R = HttpResponseBase>(path: string, data?: D): Observable<R> {
+  protected delete<D, R = HttpResponseBase>(path: string, data?: BaseHttpConfig<D>): Observable<R> {
     return this._httpClient.delete<R>(path, data);
   }
 

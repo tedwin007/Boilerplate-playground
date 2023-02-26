@@ -54,32 +54,4 @@ export class <%=classify(name)%>Module {
       providers: []
     }
   }
-
-  /**
-   * <%=classify(name)%>Module.forTest()
-   * Helpful util method that replaces services with Stub services,
-   * modules with their TestingModule (Httpclient for example).
-   * so when we will want to test different parts and component, we can simply do
-   * <%=classify(name)%>Module.forTest({declarations:[CurrentTestedComponent]})
-   *
-   * note:
-   * - this assumes we are using Karma & Jasmin
-   * - this is not necessarily works, at the moment it is only demonstrates concept
-   * - I did built a working version of this (it saves a lot of time and encourages "testing")
-   */
-  static forTest(moduleDef:TestModuleMetadata):TestBedStatic {
-    return TestBed.configureTestingModule({
-      ...moduleDef,
-      imports:[<%=classify(name)%>Module.forRoot(),...(moduleDef.imports || [])],
-    }).overrideModule(<%=classify(name)%>Module, {
-      remove: {
-        imports: [HttpClientModule],
-        providers:[<%=classify(name)%>Service]
-      },
-      add: {
-        imports: [HttpClientTestingModule],
-        providers:[<%=classify(name)%>StubService]
-      }
-    })
-  }
 }

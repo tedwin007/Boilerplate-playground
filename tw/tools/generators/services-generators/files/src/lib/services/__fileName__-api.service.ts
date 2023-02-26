@@ -35,18 +35,12 @@ function isDeleteHttpMethod(current){
       /**
        * ### <%-camelize(methodName)%>
        * <%- current['description'] %>
-       *
        * Path: <%-urlPath%>
-       *
        * Method: <%-cb(current) %>
-       *
        * Params:
        *  <% current[ cb(current)]['parameters']?.forEach(function(item){ %>
        *  <%= item["name"] %>: <%-item['type'] %> - description: <%-item['description'] %>,
-       *
-       *
        *  <%})%>
-       *
        *  @example ```<%= current['example'] %>```
        */
        <%-methodName%>(params:{<%pathData.parameters?.forEach(function(item){ %><%= item.name %>: <%-item.type %>, <%}) %>}):Observable<<%-classify( responseType|| '') || 'any' %>> {

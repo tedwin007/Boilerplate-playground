@@ -5,7 +5,7 @@ import {RouterModule} from "@angular/router";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
-import {ExampleApiService} from "../../../../libs/example/src/lib/services/example-api.service";
+import {ExampleApiService} from "@tw/example";
 
 @NgModule({
   providers: [ExampleApiService],
