@@ -1,0 +1,31 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "esnext",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@tw/example": [
+        "libs/example/src/index.ts"
+      ],
+      "@tw/shared": [
+        "libs/shared/src/index.ts"
+      ]
+    },
+    "useDefineForClassFields": false
+  },
+  "exclude": ["node_modules", "tmp", "**/forms/**", "**/files/**"]
+}
