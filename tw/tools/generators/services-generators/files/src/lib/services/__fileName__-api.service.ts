@@ -1,4 +1,3 @@
-import {HttpClient} from "@angular/common/http";
 import {Injectable} from "@angular/core";
 import { AbstractDomainApi } from '@tw/shared';
 import {Observable,throwError} from "rxjs";
@@ -55,7 +54,7 @@ export class <%=classify(name)%>ApiService extends AbstractDomainApi  {
       <%- buildMethods(current,isDeleteHttpMethod,prop)%>
       <%})%>
 
-  constructor(private httpClient: HttpClient) {
-    super(httpClient,'<%-swaggerData.host%><%-swaggerData.basePath%>/');
+  constructor() {
+    super('<%-swaggerData.host%><%-swaggerData.basePath%>/');
   }
 }

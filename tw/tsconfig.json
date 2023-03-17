@@ -23,8 +23,7 @@
       ],
       "@tw/shared": [
         "libs/shared/src/index.ts"
-      ],
-      "@tw/store": ["libs/store/src/index.ts"]
+      ]
 
     },
     "useDefineForClassFields": false

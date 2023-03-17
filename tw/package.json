@@ -8,7 +8,7 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "create": "node node_modules/@nrwl/cli/bin/nx.js workspace-schematic feature-generator --name=store --singleItemName=PetStrore"
+    "create": "node node_modules/@nrwl/cli/bin/nx.js workspace-schematic feature-generator --name=users --singleItemName=user"
   },
   "private": true,
   "dependencies": {

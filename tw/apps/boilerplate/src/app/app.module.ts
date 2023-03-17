@@ -20,10 +20,7 @@ import {SharedModule} from "@tw/shared";
     RouterModule.forRoot([{
       path: 'example',
       loadChildren: () => import('@tw/example').then(m => m.moduleInstance)
-    }, {
-      path: 'petStore',
-      loadChildren: () => import('@tw/store').then(m => m.Store())
-    },
+    }
     ]),
   ],
   bootstrap: [AppComponent],

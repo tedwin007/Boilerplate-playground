@@ -5,8 +5,8 @@
     "version": "1.0.0",
     "title": "User API"
   },
-  "host": "petstore.swagger.io",
-  "basePath": "/v2",
+  "host": "api",
+  "basePath": "/v1",
   "tags": [
     {
       "name": "User",
