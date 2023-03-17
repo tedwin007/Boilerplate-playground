@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../dist/out-tsc/tools",
+    "rootDir": ".",
+    "module": "commonjs",
+    "target": "es5",
+    "types": ["node"],
+    "importHelpers": false
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "tmp", "**/forms/**", "**/files/**", "**/templates/**"]
+
+}

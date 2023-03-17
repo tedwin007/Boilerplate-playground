@@ -1,0 +1,33 @@
+:host {
+  display: inherit;
+  position: relative;
+}
+
+.searchbar-container {
+  position: relative;
+  display: grid;
+
+  .searchbar-input {
+    padding: 3px 3px 3px 10px;
+    box-shadow: inset 1px 2px 3px grey;
+    border-radius: 15px;
+    border: 0;
+  }
+
+  input::placeholder{
+    color: lightgray;
+    padding-left: 10px
+  }
+
+  span {
+    position: absolute;
+    border-radius: 15px;
+    right: 0;
+    margin-top: 5px;
+    margin-right: 10px;
+    color: lightgray;
+  }
+
+
+}
+

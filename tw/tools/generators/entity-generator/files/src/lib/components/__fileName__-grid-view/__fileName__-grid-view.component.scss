@@ -1,0 +1,18 @@
+<%var obj = swaggerData['definitions']; %>
+<%var keys = Object.keys(obj); %>
+
+                               :host{
+  width: 100%;
+  height: auto;
+}
+.ag-theme-alpine{
+  width: 100%;
+}
+
+/**
+ Auto Generated Section - Customizable GridType
+ */
+<% keys.forEach(function (entity) { %>
+.<%=dasherize(entity)%>-grid {
+}
+<% }) %>

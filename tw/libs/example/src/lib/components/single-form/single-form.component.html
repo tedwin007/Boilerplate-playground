@@ -1,0 +1,23 @@
+<!-- ******************************-->
+<!-- SingleForm -->
+<!-- ******************************-->
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="single-form">
+
+
+        <div class="input-group">
+            <label for="id">id </label>
+            <input formControlName="id" id="id" type="number">
+            <div class="input-error" *ngIf="form.get('id')?.invalid  && (form.get('id')?.dirty || form.get('id')?.touched)">hard coded (not generated) error</div>
+        </div>
+
+    </div>
+    <!-- ******************************-->
+    <!--           Buttons             -->
+    <!-- ******************************-->
+    <div class="form-buttons-area">
+        <button type="submit" [disabled]="!form.valid">save</button>
+        <button type="submit" [disabled]="!form.valid" *ngIf="canEdit">edit</button>
+        <button type="submit" [disabled]="!form.valid">delete</button>
+    </div>
+</form>

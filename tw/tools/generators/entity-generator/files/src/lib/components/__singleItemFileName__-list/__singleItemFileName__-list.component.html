@@ -1,0 +1,7 @@
+<ng-container *ngFor="let item of <%=classify(singleItemName)%>State$ | async as <%=classify(singleItemName)%>">
+  <single-<%= dasherize(singleItemName) %>-item  [data]="<%=classify(singleItemName)%>">
+  </single-<%= dasherize(singleItemName) %>-item>
+</ng-container>
+
+
+

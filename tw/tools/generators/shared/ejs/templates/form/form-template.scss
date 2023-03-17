@@ -1,0 +1,14 @@
+:host{
+  position: relative;
+  display: grid;
+  grid-template-rows: auto;
+
+  .<%=dasherize(entityName)%>-form{
+    input {}
+   .input-group{}
+   .form-buttons-area{}
+  }
+
+}
+
+

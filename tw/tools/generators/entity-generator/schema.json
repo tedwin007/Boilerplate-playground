@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "entity-generator",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Library name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "grid": {
+      "type": "string",
+      "description": "Adds agGrid component with columns definition",
+      "default": "dt15-grid.json"
+    },
+    "required": [
+      "name"
+    ]
+  }
+}

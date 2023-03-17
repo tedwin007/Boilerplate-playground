@@ -1,0 +1,49 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "",
+    "version": "1",
+    "title": "Angular-API"
+  },
+  "host": "virtserver.swaggerhub.com",
+  "basePath": "/TidharWienreb/angular-api/1",
+  "tags": [
+    {
+      "name": "Public"
+    },
+    {
+      "name": "Private"
+    }
+  ],
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/apis": {
+      "get": {
+        "operationId": "getAllApis",
+        "tags": [
+          "Public"
+        ],
+        "summary": "Returns a list of all the available APIs",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "A JSON array of apis names"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Single": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    }
+  }
+}
