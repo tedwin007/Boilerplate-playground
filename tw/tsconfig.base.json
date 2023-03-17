@@ -10,20 +10,14 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "esnext",
-    "lib": [
-      "es2017",
-      "dom"
-    ],
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@tw/example": [
-        "libs/example/src/index.ts"
-      ],
-      "@tw/shared": [
-        "libs/shared/src/index.ts"
-      ]
+      "@tw/example": ["libs/example/src/index.ts"],
+      "@tw/shared": ["libs/shared/src/index.ts"],
+      "@tw/store": ["libs/store/src/index.ts"]
     },
     "useDefineForClassFields": false
   },

@@ -7,19 +7,15 @@ import {catchError} from "rxjs/operators";
 <%
 var paths = swaggerData['paths'];
 var pathNameList = Object.keys(swaggerData.paths);
-
 function isGetHttpMethod(current){
   return Object.keys(current).find(function(item){return item ==='get'});
 }
-
 function isPostHttpMethod(current){
   return Object.keys(current).find(function(item){return item ==='post'});
 }
-
 function isPutHttpMethod(current){
   return Object.keys(current).find(function(item){return item ==='put'});
 }
-
 function isDeleteHttpMethod(current){
   return Object.keys(current).find(function(item){return item ==='delete'});
 }
@@ -51,7 +47,6 @@ function isDeleteHttpMethod(current){
 
 @Injectable()
 export class <%=classify(name)%>ApiService extends AbstractDomainApi  {
-
   <% pathNameList.forEach( function(prop){ %>
     <% var current = paths[prop] %>
       <%- buildMethods(current,isGetHttpMethod,prop)%>
@@ -60,7 +55,7 @@ export class <%=classify(name)%>ApiService extends AbstractDomainApi  {
       <%- buildMethods(current,isDeleteHttpMethod,prop)%>
       <%})%>
 
-  constructor(private httpClient: HttpClient,apiURL = '<%-swaggerData.host%><%-swaggerData.basePath%>/' ) {
-    super(httpClient,apiURL);
+  constructor(private httpClient: HttpClient) {
+    super(httpClient,'<%-swaggerData.host%><%-swaggerData.basePath%>/');
   }
 }

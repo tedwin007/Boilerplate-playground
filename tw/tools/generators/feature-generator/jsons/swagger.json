@@ -1,60 +1,180 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "",
-    "version": "1",
-    "title": "Angular-API"
+    "description": "This is a sample server Petstore server.  You can find out more about     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).      For this sample, you can use the api key `special-key` to test the authorization     filters.",
+    "version": "1.0.0",
+    "title": "Swagger Petstore 2.0",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "apiteam@swagger.io"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
   },
-  "host": "virtserver.swaggerhub.com",
-  "basePath": "/TidharWienreb/angular-api/1",
+  "host": "petstore.swagger.io",
+  "basePath": "/v2",
   "tags": [
     {
-      "name": "Public"
+      "name": "User",
+      "description": "User Table",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "http://swagger.io"
+      }
     },
     {
-      "name": "Private"
+      "name": "store",
+      "description": "Access to Petstore orders"
+    },
+    {
+      "name": "user",
+      "description": "Operations on User"
     }
   ],
   "schemes": [
-    "https"
+    "https",
+    "http"
   ],
   "paths": {
-    "/apis": {
-      "get": {
+    "/pet": {
+      "post": {
         "tags": [
-          "Public"
+          "user"
         ],
-        "summary": "GetAPIList",
-        "parameters": [],
+        "summary": "Add new user",
+        "description": "",
+        "operationId": "addNewUser",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Pet object that needs to be added to the store",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
         "responses": {
-          "200": {
-            "description": "A JSON array of apis names"
+          "405": {
+            "description": "Invalid input"
           }
         }
       },
-      "post": {
+      "get": {
         "tags": [
-          "Private"
+          "user"
         ],
-        "summary": "Save some data",
-        "parameters": [],
+        "summary": "Get users",
+        "description": "",
+        "operationId": "getUserByName",
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
         "responses": {
           "200": {
-            "description": "A JSON array of apis names"
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Invalid username supplied"
+          },
+          "404": {
+            "description": "User not found"
           }
         }
       }
     }
   },
   "definitions": {
-    "Single": {
+    "User": {
       "type": "object",
       "properties": {
-        "id": {
+        "autoJoin": {
+          "type": "boolean",
+          "default": false
+        },
+        "moderator": {
+          "type": "boolean",
+          "default": true
+        },
+        "anyFlagUp": {
+          "type": "boolean",
+          "default": true
+        },
+        "index": {
           "type": "integer",
           "format": "int64"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "userGuid": {
+          "type": "string"
+        },
+        "versionGUID": {
+          "type": "string"
+        },
+        "mandatory": {
+          "type": "string"
+        },
+        "guid": {
+          "type": "string"
+        },
+        "dailyReminder": {
+          "type": "string"
+        },
+        "userRole": {
+          "type": "boolean"
+        },
+        "email": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "description": "pet status in the store",
+          "enum": [
+            "available",
+            "pending",
+            "sold"
+          ]
+        }
+      },
+      "xml": {
+        "name": "User"
+      }
+    },
+    "ApiResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "type": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
         }
       }
     }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
   }
 }

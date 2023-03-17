@@ -18,12 +18,17 @@ import {SharedModule} from "@tw/shared";
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot([{
-      path: '',
+      path: 'example',
       loadChildren: () => import('@tw/example').then(m => m.moduleInstance)
-    }]),
+    }, {
+      path: 'petStore',
+      loadChildren: () => import('@tw/store').then(m => m.Store())
+    },
+    ]),
   ],
   bootstrap: [AppComponent],
 })
+
 export class AppModule {
 }
 

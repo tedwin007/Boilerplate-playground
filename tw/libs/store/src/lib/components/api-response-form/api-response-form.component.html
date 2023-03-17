@@ -1,0 +1,37 @@
+<!-- ******************************-->
+<!-- ApiResponseForm -->
+<!-- ******************************-->
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="api-response-form">
+        
+        
+        <div class="input-group">
+            <label for="code">code </label>
+            <input formControlName="code" id="code" type="number">
+            <div class="input-error" *ngIf="form.get('code').invalid  && (form.get('code').dirty || form.get('code').touched)">hard coded (not generated) error</div>
+        </div>
+        
+        
+        <div class="input-group">
+            <label for="type">type </label>
+            <input formControlName="type" id="type" type="text">
+            <div class="input-error" *ngIf="form.get('type').invalid  && (form.get('type').dirty || form.get('type').touched)">hard coded (not generated) error</div>
+        </div>
+        
+        
+        <div class="input-group">
+            <label for="message">message </label>
+            <input formControlName="message" id="message" type="text">
+            <div class="input-error" *ngIf="form.get('message').invalid  && (form.get('message').dirty || form.get('message').touched)">hard coded (not generated) error</div>
+        </div>
+        
+    </div>
+    <!-- ******************************-->
+    <!--           Buttons             -->
+    <!-- ******************************-->
+    <div class="form-buttons-area">
+        <button type="submit" [disabled]="!form.valid">save</button>
+        <button type="submit" [disabled]="!form.valid" *ngIf="canEdit">edit</button>
+        <button type="submit" [disabled]="!form.valid">delete</button>
+    </div>
+</form>
