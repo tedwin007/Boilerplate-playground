@@ -1,4 +1,4 @@
-import {ModuleWithProviders, NgModule} from '@angular/core';
+import { NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '@tw/shared';
 import {ReactiveFormsModule} from "@angular/forms";
@@ -10,8 +10,6 @@ import { Single<%=classify(singleItemName)%>Component } from './components/singl
 import { <%=classify(name)%>Service } from './<%=dasherize(name)%>.service';
 import {<%=classify(name)%>Component} from "./<%=dasherize(name)%>.component";
 import {AgGridModule} from "ag-grid-angular";
-import {TestBed, TestBedStatic, TestModuleMetadata} from '@angular/core/testing';
-import {HttpClientTestingModule} from "@angular/common/http/testing";
 import {<%=classify(name)%>StubService} from "./test/stubs/<%=fileName%>-stub.service";
 <%Object.keys(swaggerData['definitions']).forEach(function(item){%>import {<%=classify(item)%>FormComponent} from "./components/<%=dasherize(item)%>-form/<%=dasherize(item)%>-form.component";<%})%>
 
@@ -41,17 +39,4 @@ import {<%=classify(name)%>StubService} from "./test/stubs/<%=fileName%>-stub.se
   ]
 })
 export class <%=classify(name)%>Module {
-  static forRoot(): ModuleWithProviders<<%=classify(name)%>Module> {
-    return {
-      ngModule: <%=classify(name)%>Module,
-      providers: [<%=classify(name)%>Service]
-    }
-  }
-
-  static forChild(): ModuleWithProviders<<%=classify(name)%>Module> {
-    return {
-      ngModule: <%=classify(name)%>Module,
-      providers: []
-    }
-  }
 }

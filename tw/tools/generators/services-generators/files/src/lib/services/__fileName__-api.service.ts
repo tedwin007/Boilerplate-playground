@@ -30,8 +30,7 @@ function isDeleteHttpMethod(current){
       /**
        * ### <%-camelize(methodName)%>
        * <%- current['description'] %>
-       * Path: <%-urlPath%>
-       * Method: <%-cb(current) %>
+       * <%-urlPath%>:<%-cb(current) %>
        * Params:
        *  <% current[ cb(current)]['parameters']?.forEach(function(item){ %>
        *  <%= item["name"] %>: <%-item['type'] %> - description: <%-item['description'] %>,
@@ -46,6 +45,11 @@ function isDeleteHttpMethod(current){
 
 @Injectable()
 export class <%=classify(name)%>ApiService extends AbstractDomainApi  {
+
+  constructor() {
+    super('<%-swaggerData.host%><%-swaggerData.basePath%>');
+  }
+
   <% pathNameList.forEach( function(prop){ %>
     <% var current = paths[prop] %>
       <%- buildMethods(current,isGetHttpMethod,prop)%>
@@ -54,7 +58,4 @@ export class <%=classify(name)%>ApiService extends AbstractDomainApi  {
       <%- buildMethods(current,isDeleteHttpMethod,prop)%>
       <%})%>
 
-  constructor() {
-    super('<%-swaggerData.host%><%-swaggerData.basePath%>/');
-  }
 }

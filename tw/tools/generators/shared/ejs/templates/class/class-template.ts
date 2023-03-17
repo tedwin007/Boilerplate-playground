@@ -1,18 +1,11 @@
 import {I<%=classify(entityName)%>} from "../interfaces/<%=dasherize(entityName)%>.interface";
 
 export interface I<%=classify(entityName)%>Request{
-
-}
-export interface I<%=classify(entityName)%>Response{
-
+ id?:string
 }
 
-/**
-* @example
-* ```js
-* <%- JSON.stringify(swaggerData['definitions'][entityName]['example'])%>
-* ```
-*/
+export type I<%=classify(entityName)%>Response = I<%=classify(entityName)%>;
+
 export class <%=classify(entityName)%> implements I<%=classify(entityName)%>{
     <%- include(dirPath+'/class/classPropsView',{obj:swaggerData['definitions'][entityName]['properties']}) %>
 
@@ -20,13 +13,11 @@ export class <%=classify(entityName)%> implements I<%=classify(entityName)%>{
       Object.assign(this, data);
     }
 
-    static toRequestData(data:I<%=classify(entityName)%>) :I<%=classify(entityName)%>Request{
-      return {
-      }
+    static toRequestData(data:I<%=classify(entityName)%>) :I<%=classify(entityName)%>Request | null{
+      return data?.id ? {id:data?.id} : null
     }
 
     static fromResponseData(data: I<%=classify(entityName)%>) : <%=classify(entityName)%> {
         return new <%=classify(entityName)%>(data);
     }
-
   }
