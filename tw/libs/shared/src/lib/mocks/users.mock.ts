@@ -1,29 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {AgGridEvent, ColDef} from 'ag-grid-community';
-import {SingleColumnDefs} from "./constants/columsDefs.const";
 
-export enum GridStyleOf {
-  Single = 'single-grid',
-}
-
-interface IRowData {
-  autoJoin: boolean;
-  allowToSign: boolean;
-  moderator: boolean;
-  anyFlagUp: boolean;
-  index: number;
-  userName: string;
-  userGuid: string;
-  versionGUID: string;
-  mandatory: boolean;
-  accountID: number;
-  guid: string;
-  dailyReminder: boolean;
-  userRole: string;
-  email: string
-}
-
-const rowData: IRowData[] = [{
+export const usersMock = [{
   "accountID": 9,
   "versionGUID": "Culpa iure et delectus molestias. Praesentium enim quo dolore adipisci placeat provident. Iusto ratione impedit laudantium aperiam dolor sit sed.\n \rAut aut ipsum occaecati. Vero repudiandae dolores sed dolores. Perspiciatis dicta consectetur molestiae quos maiores et blanditiis qui. Voluptates totam architecto nulla corporis ea eius cupiditate. Corporis dolorem quae non rem dolor asperiores et.\n \rBeatae debitis nemo est excepturi aut dolorem doloribus. Minus quo maiores. Quidem nulla eveniet voluptatem distinctio dolorem explicabo explicabo quisquam dolores. Quam velit voluptate maxime sed molestiae rerum omnis sit alias. Sit accusantium exercitationem est cum dignissimos et.",
   "dailyReminder": true,
@@ -234,46 +210,3 @@ const rowData: IRowData[] = [{
   "anyFlagUp": true,
   "index": 40
 }];
-
-@Component({
-  selector: 'tw-example-grid-view',
-  template: `
-      <div class="single-grid">
-          <ag-grid-angular
-                  class="ag-theme-alpine"
-                  [ngClass]="gridClass"
-                  [rowData]="rowData"
-                  (gridReady)="autoSize($event)"
-                  [frameworkComponents]="frameworkComponents"
-                  [columnDefs]="columnDefs"
-          >
-          </ag-grid-angular>
-      </div>
-  `,
-  styleUrls: ['./example-grid-view.component.scss'],
-})
-export class ExampleGridViewComponent implements OnInit {
-  private _columnDefs = SingleColumnDefs
-  gridClass!: GridStyleOf;
-  frameworkComponents = {};
-  @Input() rowData = rowData;
-
-  get columnDefs(): ColDef[] {
-    return this._columnDefs;
-  }
-
-  ngOnInit(): void {
-    this.setColumnDefs(SingleColumnDefs);
-  }
-
-  autoSize(event: AgGridEvent): void {
-    event.api.sizeColumnsToFit();
-  }
-
-  setColumnDefs(value: ColDef[], cssClass?: GridStyleOf) {
-    this._columnDefs = value;
-    if (cssClass) {
-      this.gridClass = cssClass;
-    }
-  }
-}
