@@ -1,4 +1,4 @@
-import {BehaviorSubject, Observable, of} from "rxjs";
+import {BehaviorSubject, Observable} from "rxjs";
 
 /**
  * Abstract Base Flux
