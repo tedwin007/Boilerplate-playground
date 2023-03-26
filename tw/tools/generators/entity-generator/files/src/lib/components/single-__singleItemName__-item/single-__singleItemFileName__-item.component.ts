@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
-import {I<%=classify(singleItemName)%>} from '../../models/interfaces/<%=dasherize(singleItemName)%>-item.interface';
+import {I<%=classify(singleItemName)%>} from '../../models/interfaces/<%=dasherize(singleItemName)%>.interface';
 
 @Component({
   selector: 'single-<%=dasherize(singleItemName)%>-item',
@@ -8,6 +8,5 @@ import {I<%=classify(singleItemName)%>} from '../../models/interfaces/<%=dasheri
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Single<%=classify(singleItemName)%>Component {
-  // todo: replace/define 'I<%=classify(singleItemName)%>' (empty)
   @Input() data?: I<%=classify(singleItemName)%>;
 }

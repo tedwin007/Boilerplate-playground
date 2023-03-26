@@ -18,13 +18,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@tw/example": [
-        "libs/example/src/index.ts"
-      ],
       "@tw/shared": [
         "libs/shared/src/index.ts"
-      ]
-
+      ],
+      "@tw/users": ["libs/users/src/index.ts"]
     },
     "useDefineForClassFields": false
   },

@@ -1,7 +1,7 @@
 import {I<%=classify(entityName)%>} from "../interfaces/<%=dasherize(entityName)%>.interface";
 
 export interface I<%=classify(entityName)%>Request{
- id?:string
+ id?: string | number;
 }
 
 export type I<%=classify(entityName)%>Response = I<%=classify(entityName)%>;
@@ -13,7 +13,7 @@ export class <%=classify(entityName)%> implements I<%=classify(entityName)%>{
       Object.assign(this, data);
     }
 
-    static toRequestData(data:I<%=classify(entityName)%>) :I<%=classify(entityName)%>Request | null{
+    static toRequestData(data:{id?:string | number}) :I<%=classify(entityName)%>Request | null{
       return data?.id ? {id:data?.id} : null
     }
 

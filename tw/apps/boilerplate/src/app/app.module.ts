@@ -5,11 +5,10 @@ import {RouterModule} from "@angular/router";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
-import {ExampleApiService} from "@tw/example";
 import {SharedModule} from "@tw/shared";
 
 @NgModule({
-  providers: [ExampleApiService],
+  providers: [],
   declarations: [AppComponent],
   imports: [
     BrowserModule,
@@ -18,9 +17,13 @@ import {SharedModule} from "@tw/shared";
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot([{
-      path: 'example',
-      loadChildren: () => import('@tw/example').then(m => m.moduleInstance)
-    }
+      path: 'users',
+      loadChildren: () => import('@tw/users').then(m => m.UsersModule)
+    },
+      // {
+      //   path: 'store',
+      //   loadChildren: () => import('@tw/petstore').then(m => m.PetstoreModule)
+      // }
     ]),
   ],
   bootstrap: [AppComponent],

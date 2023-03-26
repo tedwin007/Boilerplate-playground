@@ -1,5 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {AgGridEvent, ColDef} from "ag-grid-community";
+import {
+<%= classify(singleItemName) %>sColumnDefs
+} from "./constants/columsDefs.const";
+
 <%var obj = swaggerData['definitions']; %>
 <%var keys = Object.keys(obj); %>
 
@@ -14,7 +18,7 @@ export enum GridStyleOf {
 @Component({
   selector: 'tw-<%= dasherize(name) %>-grid-view',
   template: `
-    <ag-grid-angular class="ag-theme-alpine" [ngClass]="gridClass" 
+    <ag-grid-angular class="ag-theme-alpine" [ngClass]="gridClass"
                      [rowData]="rowData"
                      (gridReady)="autoSize($event)"
                      [frameworkComponents]="frameworkComponents"
@@ -24,8 +28,8 @@ export enum GridStyleOf {
   styleUrls: ['./<%= dasherize(name) %>-grid-view.component.scss']
 })
 export class <%= classify(name) %>GridViewComponent implements OnInit {
-  private _columnDefs: ColDef[];
-  gridClass: GridStyleOf;
+  private _columnDefs!: ColDef[];
+  gridClass!: GridStyleOf;
   frameworkComponents = {}
   @Input() rowData = [];
 
@@ -34,7 +38,7 @@ export class <%= classify(name) %>GridViewComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.setColumnDefs([]);
+    this.setColumnDefs(<%= classify(singleItemName) %>sColumnDefs);
   }
 
   autoSize(event: AgGridEvent): void {

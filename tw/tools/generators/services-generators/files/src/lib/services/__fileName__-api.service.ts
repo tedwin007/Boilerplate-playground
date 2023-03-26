@@ -37,13 +37,13 @@ function isDeleteHttpMethod(current){
        *  <%})%>
        *  @example ```<%= current['example'] %>```
        */
-       <%-methodName%>(params:{<%pathData.parameters?.forEach(function(item){ %><%= item.name %>: <%-item.type %>, <%}) %>}):Observable<<%-classify( responseType|| '') || 'any' %>> {
+       <%-methodName%>(params:any):Observable<<%-responseType?.includes('#/definitions/') ? responseType.split('#/definitions/')[1] : responseType || 'any' %>> {
       <%if(method === "get" || method === "delete"){%>const query = new URLSearchParams(<any>params).toString();<%}%>
-        return this.httpClient.<%=method%><<%-classify( responseType|| '') || 'any'%>>(this.baseUrl+'<%=urlPath%>'<%if(method === "get" || method === "delete" ){  %>+query <%}%><%if(method!=='get' && method !== "delete"){%>,params<%}%> ,{observe:'body'}).pipe(catchError((err)=>{return throwError(new Error(err))}))
+        return this.httpClient.<%=method%><<%- responseType?.includes('#/definitions/')? classify( responseType.split('#/definitions/')[1] || responseType) : 'any'%>>(this.baseUrl+'<%=urlPath%>'<%if(method === "get" || method === "delete" ){  %>+query <%}%><%if(method!=='get' && method !== "delete"){%>,params<%}%> ,{observe:'body'}).pipe(catchError((err)=>{return throwError(new Error(err))}))
   }
 <%} %>
 
-@Injectable()
+@Injectable({providedIn:'root'})
 export class <%=classify(name)%>ApiService extends AbstractDomainApi  {
 
   constructor() {

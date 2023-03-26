@@ -8,7 +8,7 @@ import {Observable} from "rxjs";
   styleUrls: ['./<%=dasherize(singleItemName)%>-list.component.scss']
 })
 export class <%=classify(singleItemName)%>ListComponent<T=any> implements OnInit {
-  <%=classify(singleItemName)%>State$?:Observable<T>;
+  <%=classify(singleItemName)%>State$?:Observable<any>;
 
   constructor(private <%=classify(name).toLowerCase()%>Service:<%=classify(name)%>Service) { }
 

@@ -1,6 +1,8 @@
-<ng-container *ngIf="<%=classify(singleItemName)%>State$ |async as <%=classify(singleItemName)%>"
-  <single-<%= dasherize(singleItemName) %>-item  [data]="<%=classify(singleItemName)%>" *ngFor="let item of <%=classify(singleItemName)%>">>
+<ng-container *ngIf="<%=classify(singleItemName)%>State$ |async as <%=classify(singleItemName)%>">
+  <ng-container *ngFor="let item of <%=classify(singleItemName)%>">
+  <single-<%= dasherize(singleItemName) %>-item  [data]="item" %>>
   </single-<%= dasherize(singleItemName) %>-item>
+  </ng-container>
 </ng-container>
 
 

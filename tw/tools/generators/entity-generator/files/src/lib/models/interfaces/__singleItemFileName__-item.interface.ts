@@ -1,3 +1,3 @@
-export interface I<%=classify(singleItemName)%>{
-  //todo...
-}
+// export interface I<%=classify(singleItemName)%>{
+//   //todo...
+// }
