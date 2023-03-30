@@ -14,12 +14,3 @@ body{
   display: grid;
   grid-row-gap: 20px;
 }
-
-
-
-.breadcrumb-item+.breadcrumb-item::before {
-  float: left;
-  padding-right: 0.5rem;
-  color: #6c757d;
-  content: var(--bs-breadcrumb-divider, " > ");
-}

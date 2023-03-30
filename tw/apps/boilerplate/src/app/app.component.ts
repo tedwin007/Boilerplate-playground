@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'tw-root',
   template: `
       <header>
-          <img src="https://dealhub.io/wp-content/uploads/2021/05/main-logo.svg">
+          <img src="">
           <tw-breadcrumb></tw-breadcrumb>
       </header>
 

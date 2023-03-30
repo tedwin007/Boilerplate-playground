@@ -18,13 +18,8 @@ import {SharedModule} from "@tw/shared";
     HttpClientModule,
     RouterModule.forRoot([{
       path: 'users',
-      loadChildren: () => import('@tw/users').then(m => m.UsersModule)
-    },
-      // {
-      //   path: 'store',
-      //   loadChildren: () => import('@tw/petstore').then(m => m.PetstoreModule)
-      // }
-    ]),
+      loadChildren: () => import('').then(m => m)
+    }]),
   ],
   bootstrap: [AppComponent],
 })
