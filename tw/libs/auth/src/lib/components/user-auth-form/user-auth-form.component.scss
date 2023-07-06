@@ -1,0 +1,42 @@
+@import 'apps/boilerplate/src/style/color-palette';
+
+
+:host {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto;
+  height: 100%;
+
+  form{
+    height: 100%;
+    max-width: 300px;
+    label{
+      display: flex;
+      margin-right: 20px;
+      align-items: center;
+    }
+
+  }
+  .user-auth-form {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    .input-group {
+      display: flex;
+      justify-content: space-evenly;
+      align-content: space-between;
+    }
+
+  }
+
+  .form-buttons-area {
+    display: flex;
+    justify-content: end;
+    button[type="submit"]{
+      width: 100%;
+    }
+  }
+}
+
+
