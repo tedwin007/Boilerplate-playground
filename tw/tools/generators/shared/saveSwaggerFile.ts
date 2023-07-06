@@ -10,7 +10,6 @@ export async function saveSwaggerFile(folderPath: string, data: any) {
         fs.writeFileSync(destPath, data, {encoding: 'utf8'});
     } catch (err) {
         console.error(err);
-        debugger;
     }
 }
 

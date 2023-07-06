@@ -24,14 +24,13 @@
   .content {
     position: relative;
     height: 100%;
+    // todo:  Only for login
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    // end todo
   }
 }
-
-.sub-header {
-  background-color: #F5F8FD;
-  height: 85px;
-  display: flex;
-  align-items: center;
 
   .container {
     display: flex;
@@ -52,5 +51,4 @@
     color: #D9D9D9;
     font-weight: 400;
     font-size: 14px;
-  }
 }

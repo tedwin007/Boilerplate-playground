@@ -5,7 +5,8 @@ import {RouterModule} from "@angular/router";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
-import {SharedModule} from "@tw/shared";
+import {SharedModule, SearchbarComponent} from "@tw/shared";
+import {AuthService} from "@tw/auth";
 
 @NgModule({
   providers: [],
@@ -16,10 +17,14 @@ import {SharedModule} from "@tw/shared";
     SharedModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    RouterModule.forRoot([{
-      path: 'users',
-      loadChildren: () => import('').then(m => m)
-    }]),
+    RouterModule.forRoot([
+      {path: 'home', component: SearchbarComponent},
+      {path: 'bla', component: SearchbarComponent, canActivate: [AuthService.authGuard]},
+      {
+        path: 'login', loadChildren: () => import('@tw/auth').then(m => m.AuthModule)
+      },
+      {path: '', redirectTo: '/home', pathMatch: 'full'},
+    ]),
   ],
   bootstrap: [AppComponent],
 })

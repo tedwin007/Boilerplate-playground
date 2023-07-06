@@ -1,0 +1,41 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="person-form">
+        
+        
+        <div class="input-group">
+            <label for="firstName">firstName </label>
+            <input formControlName="firstName" id="firstName" type="text">
+            <div class="input-error" *ngIf="form.get('firstName')?.invalid  && (form.get('firstName')?.dirty || form.get('firstName')?.touched)">hard coded (not generated) error</div>
+        </div>
+        
+        
+        <div class="input-group">
+            <label for="lastName">lastName </label>
+            <input formControlName="lastName" id="lastName" type="text">
+            <div class="input-error" *ngIf="form.get('lastName')?.invalid  && (form.get('lastName')?.dirty || form.get('lastName')?.touched)">hard coded (not generated) error</div>
+        </div>
+        
+        
+        <div class="input-group">
+            <label for="email">email </label>
+            <input formControlName="email" id="email" type="text">
+            <div class="input-error" *ngIf="form.get('email')?.invalid  && (form.get('email')?.dirty || form.get('email')?.touched)">hard coded (not generated) error</div>
+        </div>
+        
+        
+        <div class="input-group">
+            <label for="age">age </label>
+            <input formControlName="age" id="age" type="number">
+            <div class="input-error" *ngIf="form.get('age')?.invalid  && (form.get('age')?.dirty || form.get('age')?.touched)">hard coded (not generated) error</div>
+        </div>
+        
+    </div>
+    <!-- ******************************-->
+    <!--           Buttons             -->
+    <!-- ******************************-->
+    <div class="form-buttons-area">
+        <button type="submit" [disabled]="!form.valid">save</button>
+        <button type="submit" [disabled]="!form.valid" *ngIf="canEdit">edit</button>
+        <button type="submit" [disabled]="!form.valid">delete</button>
+    </div>
+</form>

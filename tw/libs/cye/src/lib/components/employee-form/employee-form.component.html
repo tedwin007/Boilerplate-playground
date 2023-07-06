@@ -1,0 +1,51 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="employee-form">
+
+
+    <div class="input-group">
+      <label for="personalInfo">personalInfo </label>
+      <input formControlName="personalInfo" id="personalInfo" type="">
+      <div class="input-error"
+           *ngIf="form.get('personalInfo')?.invalid  && (form.get('personalInfo')?.dirty || form.get('personalInfo')?.touched)">
+        hard coded (not generated) error
+      </div>
+    </div>
+
+
+    <div class="input-group">
+      <label for="companyName">companyName </label>
+      <input formControlName="companyName" id="companyName" type="text">
+      <div class="input-error"
+           *ngIf="form.get('companyName')?.invalid  && (form.get('companyName')?.dirty || form.get('companyName')?.touched)">
+        hard coded (not generated) error
+      </div>
+    </div>
+
+
+    <div class="input-group">
+      <label for="domain">domain </label>
+      <input formControlName="domain" id="domain" type="text">
+      <div class="input-error"
+           *ngIf="form.get('domain')?.invalid  && (form.get('domain')?.dirty || form.get('domain')?.touched)">hard coded
+        (not generated) error
+      </div>
+    </div>
+
+
+    <div class="input-group">
+      <label for="numOfEmployees">numOfEmployees </label>
+      <input formControlName="numOfEmployees" id="numOfEmployees" type="number">
+      <div class="input-error"
+           *ngIf="form.get('numOfEmployees')?.invalid  && (form.get('numOfEmployees')?.dirty || form.get('numOfEmployees')?.touched)">
+        hard coded (not generated) error
+      </div>
+    </div>
+
+  </div>
+  <!-- ******************************-->
+  <!--           Buttons             -->
+  <!-- ******************************-->
+  <div class="form-buttons-area">
+    <button type="submit" [disabled]="!form.valid">save</button>
+  </div>
+</form>

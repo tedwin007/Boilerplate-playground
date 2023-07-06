@@ -21,7 +21,7 @@
       "@tw/shared": [
         "libs/shared/src/index.ts"
       ],
-      "@tw/users": ["libs/users/src/index.ts"]
+      "@tw/auth": ["libs/auth/src/index.ts"]
     },
     "useDefineForClassFields": false
   },
