@@ -18,9 +18,9 @@ export class CyeApiService extends AbstractDomainApi {
    * Params:
    *  description: Created Employee object,
    */
-  saveNewEmployee(params: IEmployee): Observable<IApiResponse> {
+  saveNewEmployee(params: IEmployee): Observable<IApiResponse<IEmployee>> {
     return this.httpClient
-      .post<IApiResponse>(this.baseUrl + '/employee', params, {observe: 'body'})
+      .post<IApiResponse<IEmployee>>(this.baseUrl + '/employee', params, {observe: 'body'})
       .pipe(
         catchError((err) => {
           return throwError(() => new Error(err));

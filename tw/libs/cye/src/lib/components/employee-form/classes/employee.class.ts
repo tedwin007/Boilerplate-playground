@@ -1,29 +1,18 @@
-import {BaseEmployee, IEmployeeForm} from "../interfaces/employee.interface";
-import {FormControl, Validators} from "@angular/forms";
-import {BaseFormClass} from "./base-form.class";
+import {BaseEmployee} from "../../../models/interfaces/employee.interface";
+import {EmployeeForm} from "./employee-form.class";
 
-export class Employee extends BaseFormClass<BaseEmployee> {
+export class Employee {
+  form: EmployeeForm
 
-  constructor(data?: BaseEmployee) {
-    super(data)
+  constructor(public initialData?: BaseEmployee) {
+    this.form = new EmployeeForm(initialData)
   }
 
-  protected init(data?: BaseEmployee): void {
-    this._form = this.formBuilder.group<IEmployeeForm>({
-      companyName: new FormControl(data.companyName ?? '', {
-        nonNullable: true,
-        validators: [Validators.required]
-      }),
-      domain: new FormControl(data.domain || null),
-      numOfEmployees: new FormControl(data.numOfEmployees || null)
-    })
-  }
-
-  static create(): BaseEmployee {
+  static generate(): BaseEmployee {
     return {
-      companyName: null,
-      domain: null,
-      numOfEmployees: null,
+      companyName: '',
+      domain: '',
+      numOfEmployees: 0,
     }
   }
 }

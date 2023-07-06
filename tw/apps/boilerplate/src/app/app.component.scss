@@ -1,9 +1,14 @@
+@import "./../styles";
+
 :host {
   height: 100%;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 55px 1fr auto;
-  align-items: start;
+
+  h1 {
+    font-size: 62px;
+  }
 
   header {
     box-sizing: border-box;
@@ -14,41 +19,24 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-
-    img {
-      margin-top: 5px;
-      height: initial;
-    }
   }
 
   .content {
     position: relative;
     height: 100%;
-    // todo:  Only for login
     display: grid;
     align-items: center;
     justify-content: center;
-    // end todo
   }
 }
 
-  .container {
-    display: flex;
-    align-items: center;
-  }
-
-  .btn-primary {
-    width: 190px;
-    height: 40px;
-    border: none;
-    background: #1593FC;
-    border-radius: 5px;
-    outline: none;
-    margin-right: 40px;
-  }
-
-  .disabled {
-    color: #D9D9D9;
-    font-weight: 400;
-    font-size: 14px;
+.container {
+  display: flex;
+  align-items: center;
 }
+
+
+.sub-header {
+  margin: 60px auto;
+}
+

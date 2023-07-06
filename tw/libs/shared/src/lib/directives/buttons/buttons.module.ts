@@ -7,11 +7,15 @@ import {RegularBtnDirective} from "./regular-btn.directive";
 @NgModule({
   declarations: [
     PrimaryBtnDirective,
-    RegularBtnDirective],
+    RegularBtnDirective
+  ],
   imports: [
     CommonModule
-  ],exports:[PrimaryBtnDirective,
-    RegularBtnDirective]
+  ],
+  exports: [
+    PrimaryBtnDirective,
+    RegularBtnDirective
+  ]
 })
 export class ButtonsModule {
 }

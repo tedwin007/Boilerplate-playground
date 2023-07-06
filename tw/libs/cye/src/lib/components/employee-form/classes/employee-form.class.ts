@@ -1,43 +1,37 @@
 import {FormControl, FormGroup, Validators} from "@angular/forms"
 import {BaseFormClass} from "../../../models/classes/base-form.class";
 import {IPerson, IPersonForm} from "../../../models/interfaces/person.interface";
+import {BaseEmployee, IEmployeeForm} from "../../../models/interfaces/employee.interface";
+import {debounceTime, distinctUntilChanged, Observable, startWith, tap} from "rxjs";
+import {inject} from "@angular/core";
+import {CyeService} from "../../../cye.service";
 
-export class PersonForm extends BaseFormClass<IPerson> {
+export class EmployeeForm extends BaseFormClass<BaseEmployee> {
+  cyeService = inject(CyeService)
 
-  constructor(data?: IPerson) {
+  constructor(data?: BaseEmployee) {
     super(data)
   }
 
-  protected buildForm(data: IPerson): FormGroup {
-    return this.formBuilder.group<IPersonForm>({
-      firstName: new FormControl(data.firstName ?? '', {
+  getStateOnChanges$(): Observable<BaseEmployee> {
+    return this._form.valueChanges.pipe(
+      distinctUntilChanged(),
+      debounceTime(250),
+      startWith(this._form.value),
+      tap((data: BaseEmployee) => this.cyeService.setState([this.cyeService.getValue()[0], data])
+      )
+    )
+  }
+
+  protected buildForm(data?: BaseEmployee): FormGroup {
+    return this.formBuilder.group<IEmployeeForm>({
+      companyName: new FormControl(data?.companyName ?? '', {
         nonNullable: true,
         validators: [Validators.required]
       }),
-      lastName: new FormControl(
-        data.lastName ?? '',
-        {
-          nonNullable: true,
-          validators: [Validators.required]
-        }),
-      email: new FormControl(data.email ?? '',
-        {
-          nonNullable: true,
-          validators: [Validators.required]
-        }),
-      age: new FormControl(data.age ?? 0, {
-        nonNullable: true,
-        validators: [Validators.required,Validators.min(18),Validators.max(99)]
-      })
+      domain: new FormControl(data?.domain || ""),
+      numOfEmployees: new FormControl((data?.numOfEmployees ?? null) || '')
     })
   }
 
-  static generate(): IPerson {
-    return {
-      firstName: '',
-      lastName: '',
-      email: '',
-      age: 0,
-    }
-  }
 }

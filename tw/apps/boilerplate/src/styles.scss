@@ -1,7 +1,13 @@
 @import "style/color-palette";
 @import "style/ag-grid";
-body{
+
+body {
   background-color: #F5F5F5;
+  align-items: start;
+  line-height: 1.2;
+  font-weight: 400;
+  color: $primary;
+
 }
 
 .row {
@@ -13,4 +19,37 @@ body{
 .container {
   display: grid;
   grid-row-gap: 20px;
+}
+
+
+form {
+  display: grid;
+
+  .form-control {
+    width: 100% !important;
+  }
+
+  .input-group {
+    position: relative;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr auto;
+  }
+
+}
+
+p, label {
+  font-size: 22px;
+  left: 0;
+  right: 0;
+  color: #0b2440;
+}
+
+.input-error{
+  right:2rem;
+  color: red;
+  position: absolute;
+  bottom: -10px;
+
 }

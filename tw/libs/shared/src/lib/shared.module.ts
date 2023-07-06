@@ -20,7 +20,8 @@ import {ButtonsModule} from "./directives/buttons/buttons.module";
   exports: [
     SearchbarComponent,
     SplitPipe,
-    ButtonsModule]
+    ButtonsModule
+  ]
 })
 export class SharedModule {
 }

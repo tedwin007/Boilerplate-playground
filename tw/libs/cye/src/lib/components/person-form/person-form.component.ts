@@ -1,32 +1,48 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from "@angular/forms";
-import { IPerson} from "../../models/interfaces/person.interface";
+import {Component, EventEmitter, inject, Input, OnDestroy, OnInit, Output} from '@angular/core';
+import {FormGroup, FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {IPerson} from "../../models/interfaces/person.interface";
+import {ButtonsModule} from "@tw/shared";
+import {CommonModule} from "@angular/common";
+import {CyeService} from "../../cye.service";
+import {Person} from "./classes/person.class";
+import {ActivatedRoute, Router} from "@angular/router";
+import {Subject, takeUntil} from "rxjs";
 
 @Component({
   selector: 'ui-person-form',
   templateUrl: './person-form.component.html',
-  styleUrls: ['./person-form.component.scss']
+  styleUrls: ['./person-form.component.scss'],
+  standalone: true,
+  imports: [ButtonsModule, CommonModule, ReactiveFormsModule, FormsModule]
 })
-export class PersonFormComponent implements OnInit {
-  form: FormGroup = this.fb.group( {  firstName: [''],  lastName: [''],  email: [''],  age: [''], });
-  @Output() onSave = new EventEmitter<IPerson>();
-  @Input() canEdit = false;
-  @Input() set data(content: IPerson){
-    if (!!content) {
-      this.canEdit = true;
-      this.form.setValue(content);
+export class PersonFormComponent implements OnInit, OnDestroy {
+  form: FormGroup;
+  router = inject(Router);
+  private _ngDestroy = new Subject<void>();
+  private activeRoute = inject(ActivatedRoute)
+  private _person: Person;
+
+  constructor() {
+    const personData: IPerson = inject(CyeService).getValue()[0];
+    this._person = new Person(personData);
+    this.form = this._person.form.asFormGroup()
+  }
+
+  next(): void {
+    if (this.form.valid) {
+      this.router.navigate(['step-2'], {relativeTo: this.activeRoute})
     }
   }
 
-  constructor(private fb: FormBuilder) {}
-  ngOnInit(): void {}
-  submit(): void {
-    if(this.form.valid) {
-      this.onSave.emit(this.form.value);
-    } else {
-      throw 'error on submit';
-    //todo: toaster/throw error/logger etc...
-    }
+  ngOnInit(): void {
+    this._person.form.getStateOnChanges$()
+      .pipe(takeUntil(this._ngDestroy))
+      .subscribe()
+  }
+
+  ngOnDestroy(): void {
+    this._ngDestroy.next();
+    this._ngDestroy.complete();
   }
 }
 

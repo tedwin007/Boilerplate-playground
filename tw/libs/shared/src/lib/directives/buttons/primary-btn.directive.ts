@@ -8,3 +8,4 @@ export class PrimaryBtnDirective {
     return 'btn primary-btn';
   }
 }
+

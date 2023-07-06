@@ -1,23 +1,28 @@
-$primary: red;
-$secondary: blue;
-$warning: green;
+$primary: #0a2540;
+$secondary: #2dd5c4;
+$warning: red;
 
-/* BTN COLORS */
 $btn-primary: $primary;
 $btn-secondary: $secondary;
 
-// Brand
+
 .primary {
   &-color {
     color: $primary;
   }
 
-  &-bg, &-btn {
+  &-btn {
+    color: $secondary;
     background-color: $primary;
+
+    &:hover {
+      transition: 0.75s all;
+      background-color: $secondary;
+    }
   }
 
   &-shadow {
-    box-shadow: 0 8px 16px rgba(155, 54, 226, 0.24);
+    box-shadow: 0 8px 16px $secondary;
   }
 }
 
@@ -26,32 +31,12 @@ $btn-secondary: $secondary;
     color: $secondary;
   }
 
-  &-bg, &-btn {
+  &-btn {
+    color: $primary;
     background-color: $secondary;
-  }
-
-  &-hover:hover {
-    transition: 0.75s all;
-    background-color: rgba(254, 79, 76, 0.8);
-  }
-
-  &-shadow {
-    box-shadow: 0px 8px 16px rgba(254, 79, 76, 0.24);
-  }
-
-  .warning {
-    &-color {
-      color: $warning;
-    }
-
-    &-bg, .btn {
-      background-color: #FFBE4F;
-    }
-
-    &-hover:hover {
+    &:hover {
       transition: 0.75s all;
-      background-color: rgba(255, 190, 79, 0.8);
+      background-color: $primary;
     }
   }
-
 }

@@ -1,14 +1,21 @@
-:host{
+:host {
   position: relative;
   display: grid;
   grid-template-rows: auto;
 
-  .person-form{
-    input {}
-   .input-group{}
-   .form-buttons-area{}
+  .person-form {
+    display: grid;
+    grid-row-gap: 25px;
   }
 
+  .form-buttons-area {
+    padding-top: 50px;
+
+    button {
+      float: right
+    }
+
+  }
 }
 
 
