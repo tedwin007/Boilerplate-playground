@@ -1,4 +1,4 @@
-<form [formGroup]="form" (ngSubmit)="submit()">
+<form [formGroup]="form">
   <div class="employee-form form-group">
 
     <div class="input-group form-group">
@@ -6,34 +6,26 @@
       <input formControlName="companyName" id="companyName" type="text" class="form-control">
       <div class="input-error"
            *ngIf="form.get('companyName')?.invalid  && (form.get('companyName')?.dirty || form.get('companyName')?.touched)">
-            {{form.get('companyName')}}
+        This is a required field
       </div>
     </div>
 
     <div class="input-group form-group">
-      <label for="domain">domain </label>
+      <label for="domain">Domain </label>
       <input formControlName="domain" id="domain" type="text" class="form-control">
       <div class="input-error"
            *ngIf="form.get('domain')?.invalid  && (form.get('domain')?.dirty || form.get('domain')?.touched)">
-        hard coded (not generated) error
+       Invalid Domain
       </div>
     </div>
 
     <div class="input-group form-group">
-      <label for="numOfEmployees">numOfEmployees </label>
+      <label for="numOfEmployees">Number Of Employees </label>
       <input formControlName="numOfEmployees" id="numOfEmployees" type="number" class="form-control">
       <div class="input-error"
            *ngIf="form.get('numOfEmployees')?.invalid  && (form.get('numOfEmployees')?.dirty || form.get('numOfEmployees')?.touched)">
-        hard coded (not generated) error
+        Numbers only
       </div>
     </div>
-
-  </div>
-  <!-- ******************************-->
-  <!--           Buttons             -->
-  <!-- ******************************-->
-  <div class="form-buttons-area">
-    <button type="submit" primary-btn [disabled]="!form.valid">save</button>
-    <button type="button" (click)="back()" regular-btn>Back</button>
   </div>
 </form>

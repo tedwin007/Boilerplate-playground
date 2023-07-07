@@ -7,7 +7,6 @@ body {
   line-height: 1.2;
   font-weight: 400;
   color: $primary;
-
 }
 
 .row {
@@ -49,7 +48,5 @@ p, label {
 .input-error{
   right:2rem;
   color: red;
-  position: absolute;
   bottom: -10px;
-
 }

@@ -1,18 +1,20 @@
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormControlStatus, FormGroup} from "@angular/forms";
 import {inject} from "@angular/core";
 import {EntityFormGroup} from "../interfaces/utils-type.type";
-import {Observable} from "rxjs";
+import {distinctUntilChanged, filter, map, Observable, startWith} from "rxjs";
 import {IPerson} from "../interfaces/person.interface";
 import {CyeService} from "../../cye.service";
 
 export abstract class BaseFormClass<T> {
 
-  abstract getStateOnChanges$(): Observable<T>
-
   protected _form: FormGroup;
   protected formBuilder: FormBuilder = inject(FormBuilder)
 
   protected abstract buildForm(data?: T): FormGroup;
+
+  isValid(): boolean {
+    return !!this._form?.valid
+  }
 
   get value(): T {
     return this._form.getRawValue();

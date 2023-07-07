@@ -1,0 +1,25 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+
+  <router-outlet></router-outlet>
+
+  <div class="form-buttons-area">
+    <button (click)="next()"
+            *ngIf="currentStep !== totalSteps-1"
+            [disabled]="!isCurrentStepValid"
+            regular-btn
+            type="next">Next
+    </button>
+
+    <button type="button"
+            *ngIf="currentStep !== 0"
+            (click)="back()"
+            regular-btn>Back
+    </button>
+
+    <button type="submit"
+            *ngIf="currentStep === totalSteps-1"
+            primary-btn
+            [disabled]="!isCurrentStepValid">Save
+    </button>
+  </div>
+</form>

@@ -1,13 +1,10 @@
-:host{
+:host {
   position: relative;
   display: grid;
   grid-template-rows: auto;
 
-  .employee-form{
-    input {}
-   .input-group{}
-
+  .employee-form {
+    display: grid;
+    grid-row-gap: 25px;
   }
-
 }
-

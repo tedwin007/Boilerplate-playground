@@ -3,12 +3,12 @@ import {Component} from '@angular/core';
   selector: 'tw-root',
   template: `
       <header>
-          <img src="https://dealhub.io/wp-content/uploads/2021/05/main-logo.svg">
+          <img src="https://cyesec.com/wp-content/themes/cye/images/logo-dark.svg">
       </header>
 
       <div class="sub-header">
           <div class="container">
-              <h1 class="primary-color">Employee Form</h1>
+              <h1 class="primary-color">Wizard Form</h1>
           </div>
       </div>
 

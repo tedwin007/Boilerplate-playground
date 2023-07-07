@@ -3,8 +3,8 @@ import {EntityFormGroup} from "./utils-type.type";
 
 export interface BaseEmployee {
   companyName: string;
-  domain: string;
-  numOfEmployees: number;
+  domain: string | string[] | null;
+  numOfEmployees: number | null;
 }
 
 export type IEmployee = BaseEmployee & IPerson

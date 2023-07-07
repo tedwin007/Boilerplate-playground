@@ -1,25 +1,11 @@
 import {FormControl, FormGroup, Validators} from "@angular/forms"
-import {BaseFormClass} from "../../../models/classes/base-form.class";
-import {IPerson, IPersonForm} from "../../../models/interfaces/person.interface";
-import {debounceTime, distinctUntilChanged, Observable, startWith, tap} from "rxjs";
-import {inject} from "@angular/core";
-import {CyeService} from "../../../cye.service";
+import {IPerson, IPersonForm} from "../../../../../models/interfaces/person.interface";
+import {BaseFormClass} from "../../../../../models/classes/base-form.class";
 
 export class PersonForm extends BaseFormClass<IPerson> {
-  cyeService = inject(CyeService)
 
   constructor(data?: IPerson) {
     super(data)
-  }
-
-  getStateOnChanges$(): Observable<IPerson> {
-    return this._form.valueChanges.pipe(
-      distinctUntilChanged(),
-      debounceTime(250),
-      startWith(this._form.value),
-      tap((data: IPerson) => this.cyeService.setState([data, this.cyeService.getValue()[1]])
-      )
-    )
   }
 
   protected buildForm(data: IPerson): FormGroup {
@@ -37,7 +23,7 @@ export class PersonForm extends BaseFormClass<IPerson> {
       email: new FormControl(data.email ?? '',
         {
           nonNullable: true,
-          validators: [Validators.required]
+          validators: [Validators.required, Validators.email]
         }),
       age: new FormControl(data.age ?? 0, {
         nonNullable: true,
