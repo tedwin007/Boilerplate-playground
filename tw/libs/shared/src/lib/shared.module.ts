@@ -3,7 +3,6 @@ import {CommonModule} from '@angular/common';
 import {LocalStoreDbService} from "./services/local-store-db.service";
 import {SearchbarComponent} from './components/searchbar/searchbar.component';
 import {SplitPipe} from './pipes/split.pipe';
-import {AgGridModule} from "ag-grid-angular";
 import {ButtonsModule} from "./directives/buttons/buttons.module";
 
 @NgModule({
@@ -11,7 +10,6 @@ import {ButtonsModule} from "./directives/buttons/buttons.module";
   imports: [
     CommonModule,
     ButtonsModule,
-    AgGridModule.withComponents()
   ],
   declarations: [
     SearchbarComponent,

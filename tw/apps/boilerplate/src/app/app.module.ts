@@ -5,16 +5,13 @@ import {RouterModule} from "@angular/router";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
-import {SharedModule} from "@tw/shared";
 
-// @ts-ignore
 @NgModule({
   providers: [],
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     CommonModule,
-    SharedModule,
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot([

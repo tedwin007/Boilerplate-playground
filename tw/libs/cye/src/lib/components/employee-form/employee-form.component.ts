@@ -5,15 +5,11 @@ import {CyeService} from "../../cye.service";
 import {BaseEmployee} from "../../models/interfaces/employee.interface";
 import {Subject, takeUntil} from "rxjs";
 import {ActivatedRoute, Router} from "@angular/router";
-import {ButtonsModule} from "@tw/shared";
-import {CommonModule} from "@angular/common";
 
 @Component({
   selector: 'ui-employee-form',
   templateUrl: './employee-form.component.html',
-  styleUrls: ['./employee-form.component.scss'],
-  standalone: true,
-  imports: [ButtonsModule, CommonModule, ReactiveFormsModule, FormsModule]
+  styleUrls: ['./employee-form.component.scss']
 })
 export class EmployeeFormComponent implements OnInit, OnDestroy {
   private _employee: Employee

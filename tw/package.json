@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "nx --skip-nx-cache",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
-    "start": "nx serve",
+    "start": "ng serve",
     "build": "nx build",
     "test": "nx test",
     "create cye": "node node_modules/@nrwl/cli/bin/nx.js workspace-schematic feature-generator --name=cye --singleItemName=cye_form"

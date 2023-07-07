@@ -1,14 +1,17 @@
-import {Injectable} from '@angular/core';
-import {AbstractDomainApi} from '@tw/shared';
+import {inject, Injectable} from '@angular/core';
 import {Observable, throwError} from 'rxjs';
 import {catchError} from 'rxjs/operators';
 import {IEmployee} from "../models/interfaces/employee.interface";
 import {IApiResponse} from "../models/interfaces/api-response.interface";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({providedIn: 'root'})
-export class CyeApiService extends AbstractDomainApi {
+export class CyeApiService {
+  private baseUrl: string;
+  httpClient = inject(HttpClient)
+
   constructor() {
-    super('localhost:4200/api/v1');
+    this.baseUrl = 'localhost:4200/api/v1'
   }
 
   /**

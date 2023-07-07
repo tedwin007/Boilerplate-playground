@@ -1,7 +1,6 @@
 import {Component, EventEmitter, inject, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {FormGroup, FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {IPerson} from "../../models/interfaces/person.interface";
-import {ButtonsModule} from "@tw/shared";
 import {CommonModule} from "@angular/common";
 import {CyeService} from "../../cye.service";
 import {Person} from "./classes/person.class";
@@ -11,9 +10,7 @@ import {Subject, takeUntil} from "rxjs";
 @Component({
   selector: 'ui-person-form',
   templateUrl: './person-form.component.html',
-  styleUrls: ['./person-form.component.scss'],
-  standalone: true,
-  imports: [ButtonsModule, CommonModule, ReactiveFormsModule, FormsModule]
+  styleUrls: ['./person-form.component.scss']
 })
 export class PersonFormComponent implements OnInit, OnDestroy {
   form: FormGroup;

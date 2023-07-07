@@ -19,7 +19,7 @@ export class CyeService extends StateManger<[IPerson, BaseEmployee]> {
     return this.cyeService.saveNewEmployee({} as any).pipe(
       map(() => ({data: employee} as IApiResponse<IEmployee>)),
       catchError(() => (of({data: employee} as IApiResponse<IEmployee>))),
-      finalize(() => console.log(this.getValue()))
+      finalize(() => console.dir(this.getValue()))
     )
   }
 }
