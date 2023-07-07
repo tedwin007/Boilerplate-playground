@@ -1,6 +1,6 @@
 import {FormControl, FormGroup} from "@angular/forms";
 import {InjectionToken} from "@angular/core";
-import {Observable, of} from "rxjs";
+import {Observable} from "rxjs";
 import {BaseFormClass} from "../classes/base-form.class";
 import {Person} from "../../components/cye-form/partials/person-form/classes/person.class";
 import {Employee} from "../../components/cye-form/partials/employee-form/classes/employee.class";

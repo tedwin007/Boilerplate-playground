@@ -11,6 +11,5 @@ export function readSwaggerFile(filePath: string): { swaggerData: object } {
         return {swaggerData};
     } catch (err) {
         console.error(err);
-        debugger;
     }
 }
