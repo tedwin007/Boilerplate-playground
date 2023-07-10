@@ -18,7 +18,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@tw/cye": ["libs/cye/src/index.ts"],
       "@tw/shared": [
         "libs/shared/src/index.ts"
       ],

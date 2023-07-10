@@ -17,7 +17,7 @@ import {CommonModule} from "@angular/common";
     RouterModule.forRoot([
       {
         path: '',
-        loadChildren: () => import('@tw/cye').then(m => m.CyeModule)
+        loadChildren: () => import('@tw/auth').then(m => m.AuthModule)
       },
     ]),
   ],

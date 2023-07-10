@@ -3,12 +3,12 @@ import {Component} from '@angular/core';
   selector: 'tw-root',
   template: `
       <header>
-          <img src="https://cyesec.com/wp-content/themes/cye/images/logo-dark.svg">
+          <img class="logo" src="https://main-app-production-public.s3.amazonaws.com/0so8896gr3ytvigaths5ewke16qw">
       </header>
 
       <div class="sub-header">
           <div class="container">
-              <h1 class="primary-color">Wizard Form</h1>
+              <h1 class="primary-color">Page Title</h1>
           </div>
       </div>
 
