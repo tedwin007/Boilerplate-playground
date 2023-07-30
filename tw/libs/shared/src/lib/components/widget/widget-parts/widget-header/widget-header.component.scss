@@ -1,0 +1,17 @@
+:host {
+  position: relative;
+  font-weight: bold;
+  font-size: 25px;
+  box-sizing: border-box;
+  display: block;
+  width: inherit;
+  padding-bottom: 20px;
+  &::after{
+    content: ' ';
+    position: absolute;
+    button:10px;
+    width: 100%;
+    height: 2px;
+    background: red;
+  }
+}

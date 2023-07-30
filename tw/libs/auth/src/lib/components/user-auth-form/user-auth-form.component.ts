@@ -1,9 +1,7 @@
 import {Component, EventEmitter, inject, Input, OnInit, Output} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {IUserAuth} from "../../models/interfaces/user-auth.interface";
 import {AuthService} from "../../auth.service";
-import {catchError} from "rxjs/operators";
-import {of} from "rxjs";
 
 type IUserAuthForm = { [k in keyof IUserAuth]: FormControl<string> }
 
@@ -23,8 +21,8 @@ export class UserAuthFormComponent {
   }
 
   form: FormGroup = inject(FormBuilder).group<IUserAuthForm>({
-    username: new FormControl('', {nonNullable: true}),
-    password: new FormControl('', {nonNullable: true})
+    username: new FormControl('', {nonNullable: true,validators: [Validators.required]}),
+    password: new FormControl('', {nonNullable: true,validators: [Validators.required]})
   });
 
   submit(): void {

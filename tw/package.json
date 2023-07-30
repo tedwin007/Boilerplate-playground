@@ -8,7 +8,7 @@
     "start": "ng serve",
     "build": "nx build",
     "test": "nx test",
-    "create auth": "node node_modules/@nrwl/cli/bin/nx.js workspace-schematic feature-generator --name=auth --singleItemName=auth_form"
+    "create petstore": "node node_modules/@nrwl/cli/bin/nx.js workspace-schematic feature-generator --name=petstore --singleItemName=pet"
   },
   "private": true,
   "dependencies": {

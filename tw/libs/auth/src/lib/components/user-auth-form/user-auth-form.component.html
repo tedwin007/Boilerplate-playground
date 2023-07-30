@@ -1,7 +1,7 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
   <div class="user-auth-form">
     <div class="input-group">
-      <label for="username">username </label>
+      <label for="username">Username </label>
       <input formControlName="username" id="username" type="text" class="form-control">
       <div class="input-error"
            *ngIf="form.get('username')?.invalid  && (form.get('username')?.dirty || form.get('username')?.touched)">
@@ -10,7 +10,7 @@
     </div>
 
     <div class="input-group">
-      <label for="password">password </label>
+      <label for="password">Password </label>
       <input formControlName="password" id="password" type="password" class="form-control">
       <div class="input-error"
            *ngIf="form.get('password')?.invalid  && (form.get('password')?.dirty || form.get('password')?.touched)">

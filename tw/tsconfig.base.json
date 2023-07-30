@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@tw/auth": ["libs/auth/src/index.ts"],
+      "@tw/modals": ["libs/modals/src/index.ts"],
       "@tw/shared": ["libs/shared/src/index.ts"]
     },
     "useDefineForClassFields": false

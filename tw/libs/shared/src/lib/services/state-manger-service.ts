@@ -21,8 +21,13 @@ export class StateManger<State = any> {
     return this._state$.asObservable();
   }
 
-  setState(data: State): void {
-    this._state$.next(data);
+  setState(data: Partial<State> | State): void {
+    if (typeof data == 'object') {
+      this._state$.next({...this.getValue(), ...data})
+    } else {
+      this._state$.next(data)
+    }
+
   }
 
   getValue(): State {

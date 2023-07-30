@@ -1,0 +1,38 @@
+:host {
+  position: relative;
+  width: inherit;
+  height: 100%;
+  display: inherit;
+
+  .tabs {
+    display: flex;
+    grid-template-rows: 60px auto;
+    grid-row-gap: 25px;
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      color: wheat;
+      background: #0b2440;
+      margin-bottom:25px;
+
+      :hover {
+        background: #2dd5c4;
+      }
+
+      div {
+        display: grid;
+        padding: 20px;
+        transition: 1s all;
+        text-align: center;
+        margin-right: 20px;
+        cursor: pointer;
+      }
+
+    }
+
+    &-contetnt {
+    }
+  }
+
+}

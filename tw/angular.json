@@ -117,56 +117,28 @@
         }
       }
     },
-    "cye": {
-      "root": "libs/cye",
-      "sourceRoot": "libs/cye/src",
+    "modals": {
+      "root": "libs/modals",
+      "sourceRoot": "libs/modals/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["libs/cye/**/*.ts"]
+            "lintFilePatterns": ["libs/modals/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/cye"],
+          "outputs": ["coverage/libs/modals"],
           "options": {
-            "jestConfig": "libs/cye/jest.config.js",
+            "jestConfig": "libs/modals/jest.config.js",
             "passWithNoTests": true
           }
         }
       },
       "tags": []
-    },
-    "e2e": {
-      "root": "apps/e2e",
-      "sourceRoot": "apps/e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/e2e/cypress.json",
-            "devServerTarget": "boilerplate:serve:development"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "boilerplate:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["apps/e2e/**/*.{js,ts}"]
-          }
-        }
-      },
-      "tags": [],
-      "implicitDependencies": ["boilerplate"]
     },
     "shared": {
       "root": "libs/shared",

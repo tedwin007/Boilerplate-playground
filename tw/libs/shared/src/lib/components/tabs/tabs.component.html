@@ -1,0 +1,15 @@
+<div class="tabs-header">
+  <ng-container *ngFor="let tab of tabs">
+    <div (click)="select(tab)">{{tab.title}}</div>
+
+  </ng-container>
+
+</div>
+
+<div class="content">
+  <ng-container *ngFor="let tab of tabs">
+    <div *ngIf="tab.selected">
+      {{tab.content}}
+    </div>
+  </ng-container>
+</div>

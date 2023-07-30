@@ -20,12 +20,14 @@
   .user-auth-form {
     height: 100%;
     display: grid;
+    grid-row-gap: 25px;
     grid-template-rows: 1fr 1fr 1fr;
 
     .input-group {
       display: flex;
       justify-content: space-evenly;
       align-content: space-between;
+
     }
 
   }
