@@ -36,7 +36,7 @@ Flags:
 | `--name` | Feature name (plural / collection-level) |
 | `--singleItemName` | Singular item name, used for model and service generation |
 
-The schematic expects a valid `swagger.json` in the workspace. See [`/examples`](./examples) for a sample Uber API spec used in testing.
+The schematic expects a valid `swagger.json` in the workspace.
 
 ## How it works
 
